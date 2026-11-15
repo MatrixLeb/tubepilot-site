@@ -1,0 +1,6 @@
+# Large release assets are uploaded to the GitHub Release, not committed.
+downloads/*.exe
+downloads/*.zip
+
+# Local validation report
+_validation.txt

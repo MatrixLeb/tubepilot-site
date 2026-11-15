@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubePilot — faceless YouTube videos, from niche to upload</title>
+  <meta name="description" content="TubePilot is a Windows desktop studio that writes the script, records the voiceover, illustrates every scene, renders a 1080p video with subtitles, builds the thumbnail and uploads to YouTube. Free 48-hour trial, English and Arabic interface.">
+  <meta name="theme-color" content="#0b0b0f">
+  <meta property="og:title" content="TubePilot — faceless videos, from niche to upload">
+  <meta property="og:description" content="One click runs script, SEO, neural voice, AI or stock visuals, 1080p render, thumbnail and YouTube upload — on your own PC.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/screenshots/home-en.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8z"/>
+      <path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/>
+      <path d="M8 7.5h8M8 11h6"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>
+    </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="3" width="6" height="11" rx="3"/>
+      <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>
+    </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2.5"/>
+      <circle cx="8.5" cy="9.5" r="1.6"/>
+      <path d="M4 17l5-5 4.5 4.5L17 13l3 3"/>
+    </symbol>
+    <symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2.5"/>
+      <path d="M7 5v14M17 5v14M3 10h4M3 14h4M17 10h4M17 14h4"/>
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 16V4M7.5 8.5L12 4l4.5 4.5"/>
+      <path d="M4 15v3a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-3"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l7 3v6c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/>
+    </symbol>
+    <symbol id="i-key" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8" cy="8" r="4"/>
+      <path d="M11 11l8.5 8.5M16.5 16.5l2-2M19 19l2-2"/>
+    </symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="6" y="6" width="12" height="12" rx="2"/>
+      <rect x="10" y="10" width="4" height="4" rx="1"/>
+      <path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/>
+    </symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h4l2 2.5h6A2.5 2.5 0 0 1 20.5 10v7A2.5 2.5 0 0 1 18 19.5H6A2.5 2.5 0 0 1 3.5 17z"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.5l4.5 4.5L19 7"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5V15M7.5 10.5L12 15l4.5-4.5"/>
+      <path d="M4.5 19.5h15"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h15M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M8 5.5v13l10-6.5z"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.4 3.6A10.9 10.9 0 0 0 3.9 17.2L2.5 21.5l4.4-1.4A10.9 10.9 0 1 0 20.4 3.6z"/>
+      <path d="M8.7 7.4c.3-.1.6 0 .8.4l.9 1.8c.1.3.1.6-.1.8l-.7.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.7c.2-.2.5-.2.8-.1l1.8.9c.4.2.5.5.4.8-.2.8-.9 1.4-1.7 1.5-3.3.5-8.1-4.3-7.6-7.6.1-.9.7-1.6 1.5-1.8z"/>
+    </symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12.5" rx="2.5"/>
+      <path d="M9 20h6M12 16.5V20"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5l8.5 4.5L12 12.5 3.5 8z"/>
+      <path d="M4 12l8 4.3 8-4.3M4 16l8 4.3 8-4.3"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3.2 2"/>
+    </symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4.5" width="18" height="15" rx="2.5"/>
+      <path d="M7.5 9.5l3 2.5-3 2.5M12.5 15h4"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4.5" y="10" width="15" height="10.5" rx="2.5"/>
+      <path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 12a8 8 0 1 1-2.6-5.9"/>
+      <path d="M20 4v4.5h-4.5"/>
+    </symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 4L2.5 8.5 12 13l9.5-4.5z"/>
+      <path d="M6 10.5V15c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/>
+          </svg>
+        </span>
+        TubePilot
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#downloads">Downloads</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="docs.html">Documentation</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a href="index.html" aria-current="true" hreflang="en">EN</a>
+          <a href="index-ar.html" hreflang="ar" lang="ar">العربية</a>
+        </div>
+        <a class="btn btn-primary btn-sm" href="#downloads">
+          <svg aria-hidden="true"><use href="#i-download"/></svg>
+          Download
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">Windows desktop studio · v1.0.0</span>
+          <h1>Faceless videos,<br>from niche to <span class="grad">upload</span>.</h1>
+          <p class="hero-lead">
+            TubePilot writes the script, records the voiceover, illustrates every scene,
+            renders a 1080p video with burned-in subtitles, builds the thumbnail and uploads
+            it to YouTube. One window, one click, your own PC.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#downloads">
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              Download for Windows
+            </a>
+            <a class="btn btn-ghost" href="docs.html">
+              <svg aria-hidden="true"><use href="#i-book"/></svg>
+              Read the full guide
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> 48-hour free trial</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> English &amp; العربية</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> Portable or installer</span>
+          </div>
+        </div>
+
+        <div class="hero-shot">
+          <div class="window">
+            <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>TubePilot — Home</span></div>
+            <img src="assets/screenshots/home-en.png" width="1386" height="788" alt="TubePilot home screen showing the sidebar, language switch and the eight-step pipeline">
+          </div>
+          <div class="hero-badge">
+            <span class="dot"><svg aria-hidden="true"><use href="#i-film"/></svg></span>
+            <div>
+              <strong>1920 × 1080 · 30 fps</strong>
+              <small>H.264 + AAC, subtitles burned in</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap">
+        <div><svg aria-hidden="true"><use href="#i-monitor"/></svg> Runs locally on your PC</div>
+        <div><svg aria-hidden="true"><use href="#i-lock"/></svg> Private uploads by default</div>
+        <div><svg aria-hidden="true"><use href="#i-shield"/></svg> Official YouTube Data API</div>
+        <div><svg aria-hidden="true"><use href="#i-check"/></svg> No engagement automation</div>
+      </div>
+    </div>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Everything in one place</span>
+          <h2>A whole production line, not a pile of prompts</h2>
+          <p>
+            Most AI tools stop at text. TubePilot carries the job through voice, visuals,
+            editing, thumbnails and publishing — and keeps every step editable when you want
+            to take over.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+            <h3>Unattended pipeline</h3>
+            <p>Enter a niche, or a topic, and press once. Each stage runs in order, reports progress in the Auto tab, and can be stopped or retried without losing finished work.</p>
+          </article>
+          <article class="card">
+            <span class="ico blue"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
+            <h3>Script and SEO that fit the niche</h3>
+            <p>Hook-first narration split into timed scenes, each with a visual prompt, plus a title, description, tags and thumbnail overlay words.</p>
+          </article>
+          <article class="card">
+            <span class="ico gold"><svg aria-hidden="true"><use href="#i-mic"/></svg></span>
+            <h3>Free neural narration</h3>
+            <p>Microsoft Edge neural voices in 16 languages, with word-accurate subtitle timings. If the online service is unreachable, installed Windows voices take over.</p>
+          </article>
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-image"/></svg></span>
+            <h3>AI visuals per scene</h3>
+            <p>Each scene image is drawn from its own script prompt — not a keyword search. Optional moving AI clips and a slow Ken Burns move for stills.</p>
+          </article>
+          <article class="card">
+            <span class="ico green"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>Never blocked by a missing source</h3>
+            <p>AI video, AI stills, Pexels, Pixabay, Unsplash, the bundled offline library, Openverse, Wikimedia and NASA — the first usable match wins, every time.</p>
+          </article>
+          <article class="card">
+            <span class="ico blue"><svg aria-hidden="true"><use href="#i-film"/></svg></span>
+            <h3>Real 1080p renders</h3>
+            <p>Bundled FFmpeg cuts clips to length, scales and pads to 1920×1080, mixes an optional music bed, burns in the SRT and writes H.264/AAC MP4s.</p>
+          </article>
+          <article class="card">
+            <span class="ico gold"><svg aria-hidden="true"><use href="#i-image"/></svg></span>
+            <h3>Thumbnails that match the video</h3>
+            <p>1280×720 JPEG built from a strong scene image, a gradient treatment and your overlay words — regenerate with different text in seconds.</p>
+          </article>
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-upload"/></svg></span>
+            <h3>Private-first YouTube upload</h3>
+            <p>Resumable upload through the official API with metadata and thumbnail. Defaults to Private, supports Unlisted, Public and scheduled publishing.</p>
+          </article>
+          <article class="card">
+            <span class="ico blue"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+            <h3>English and العربية</h3>
+            <p>Switch the entire interface from the sidebar. Arabic is laid out right-to-left, and the choice is remembered on the next launch.</p>
+          </article>
+          <article class="card">
+            <span class="ico green"><svg aria-hidden="true"><use href="#i-terminal"/></svg></span>
+            <h3>Headless and schedulable</h3>
+            <p>The same engine runs from the command line for Windows Task Scheduler: pick a niche, render and upload on a daily schedule.</p>
+          </article>
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+            <h3>Your files stay yours</h3>
+            <p>Settings, projects, videos and caches live in one folder under %APPDATA%. Back it up, move it to another PC, or delete it to start clean.</p>
+          </article>
+          <article class="card">
+            <span class="ico gold"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>Honest about limits</h3>
+            <p>No bots, no view or like automation, no fake engagement. Uploads use the official API and its real quota — roughly six videos a day.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">The production line</span>
+          <h2>Eight stages, one run</h2>
+          <p>Every stage can also be used on its own from the project tabs, so you can regenerate a script, swap a voice, or re-render without starting over.</p>
+        </div>
+        <ol class="pipeline" style="list-style:none;margin:0;padding:0">
+          <li class="pipe-step"><span class="n">1</span><svg aria-hidden="true"><use href="#i-spark"/></svg><b>Topic</b><small>AI picks or you type it</small></li>
+          <li class="pipe-step"><span class="n">2</span><svg aria-hidden="true"><use href="#i-book"/></svg><b>Script</b><small>Hook, scenes, b-roll</small></li>
+          <li class="pipe-step"><span class="n">3</span><svg aria-hidden="true"><use href="#i-search"/></svg><b>SEO</b><small>Title, description, tags</small></li>
+          <li class="pipe-step"><span class="n">4</span><svg aria-hidden="true"><use href="#i-mic"/></svg><b>Voice</b><small>Neural + word timings</small></li>
+          <li class="pipe-step"><span class="n">5</span><svg aria-hidden="true"><use href="#i-image"/></svg><b>Visuals</b><small>AI, stock or bundled</small></li>
+          <li class="pipe-step"><span class="n">6</span><svg aria-hidden="true"><use href="#i-film"/></svg><b>Render</b><small>1080p + captions</small></li>
+          <li class="pipe-step"><span class="n">7</span><svg aria-hidden="true"><use href="#i-layers"/></svg><b>Thumbnail</b><small>1280×720 with words</small></li>
+          <li class="pipe-step"><span class="n">8</span><svg aria-hidden="true"><use href="#i-upload"/></svg><b>Upload</b><small>Private by default</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Look around</span>
+          <h2>The same studio in English and Arabic</h2>
+          <p>One switch flips the whole window, including the sidebar, project tabs, Settings and Subscription screen. Arabic reads right-to-left.</p>
+        </div>
+        <div class="shots">
+          <figure class="shot" style="margin:0">
+            <div class="window">
+              <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>TubePilot — Home (English)</span></div>
+              <img src="assets/screenshots/home-en.png" width="1386" height="788" loading="lazy" alt="TubePilot home screen in English with the sidebar language switch and pipeline cards">
+            </div>
+            <figcaption><b>English interface</b><span>Sidebar switch · saved per PC</span></figcaption>
+          </figure>
+          <figure class="shot" style="margin:0">
+            <div class="window">
+              <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span lang="ar">TubePilot — الرئيسية</span></div>
+              <img src="assets/screenshots/home-ar.png" width="1382" height="744" loading="lazy" alt="TubePilot home screen in Arabic, laid out right to left">
+            </div>
+            <figcaption><b lang="ar">الواجهة العربية</b><span lang="ar">تخطيط من اليمين إلى اليسار</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="ai">
+      <div class="wrap">
+        <div class="ai-band">
+          <span class="section-kicker">Visuals</span>
+          <h2>AI when you want it. Stock when you don't.</h2>
+          <p>
+            Turn on AI footage and every scene is illustrated from its own script prompt.
+            Leave it off, run out of quota, or work offline, and the video still gets made —
+            TubePilot walks down the chain until a source delivers.
+          </p>
+          <ul class="chain" aria-label="Visual source order">
+            <li>AI video</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>AI stills</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>Pexels</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>Pixabay</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>Unsplash</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li class="sample">Bundled samples</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>Openverse</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>Wikimedia</li>
+            <li class="sep" aria-hidden="true">→</li>
+            <li>NASA</li>
+          </ul>
+          <div class="ai-notes">
+            <div>
+              <b>Nothing is a dead end</b>
+              Quota errors, retired models, rate limits and network drops are logged and the next source is tried. A failed visual never fails a render.
+            </div>
+            <div>
+              <b>Pay only for what you use</b>
+              Gemini's free tier covers scripts and SEO. AI images and video need billing (or a paid OpenAI key), and the Settings card shows an estimate before you test.
+            </div>
+            <div>
+              <b>Cached by prompt</b>
+              Generated images and clips are stored per prompt, so re-rendering an unchanged project costs nothing. Edit a scene and only that scene is regenerated.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Quick start</span>
+          <h2>From download to first video</h2>
+          <p>No Python, no FFmpeg install, no build tools. The app ships with its own Java runtime and encoder.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="num">01</span>
+            <h3>Install and activate</h3>
+            <p>Run the installer, or unzip the portable build and start <code>TubePilot.exe</code>. Start the 48-hour free trial on the Subscription screen — no card, once per Windows profile.</p>
+            <a href="docs.html#install">Installation guide <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="step">
+            <span class="num">02</span>
+            <h3>Add your keys</h3>
+            <p>Open Settings and paste a free Gemini key for scripts and SEO. Optionally add AI image keys, stock keys, a voice and your YouTube connection.</p>
+            <a href="docs.html#setup">First-time setup <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="step">
+            <span class="num">03</span>
+            <h3>Create and publish</h3>
+            <p>Choose New video, describe your niche, pick a length from 2 to 20 minutes and run everything. Watch the stages, then review the MP4 and thumbnail.</p>
+            <a href="docs.html#first-video">Your first video <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="downloads">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Downloads</span>
+          <h2>Get TubePilot 1.0.0</h2>
+          <p>Windows 10 or 11, 64-bit. Both downloads contain the same app; pick whichever suits the PC.</p>
+        </div>
+
+        <div class="downloads-grid">
+          <article class="download-card primary">
+            <span class="tag">Recommended</span>
+            <h3>Windows installer</h3>
+            <div class="file">TubePilot-Setup-1.0.0.exe</div>
+            <p>
+              Installs for the current user with no administrator prompt, adds a Start-menu
+              shortcut and an uninstaller. New builds upgrade straight over the old one.
+            </p>
+            <a class="btn btn-primary btn-block" data-download="TubePilot-Setup-1.0.0.exe" href="downloads/TubePilot-Setup-1.0.0.exe" download>
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              Download installer
+            </a>
+            <div class="download-meta">
+              <span>263 MB</span>
+              <span>No admin prompt</span>
+              <span>Start-menu shortcut</span>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <h3>Portable ZIP</h3>
+            <div class="file">TubePilot-1.0.0-portable.zip</div>
+            <p>
+              Unzip anywhere and double-click <code>TubePilot\TubePilot.exe</code>. Nothing is
+              installed; settings and videos still live in <code>%APPDATA%\TubePilot</code>.
+            </p>
+            <a class="btn btn-ghost btn-block" data-download="TubePilot-1.0.0-portable.zip" href="downloads/TubePilot-1.0.0-portable.zip" download>
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              Download portable ZIP
+            </a>
+            <div class="download-meta">
+              <span>260 MB</span>
+              <span>No installation</span>
+              <span>Runs from a USB stick</span>
+            </div>
+          </article>
+        </div>
+
+        <details class="hash-box">
+          <summary>SHA-256 checksums and file details</summary>
+          <div class="hash-row">
+            <span>TubePilot-Setup-1.0.0.exe · 275,382,272 bytes</span>
+            <code>f0f6c679058620b4553702c05ffc341d0f6cf54ba135620f94e09266df25a7ff</code>
+          </div>
+          <div class="hash-row">
+            <span>TubePilot-1.0.0-portable.zip · 272,964,658 bytes</span>
+            <code>5f889c17a629b2bccdcf0948b2859adc16ea32b1a54217b61427d4249ff2c056</code>
+          </div>
+          <div class="hash-row">
+            <span>Verify in PowerShell</span>
+            <code>Get-FileHash .\TubePilot-Setup-1.0.0.exe -Algorithm SHA256</code>
+          </div>
+          <div class="hash-row">
+            <span>More files</span>
+            <code><a href="downloads/SHA256SUMS.txt">SHA256SUMS.txt</a> · sample videos and walkthroughs are in the release folder</code>
+          </div>
+        </details>
+
+        <h3 style="margin-top:38px">System requirements</h3>
+        <ul class="req-list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Windows 10 or 11, 64-bit</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> About 700 MB of free disk space</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> An AI key for your own videos — Gemini's free tier is enough</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Internet for AI, stock sources and the free neural voices</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> No GPU required; rendering is CPU-based</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Offline renders work with the bundled sample library</li>
+        </ul>
+
+        <div class="callout note" style="margin-top:26px">
+          <p><strong>SmartScreen notice.</strong> The build is not code-signed yet, so Windows may say
+          “Windows protected your PC”. Click <em>More info</em>, then <em>Run anyway</em>. You can verify
+          the file against the SHA-256 checksum above before running it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">Plans</span>
+          <h2>Try it free, then choose a plan</h2>
+          <p>One license unlocks the studio on a PC. Payment is handled directly on WhatsApp — OMT, Whish Money, USDT or bank transfer.</p>
+        </div>
+        <div class="pricing">
+          <article class="price-card">
+            <h3>Free trial</h3>
+            <div class="price">$0</div>
+            <div class="price-note">48 hours · once per Windows profile</div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Every feature unlocked</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> No card, no account</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Start inside the app</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="docs.html#activate">How the trial works</a>
+          </article>
+
+          <article class="price-card featured">
+            <h3>Monthly</h3>
+            <div class="price">$19 <small>/ month</small></div>
+            <div class="price-note">30 days per key</div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Unlimited local renders</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Command line and Task Scheduler</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Works offline after activation</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/9613091136?text=Hi%2C%20I%20would%20like%20to%20buy%20TubePilot%20Monthly%20(%2419)." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Buy on WhatsApp
+            </a>
+          </article>
+
+          <article class="price-card">
+            <h3>Yearly</h3>
+            <div class="price">$149 <small>/ year</small></div>
+            <div class="price-note">365 days · about $12.42 a month</div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Save about 35% vs monthly</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Same features, longer term</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> Keys work on Windows and Android</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/9613091136?text=Hi%2C%20I%20would%20like%20to%20buy%20TubePilot%20Yearly%20(%24149)." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              Buy on WhatsApp
+            </a>
+          </article>
+        </div>
+
+        <div class="callout tip" style="margin-top:26px">
+          <p><strong>Already have a key?</strong> Open <em>Subscription → Activate a license</em>,
+          paste the <code>TP1…</code> key and it verifies offline. The same key works on the Windows
+          and Android apps. Questions? Message <a href="https://wa.me/9613091136" target="_blank" rel="noopener">+961 3 091 136</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">FAQ</span>
+          <h2>Before you install</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>Do I need API keys to try it?</summary>
+            <p>
+              You need one AI key for your own videos, and Gemini's free tier is enough for
+              scripts and SEO. The <code>--demo</code> command renders a complete built-in
+              sample with no keys at all. Stock footage, the bundled offline library and the
+              free neural voices work without any stock or voice keys.
+            </p>
+          </details>
+          <details>
+            <summary>Does it upload without asking?</summary>
+            <p>
+              Only when you run the pipeline with uploading enabled, and uploads default to
+              <strong>Private</strong>. You can render locally with <em>Upload after rendering</em>
+              turned off, use <code>--no-upload</code>, or skip the YouTube connection entirely.
+            </p>
+          </details>
+          <details>
+            <summary>Which languages can the videos be in?</summary>
+            <p>
+              Sixteen narration languages: English (US and UK), Spanish, French, German, Italian,
+              Portuguese, Arabic, Hindi, Urdu, Turkish, Indonesian, Russian, Japanese, Korean and
+              Chinese. The interface itself switches between English and Arabic.
+            </p>
+          </details>
+          <details>
+            <summary>Will it work without a GPU?</summary>
+            <p>
+              Yes. Rendering uses the CPU and the bundled FFmpeg. A GPU only helps the window
+              itself; on remote desktops or VMs with no 3D support, set
+              <code>TUBEPILOT_SOFTWARE_RENDER=1</code> before launching.
+            </p>
+          </details>
+          <details>
+            <summary>Can I run it fully offline?</summary>
+            <p>
+              The renderer, the bundled sample library and FFmpeg are local, so a video can be
+              rendered offline. Scripts and SEO need your AI provider, stock downloads need
+              internet, and the free Edge voices are online — Windows SAPI voices cover offline
+              narration.
+            </p>
+          </details>
+          <details>
+            <summary>How many videos can I upload per day?</summary>
+            <p>
+              YouTube grants 10,000 API units per day and an upload costs about 1,600, so expect
+              roughly six uploads daily per Google Cloud project. Local renders are unlimited.
+              See <a href="docs.html#youtube">the YouTube guide</a> for details.
+            </p>
+          </details>
+        </div>
+        <p style="margin-top:24px"><a href="docs.html#faq">More questions in the documentation →</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta">
+          <h2>Make your first faceless video tonight</h2>
+          <p>Install, start the 48-hour trial, paste a free Gemini key and press Create &amp; run everything. The full manual covers every screen and every setting.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#downloads">
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              Download TubePilot
+            </a>
+            <a class="btn btn-ghost" href="docs.html">
+              <svg aria-hidden="true"><use href="#i-book"/></svg>
+              Open the documentation
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/>
+              </svg>
+            </span>
+            TubePilot
+          </a>
+          <p class="blurb">A Windows studio for faceless YouTube channels. Script, voice, visuals, render, thumbnail and upload — on your own PC.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#downloads">Downloads</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Documentation</h4>
+          <ul>
+            <li><a href="docs.html#install">Installation</a></li>
+            <li><a href="docs.html#setup">First-time setup</a></li>
+            <li><a href="docs.html#visuals">AI and stock visuals</a></li>
+            <li><a href="docs.html#troubleshooting">Troubleshooting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <ul>
+            <li><a href="https://wa.me/9613091136" target="_blank" rel="noopener">WhatsApp support</a></li>
+            <li><a href="docs-ar.html" lang="ar">الدليل بالعربية</a></li>
+            <li><a href="docs.html#data">Your data</a></li>
+            <li><a href="docs.html#legal">Legal notes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> TubePilot · Version 1.0.0 · Windows x64</p>
+        <p>Not affiliated with Google, Microsoft, Pexels, Pixabay, Unsplash, Openverse, Wikimedia Commons or NASA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/downloads.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

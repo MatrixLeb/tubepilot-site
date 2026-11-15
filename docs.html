@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubePilot documentation — installation to publishing</title>
+  <meta name="description" content="The complete TubePilot manual: install the Windows app, start the trial, add your keys, read every screen, run the pipeline, upload to YouTube, schedule headless runs and fix common problems.">
+  <meta name="theme-color" content="#0b0b0f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5V15M7.5 10.5L12 15l4.5-4.5"/><path d="M4.5 19.5h15"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h15M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.5l4.5 4.5L19 7"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.4 3.6A10.9 10.9 0 0 0 3.9 17.2L2.5 21.5l4.4-1.4A10.9 10.9 0 1 0 20.4 3.6z"/>
+      <path d="M8.7 7.4c.3-.1.6 0 .8.4l.9 1.8c.1.3.1.6-.1.8l-.7.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.7c.2-.2.5-.2.8-.1l1.8.9c.4.2.5.5.4.8-.2.8-.9 1.4-1.7 1.5-3.3.5-8.1-4.3-7.6-7.6.1-.9.7-1.6 1.5-1.8z"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M8 7.5h8M8 11h6"/>
+    </symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12.5" rx="2.5"/><path d="M9 20h6M12 16.5V20"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/></svg>
+        </span>
+        TubePilot
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how">How it works</a>
+        <a href="index.html#downloads">Downloads</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="docs.html" aria-current="page">Documentation</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <a href="docs.html" aria-current="true" hreflang="en">EN</a>
+          <a href="docs-ar.html" hreflang="ar" lang="ar">العربية</a>
+        </div>
+        <a class="btn btn-primary btn-sm" href="index.html#downloads">
+          <svg aria-hidden="true"><use href="#i-download"/></svg>
+          Download
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="docs-hero">
+      <div class="wrap">
+        <span class="section-kicker">The manual</span>
+        <h1>TubePilot documentation</h1>
+        <p>
+          Everything from the first install to a published video: the trial, every key and
+          toggle, all project tabs, the command line, scheduling, YouTube limits, backups
+          and troubleshooting. Written for the shipping 1.0.0 build.
+        </p>
+        <div class="doc-meta">
+          <span>Version 1.0.0</span>
+          <span>Windows 10 / 11 · x64</span>
+          <span>English &amp; العربية</span>
+          <span>About 25 minutes to read</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap docs-layout">
+      <aside class="docs-sidebar" aria-label="Documentation contents">
+        <p class="toc-title">Contents</p>
+        <div class="docs-search">
+          <input id="toc-search" type="search" placeholder="Filter sections…" aria-label="Filter sections" autocomplete="off">
+          <p class="hint" id="toc-search-hint"></p>
+        </div>
+        <ol>
+          <li><a href="#overview">1. Overview</a></li>
+          <li><a href="#requirements">2. Requirements</a></li>
+          <li><a href="#install">3. Installation</a></li>
+          <li><a href="#activate">4. Trial and license</a></li>
+          <li><a href="#setup">5. First-time setup</a></li>
+          <li><a href="#first-video">6. Your first video</a></li>
+          <li><a href="#screens">7. Screen-by-screen guide</a></li>
+          <li><a href="#language">8. Language and RTL</a></li>
+          <li><a href="#visuals">9. AI and stock visuals</a></li>
+          <li><a href="#cli">10. Command line</a></li>
+          <li><a href="#schedule">11. Scheduled runs</a></li>
+          <li><a href="#youtube">12. YouTube connection</a></li>
+          <li><a href="#data">13. Files and backups</a></li>
+          <li><a href="#quota">14. Quota and policies</a></li>
+          <li><a href="#troubleshooting">15. Troubleshooting</a></li>
+          <li><a href="#faq">16. FAQ</a></li>
+          <li><a href="#legal">17. Privacy and legal</a></li>
+          <li><a href="#support">18. Support</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-content">
+
+        <section id="overview">
+          <h2>1. Overview <a class="anchor" href="#overview" aria-label="Link to this section">#</a></h2>
+          <p>
+            TubePilot is a Windows desktop studio for faceless YouTube channels. You give it a
+            niche and, optionally, an exact topic. It then runs the whole production line:
+          </p>
+          <p><strong>topic → script → SEO → neural voiceover → AI or stock visuals → 1080p MP4 → thumbnail → YouTube upload.</strong></p>
+          <p>
+            Everything runs on your own PC. Settings, keys, projects, voiceovers and finished
+            videos live in one folder under <code>%APPDATA%\TubePilot</code>. The app bundles its
+            own Java runtime, FFmpeg and an offline sample library, so the installed PC needs no
+            developer tools and can still render a video without internet.
+          </p>
+          <div class="callout note">
+            <p><strong>What TubePilot does not do.</strong> It never automates views, likes,
+            comments, subscriptions or watch time. Uploads go through the official YouTube Data
+            API v3 only. The app is a production tool, not an engagement bot.</p>
+          </div>
+          <h3>What each stage produces</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Stage</th><th>What happens</th></tr></thead>
+              <tbody>
+                <tr><td>Idea</td><td>Your AI provider picks a topic inside the niche, or uses the topic you typed.</td></tr>
+                <tr><td>Script</td><td>A hook-first narration split into timed scenes, each with its own visual description.</td></tr>
+                <tr><td>SEO</td><td>Title, description, tags and the short overlay text used on the thumbnail.</td></tr>
+                <tr><td>Voice</td><td>Free Microsoft Edge neural narration with word-level timings that become an SRT subtitle file. Offline Windows voices are the fallback.</td></tr>
+                <tr><td>Visuals</td><td>AI images or clips per scene, then stock video and photos, then the bundled samples.</td></tr>
+                <tr><td>Render</td><td>Bundled FFmpeg writes 1920×1080 at 30 fps, H.264/AAC, with optional music and burned-in subtitles.</td></tr>
+                <tr><td>Thumbnail</td><td>A 1280×720 JPEG made from a strong scene image, a gradient and your overlay words.</td></tr>
+                <tr><td>Upload</td><td>Resumable upload with metadata and thumbnail, private by default.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>A failed optional stage never discards finished work. The MP4 stays on disk and the error is shown on the project.</p>
+        </section>
+
+        <section id="requirements">
+          <h2>2. Requirements <a class="anchor" href="#requirements" aria-label="Link to this section">#</a></h2>
+          <h3>Computer</h3>
+          <ul class="checklist">
+            <li>Windows 10 or Windows 11, 64-bit.</li>
+            <li>About 700 MB of free disk space for the app, plus room for videos (roughly 40–120 MB per finished video).</li>
+            <li>4 GB of RAM is enough to run and render; 8 GB is more comfortable with a browser open.</li>
+            <li>No GPU is required. Rendering is CPU-based; a GPU only helps the window itself.</li>
+            <li>Internet for AI generation, online stock sources, online neural voices and YouTube.</li>
+          </ul>
+          <h3>Accounts and keys</h3>
+          <ul class="checklist">
+            <li><strong>One AI key is required for your own videos.</strong> Gemini's free tier is enough for scripts and SEO.</li>
+            <li>Optional: an AI image/video key with billing for AI-generated visuals.</li>
+            <li>Optional: free Pexels, Pixabay and Unsplash keys for the widest stock choice. Openverse, Wikimedia Commons and NASA need no key.</li>
+            <li>Optional: a Google Cloud OAuth client for automatic YouTube uploads.</li>
+          </ul>
+          <div class="callout warn">
+            <p><strong>Builds from source only.</strong> Running from source needs JDK 21 and Gradle. The
+            downloadable installer and portable ZIP include their own runtime; you do not install
+            Java on the target PC.</p>
+          </div>
+        </section>
+
+        <section id="install">
+          <h2>3. Installation <a class="anchor" href="#install" aria-label="Link to this section">#</a></h2>
+          <p>Both downloads contain the same application. Choose one:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>Installer</th><th>Portable ZIP</th></tr></thead>
+              <tbody>
+                <tr><td>File</td><td><code>TubePilot-Setup-1.0.0.exe</code></td><td><code>TubePilot-1.0.0-portable.zip</code></td></tr>
+                <tr><td>Install</td><td>Per-user, no administrator prompt</td><td>Unzip anywhere</td></tr>
+                <tr><td>Shortcut</td><td>Start-menu entry and uninstaller</td><td>Start <code>TubePilot\TubePilot.exe</code> directly</td></tr>
+                <tr><td>Upgrades</td><td>Run the newer installer over the old one</td><td>Replace the folder with the newer unzip</td></tr>
+                <tr><td>Best for</td><td>A permanent workstation</td><td>Testing, USB sticks, locked-down PCs</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Install with the setup EXE</h3>
+          <ol>
+            <li>Download <code>TubePilot-Setup-1.0.0.exe</code> from the <a href="index.html#downloads">downloads section</a>.</li>
+            <li>Double-click it. Windows may show <em>Windows protected your PC</em> because the build is not code-signed yet. Click <strong>More info → Run anyway</strong>.</li>
+            <li>Accept the default folder, or choose another one. The installer writes to your user profile, so no admin password is needed.</li>
+            <li>When it finishes, launch <strong>TubePilot</strong> from the Start menu.</li>
+          </ol>
+
+          <h3>Run the portable build</h3>
+          <ol>
+            <li>Right-click the ZIP → <strong>Extract All</strong>. Do not run the app from inside the ZIP preview.</li>
+            <li>Open the extracted <code>TubePilot</code> folder.</li>
+            <li>Double-click <code>TubePilot.exe</code>.</li>
+            <li>To move it later, move the <em>whole folder</em>; the app needs the files next to the EXE, including <code>app\resources\tools\ffmpeg.exe</code>.</li>
+          </ol>
+
+          <h3>Verify the download (optional)</h3>
+          <p>Open PowerShell in the download folder and compare the hash with the value on the download page:</p>
+          <div class="code-block"><pre><code>Get-FileHash .\TubePilot-Setup-1.0.0.exe -Algorithm SHA256</code></pre></div>
+          <p>The current installer hash is <code>f0f6c679058620b4553702c05ffc341d0f6cf54ba135620f94e09266df25a7ff</code>. The portable ZIP is <code>5f889c17a629b2bccdcf0948b2859adc16ea32b1a54217b61427d4249ff2c056</code>.</p>
+
+          <h3>First launch notes</h3>
+          <ul>
+            <li>Settings and videos are created in <code>%APPDATA%\TubePilot</code> on first run.</li>
+            <li>If the window is blank on a remote desktop or virtual machine, close it and set <code>TUBEPILOT_SOFTWARE_RENDER=1</code> before launching. That switches the UI to CPU rendering.</li>
+            <li>Windows SmartScreen will keep warning until the build is code-signed. The warning is about signing reputation, not a virus report.</li>
+            <li>Antivirus may scan <code>ffmpeg.exe</code> on first render. Allow the app folder and <code>%APPDATA%\TubePilot\tools</code> if it blocks anything.</li>
+          </ul>
+
+          <h3>Uninstall</h3>
+          <ul>
+            <li><strong>Installer build:</strong> Settings → Apps → Installed apps → TubePilot → Uninstall. For a fully clean removal, delete <code>%APPDATA%\TubePilot</code> afterwards (this deletes keys, projects and videos).</li>
+            <li><strong>Portable build:</strong> delete the extracted folder, then delete <code>%APPDATA%\TubePilot</code> if you also want to remove your data.</li>
+          </ul>
+        </section>
+
+        <section id="activate">
+          <h2>4. Trial and license <a class="anchor" href="#activate" aria-label="Link to this section">#</a></h2>
+          <p>
+            On first launch the window opens on <strong>Subscription</strong>. New video and Settings
+            stay locked until you start the trial or activate a purchased key.
+          </p>
+          <h3>Start the 48-hour free trial</h3>
+          <ol>
+            <li>Open <strong>Subscription</strong> in the sidebar (it is where the app starts).</li>
+            <li>Press <strong>Start 48-hour free trial</strong>.</li>
+            <li>A live countdown appears in the sidebar, on Home and on Subscription. No card and no account are needed.</li>
+          </ol>
+          <p>
+            The trial is a <strong>one-time offer per Windows profile</strong>. Once it has been used or
+            has expired, the trial button and every “start free trial” prompt disappear; only the
+            Monthly and Yearly plans remain.
+          </p>
+          <h3>Activate a purchased key</h3>
+          <ol>
+            <li>Open <strong>Subscription</strong>.</li>
+            <li>Paste the <code>TP1…</code> key into <strong>Activate a license</strong>.</li>
+            <li>Press <strong>Activate</strong>. The Ed25519 signature is verified offline; no internet is needed.</li>
+          </ol>
+          <p>You can also activate from a terminal in the app folder:</p>
+          <div class="code-block"><pre><code>TubePilot-cli.cmd --activate TP1...</code></pre></div>
+          <div class="code-block"><pre><code>TubePilot-cli.cmd --subscription</code></pre></div>
+          <p>The second command prints the current plan, expiry and whether pipeline access is unlocked.</p>
+          <h3>When access locks</h3>
+          <p>
+            When the trial or license reaches zero, the sidebar countdown turns red in the last hour
+            and access locks immediately at expiry. Creating videos, the pipeline, uploads, headless
+            runs and opening existing projects all require an active plan. The app stays on
+            Subscription until a new key is entered. Nothing is deleted.
+          </p>
+          <h3>Plans</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Plan</th><th>Price</th><th>Term</th></tr></thead>
+              <tbody>
+                <tr><td>Free trial</td><td>$0</td><td>48 hours, once per Windows profile</td></tr>
+                <tr><td>Monthly</td><td>$19</td><td>30 days per key</td></tr>
+                <tr><td>Yearly</td><td>$149</td><td>365 days, about $12.42 per month</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            Payment is handled directly on WhatsApp (<a href="https://wa.me/9613091136" target="_blank" rel="noopener">+961 3 091 136</a>)
+            by OMT, Whish Money, USDT or bank transfer. The key from that chat unlocks the Windows and
+            Android apps. Keys verify offline and are honour-based: they cannot be forged or revoked,
+            so one key can technically be used on more than one PC.
+          </p>
+          <p><strong>Sign out on this PC</strong> clears the local license so the key can be entered on another computer.</p>
+        </section>
+
+        <section id="setup">
+          <h2>5. First-time setup <a class="anchor" href="#setup" aria-label="Link to this section">#</a></h2>
+          <p>
+            Open <strong>Settings</strong> and work down the cards. Only the AI provider is required
+            for your own videos; everything else is optional or already bundled.
+          </p>
+
+          <h3>5.1 AI provider (required)</h3>
+          <ol>
+            <li>Pick a provider: <strong>Gemini (free)</strong> is the simplest, <strong>OpenAI (ChatGPT)</strong> works with an OpenAI key, and <strong>Zen</strong>/<strong>Go</strong> are OpenCode gateways with their own billing.</li>
+            <li>Paste the key into the field. Keys are stored locally in <code>settings.properties</code>.</li>
+            <li>Choose a model. <code>gemini-3.6-flash</code> is a good default; <strong>Load models</strong> asks the provider what your key can use.</li>
+            <li>Press <strong>Test key &amp; model</strong>. You want a short success message, not a 401/429/402.</li>
+          </ol>
+          <p>
+            Get a free Gemini key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
+            Get an OpenAI key at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com/api-keys</a>;
+            API usage is billed separately from a ChatGPT Plus subscription.
+          </p>
+
+          <h3>5.2 AI-generated footage (optional)</h3>
+          <p>
+            The <strong>AI-generated footage</strong> card lets TubePilot draw every scene from that
+            scene's own script prompt instead of searching for stock. It is optional and off in
+            practice until a key has image quota.
+          </p>
+          <ul>
+            <li><strong>Illustrate each scene from its script</strong> — master switch for AI stills. On by default; it only runs when a usable key exists.</li>
+            <li><strong>Gemini image model</strong> — default <code>gemini-2.5-flash-image</code>. If the saved name is retired, a current image model is found automatically.</li>
+            <li><strong>OpenAI image model</strong> — default <code>gpt-image-1</code>, used with an OpenAI key.</li>
+            <li><strong>Real AI video clips (premium)</strong> — off by default; asks Gemini Omni Flash for a short clip per scene instead of a still.</li>
+            <li><strong>Resolution / clip length</strong> — 360p, 720p or 1080p and 4/6/8/10 seconds, with an estimated cost shown on the card.</li>
+            <li><strong>Test AI visuals</strong> — checks the configured model without billing an image.</li>
+          </ul>
+          <div class="callout warn">
+            <p><strong>Billing required for AI visuals.</strong> Gemini's free tier allows <strong>zero</strong>
+            image and video requests (HTTP 429). Enable billing on the Google AI Studio project, or add
+            a paid OpenAI key. Scripts and SEO still work on the free tier. Without billing, the video
+            simply uses stock footage.</p>
+          </div>
+
+          <h3>5.3 Narration</h3>
+          <ol>
+            <li>Leave <strong>Edge neural (free)</strong> selected. It needs no key and covers 16 languages.</li>
+            <li>Pick a voice and press <strong>Test voice</strong>. Edge voices need internet.</li>
+            <li>If the test fails, switch to <strong>Windows voices (offline)</strong> and choose an installed SAPI voice. <code>--setup</code> reports which engine works.</li>
+            <li>Adjust <strong>Speed</strong> if you want a faster or slower read.</li>
+          </ol>
+
+          <h3>5.4 Stock visuals</h3>
+          <p>
+            Below the AI card, enable the sources you want and paste any free keys. Pexels, Pixabay and
+            Unsplash need keys; Openverse, Wikimedia Commons, NASA and the bundled samples do not.
+            Press <strong>Test enabled sources</strong>.
+          </p>
+          <ul>
+            <li><a href="https://www.pexels.com/api/" target="_blank" rel="noopener">Pexels API</a> — free key, credit link required (added automatically).</li>
+            <li><a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener">Pixabay API</a> — free key, credit line added automatically.</li>
+            <li><a href="https://unsplash.com/developers" target="_blank" rel="noopener">Unsplash</a> — free access key, photographer credited automatically.</li>
+            <li>Openverse, Wikimedia Commons and NASA — no key.</li>
+            <li><strong>Bundled samples</strong> — 44 clips installed with the app, works fully offline.</li>
+          </ul>
+
+          <h3>5.5 FFmpeg</h3>
+          <p>
+            FFmpeg is bundled at <code>app\resources\tools\ffmpeg.exe</code>. Leave it alone and press
+            <strong>Detect</strong> once. A passing H.264 self-test means rendering is ready. If the
+            bundled copy is ever lost, the app can download one into <code>%APPDATA%\TubePilot\tools</code>.
+          </p>
+          <div class="callout note">
+            <p>Some other apps install a stripped FFmpeg (CapCut is a common one). TubePilot detects and
+            ignores builds without <code>libx264</code>, so always let it use its own copy.</p>
+          </div>
+
+          <h3>5.6 Automation and music</h3>
+          <ul>
+            <li><strong>Upload after rendering</strong> — leave on for a straight-through run; off to review the MP4 first.</li>
+            <li><strong>Default visibility</strong> — Private (recommended), Unlisted or Public.</li>
+            <li><strong>Background music</strong> — point the music folder at a folder of royalty-free MP3s, then set the volume. One track is picked and mixed low under the narration.</li>
+            <li><strong>AI disclosure</strong> — on by default; appends a short “created with AI assistance” line when AI was used.</li>
+          </ul>
+
+          <h3>5.7 YouTube (optional at first)</h3>
+          <p>
+            Skip this to render locally. To enable uploads, create a Google Cloud OAuth <em>Desktop app</em>
+            client, paste its client ID and secret into <strong>Settings → YouTube</strong>, and press
+            <strong>Connect YouTube</strong>. Full steps are in <a href="#youtube">section 12</a>.
+          </p>
+
+          <h3>5.8 Save</h3>
+          <p>Press the save button in the Settings header. Changes are written to <code>settings.properties</code>.</p>
+        </section>
+
+        <section id="first-video">
+          <h2>6. Your first video <a class="anchor" href="#first-video" aria-label="Link to this section">#</a></h2>
+          <ol>
+            <li>Press <strong>New video</strong> in the sidebar.</li>
+            <li><strong>Niche / channel topic</strong> — for example <code>personal finance for beginners</code>. Required unless you type a topic.</li>
+            <li><strong>Video topic</strong> — optional. Leave it empty and the AI chooses one. Or press <strong>Brainstorm 12 ideas with AI</strong> and click a result.</li>
+            <li><strong>Target audience</strong> — optional, default “General audience”.</li>
+            <li><strong>Tone</strong> — Educational, Storytelling, Documentary, Listicle, Motivational, Explainer, News recap or Mystery.</li>
+            <li><strong>Language</strong> — the narration language, not the app language. 16 options, including Arabic, Hindi, Urdu, Turkish and Chinese.</li>
+            <li><strong>Target length</strong> — 2 to 20 minutes. Six minutes is a good default.</li>
+            <li>Leave <strong>Run the full pipeline automatically</strong> on.</li>
+            <li>Press <strong>Create &amp; run everything</strong>.</li>
+          </ol>
+          <p>
+            The project opens on the <strong>Auto</strong> tab. Each stage reports progress, and the stop
+            button halts cleanly without discarding finished files. When it ends you get the MP4 path,
+            the thumbnail path and, if uploaded, the YouTube URL.
+          </p>
+          <div class="callout tip">
+            <p><strong>How long does it take?</strong> A six-minute video usually needs a few minutes for
+            script, SEO and voice, plus several minutes of CPU encoding. A 20-minute 1080p render is
+            much longer. Keep the PC awake and online until the upload finishes.</p>
+          </div>
+          <h3>Review, fix, publish</h3>
+          <ul>
+            <li><strong>Script</strong> — read the hook and scenes, edit any narration or visual line, then save.</li>
+            <li><strong>SEO</strong> — adjust title, description and tags; add chapter timestamps from the scene list.</li>
+            <li><strong>Voice</strong> — regenerate the voiceover after editing the script, or swap the voice and speed.</li>
+            <li><strong>Video</strong> — rebuild the visuals and render again; watch the MP4 or open the project folder.</li>
+            <li><strong>Thumb</strong> — regenerate the thumbnail with different overlay text.</li>
+            <li><strong>Publish</strong> — upload manually, or re-upload with different metadata if the first attempt failed.</li>
+          </ul>
+        </section>
+
+        <section id="screens">
+          <h2>7. Screen-by-screen guide <a class="anchor" href="#screens" aria-label="Link to this section">#</a></h2>
+
+          <h3>Home</h3>
+          <p>
+            The landing screen shows your plan and countdown, the eight-stage pipeline summary and
+            shortcuts to a new video, existing projects and Settings. The sidebar carries the
+            English/العربية switch, Home, New video, Settings, Subscription and the data-folder button.
+          </p>
+
+          <h3>New video</h3>
+          <p>
+            The form described in <a href="#first-video">section 6</a>, with an AI idea generator and a
+            language picker. The right-hand cards show the AI key, visual chain, FFmpeg and YouTube
+            status so you can see what is missing before starting.
+          </p>
+
+          <h3>Project tabs</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Tab</th><th>What you can do</th></tr></thead>
+              <tbody>
+                <tr><td>Auto</td><td>Run or resume the full pipeline, watch stage-by-stage progress, stop a run and read the live log.</td></tr>
+                <tr><td>Script</td><td>Generate or regenerate the narration, edit scenes, copy the full script, open the project folder.</td></tr>
+                <tr><td>SEO</td><td>Generate title, description, tags and overlay text; add chapter timestamps; copy or save the package.</td></tr>
+                <tr><td>Voice</td><td>Choose Edge or Windows voices, pick a voice and speed, generate the MP3 and SRT, play it and open the WAV/folder.</td></tr>
+                <tr><td>Video</td><td>Build the visual plan, fetch AI/stock footage, choose the render settings and produce the MP4.</td></tr>
+                <tr><td>Thumb</td><td>Pick or regenerate the scene image, edit overlay text and write the 1280×720 JPEG.</td></tr>
+                <tr><td>Publish</td><td>Review metadata, set privacy, upload to YouTube and set the thumbnail.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Settings</h3>
+          <p>Settings is one long page of cards, saved together:</p>
+          <ul>
+            <li><strong>Subscription</strong> — plan, countdown, license key, WhatsApp buttons, sign-out.</li>
+            <li><strong>AI provider</strong> — provider, key, model, load/test.</li>
+            <li><strong>AI-generated footage</strong> — stills, video, models, resolution, clip length, test.</li>
+            <li><strong>Narration voice</strong> — engine, voice, speed, Windows voice name, test.</li>
+            <li><strong>Stock visuals</strong> — per-source switches and keys, test.</li>
+            <li><strong>FFmpeg</strong> — detect, self-test, path.</li>
+            <li><strong>Automation</strong> — upload after rendering, default visibility, AI disclosure.</li>
+            <li><strong>Background music</strong> — folder and volume.</li>
+            <li><strong>YouTube</strong> — OAuth client ID/secret, connect, disconnect.</li>
+          </ul>
+
+          <h3>Subscription</h3>
+          <p>
+            Shows the active plan and exact expiry, the Monthly and Yearly cards, the WhatsApp purchase
+            and support buttons, the license-key box and sign-out. The trial button appears only if the
+            trial has never been used on this Windows profile.
+          </p>
+        </section>
+
+        <section id="language">
+          <h2>8. Language and right-to-left layout <a class="anchor" href="#language" aria-label="Link to this section">#</a></h2>
+          <p>
+            The sidebar has an <strong>English / العربية</strong> switch. It changes the whole window —
+            Home, New video, every project tab, Settings and Subscription — and Arabic is laid out
+            right-to-left. The choice is saved in <code>ui_language</code> and restored on the next
+            launch.
+          </p>
+          <ul>
+            <li>Only the interface is translated. AI-generated titles, scripts and topics stay in the narration language you chose.</li>
+            <li>File dialogs are translated too: their titles and filters follow the app language.</li>
+            <li>The language switch is independent of the video language on New video.</li>
+          </ul>
+          <p>
+            The built-in demo video is no longer a Home-screen button. It remains available for
+            walkthroughs and smoke tests from the command line:
+          </p>
+          <div class="code-block"><pre><code>TubePilot.exe --demo
+TubePilot.exe --demo --language ar</code></pre></div>
+          <p>
+            In the app folder, <code>TubePilot-cli.cmd --demo</code> does the same. Setting
+            <code>TUBEPILOT_DEMO_AUTOSTART=en</code> or <code>ar</code> starts the demo automatically after
+            the window opens. The demo needs an active trial or plan.
+          </p>
+        </section>
+
+        <section id="visuals">
+          <h2>9. AI and stock visuals <a class="anchor" href="#visuals" aria-label="Link to this section">#</a></h2>
+          <p>
+            Every scene gets a visual, even when keys are missing or quota runs out. TubePilot walks a
+            fixed chain and takes the first usable result:
+          </p>
+          <div class="callout note">
+            <p><strong>AI video → AI stills → Pexels → Pixabay → Unsplash → bundled samples → Openverse → Wikimedia Commons → NASA.</strong></p>
+          </div>
+          <h3>AI stills</h3>
+          <p>
+            The image prompt is built from the scene's own visual description plus its narration, the
+            topic and the tone. The returned picture is normalised to 1920×1080 and animated with a slow
+            Ken Burns push, pull or pan. Pictures are cached in <code>cache\stock\ai\</code> keyed by the
+            full prompt, so re-rendering an unchanged project costs nothing.
+          </p>
+          <h3>AI video</h3>
+          <p>
+            When <strong>Real AI video clips</strong> is on, Gemini Omni Flash (<code>gemini-omni-1.2-flash</code>)
+            is asked for a short clip per scene. It is premium, off by default, and stops being retried
+            for that render after the first failure. Clips are cached in <code>cache\stock\ai_video\</code>.
+          </p>
+          <h3>Stock and bundled footage</h3>
+          <p>
+            Stock results are searched with each scene's visual phrase. A suitable video is trimmed to
+            the scene length; a photo gets the Ken Burns move. Pexels, Pixabay and Unsplash credits are
+            appended to the description automatically. The bundled sample library (44 clips) is
+            installed with the app and is the offline safety net. A generated title card is drawn only
+            if every other source misses.
+          </p>
+          <h3>Failures</h3>
+          <p>
+            Quota, retired models, rate limits, content filtering and network errors are logged with
+            one line and fall through to the next source. A failed visual never fails the render, and
+            thumbnails stay on stock images so a render never silently spends money on an extra image.
+          </p>
+          <div class="callout warn">
+            <p><strong>AI image/video needs billing.</strong> Gemini's free tier allows zero image requests.
+            If every AI attempt falls back to stock, check the render log for the reason and confirm
+            billing on the AI Studio project — or use a paid OpenAI key for stills.</p>
+          </div>
+        </section>
+
+        <section id="cli">
+          <h2>10. Command line <a class="anchor" href="#cli" aria-label="Link to this section">#</a></h2>
+          <p>
+            The same engine runs headless from the app folder. Use <code>TubePilot-cli.cmd</code> in the
+            installed or portable build:
+          </p>
+          <div class="code-block"><pre><code>TubePilot-cli.cmd --niche "personal finance" --minutes 8
+TubePilot-cli.cmd --niche "ancient history" --topic "why Rome fell" --minutes 9 --no-upload
+TubePilot-cli.cmd --setup
+TubePilot-cli.cmd --subscription
+TubePilot-cli.cmd --activate TP1...</code></pre></div>
+          <p>From a source checkout, use Gradle instead:</p>
+          <div class="code-block"><pre><code>$env:JAVA_HOME="C:\Program Files\Android\Android Studio\jbr"
+cd E:\Business\TubePilot
+.\gradlew.bat :desktop:runAuto --args='--niche "personal finance" --minutes 8'</code></pre></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Option</th><th>Meaning</th></tr></thead>
+              <tbody>
+                <tr><td><code>-n</code>, <code>--niche &lt;text&gt;</code></td><td>Channel topic. Required unless <code>--topic</code> is set.</td></tr>
+                <tr><td><code>-t</code>, <code>--topic &lt;text&gt;</code></td><td>Exact video topic. When omitted, the AI chooses one.</td></tr>
+                <tr><td><code>-a</code>, <code>--audience &lt;text&gt;</code></td><td>Target audience. Default <code>General audience</code>.</td></tr>
+                <tr><td><code>--tone &lt;text&gt;</code></td><td>Tone. Default <code>Educational</code>.</td></tr>
+                <tr><td><code>--language &lt;tag&gt;</code></td><td>Narration language tag such as <code>en-US</code>, <code>ar-SA</code>, <code>es-ES</code>. Default <code>en-US</code>.</td></tr>
+                <tr><td><code>-m</code>, <code>--minutes &lt;2-20&gt;</code></td><td>Target length. Default 6.</td></tr>
+                <tr><td><code>--no-upload</code></td><td>Render locally, skip YouTube.</td></tr>
+                <tr><td><code>--privacy &lt;mode&gt;</code></td><td><code>private</code>, <code>unlisted</code> or <code>public</code> for this run only.</td></tr>
+                <tr><td><code>--setup</code>, <code>--check</code></td><td>Readiness check: keys, FFmpeg, Edge TTS, visuals and subscription.</td></tr>
+                <tr><td><code>--demo</code></td><td>Render the built-in demo. Add <code>--language ar</code> for Arabic.</td></tr>
+                <tr><td><code>--activate &lt;key&gt;</code></td><td>Activate a license key on this PC.</td></tr>
+                <tr><td><code>--subscription</code></td><td>Print the plan and whether access is unlocked.</td></tr>
+                <tr><td><code>-h</code>, <code>--help</code></td><td>Show usage.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <code>--no-upload</code> and <code>--privacy</code> apply only to that invocation; saved Settings
+            are restored afterwards. <code>--setup</code> exits with code 0 when required items are ready
+            and 1 when something marked MISSING or FAILED needs attention. It is safe to run repeatedly.
+          </p>
+          <div class="callout note">
+            <p>Headless runs use the same <code>settings.properties</code> as the window, so activating a
+            plan in the app also unlocks scheduled runs. Scheduled runs need an active trial or plan.</p>
+          </div>
+        </section>
+
+        <section id="schedule">
+          <h2>11. Scheduled runs <a class="anchor" href="#schedule" aria-label="Link to this section">#</a></h2>
+          <p>
+            For a daily or weekly unattended video, point Windows Task Scheduler at
+            <code>TubePilot-cli.cmd</code> (installed build) or at the repository's
+            <code>run-auto.ps1</code> (source build). Example for the installed build:
+          </p>
+          <div class="code-block"><pre><code>powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& 'C:\Users\YOU\AppData\Local\TubePilot\TubePilot-cli.cmd' --niche 'personal finance' --minutes 8"</code></pre></div>
+          <ol>
+            <li>Open <strong>Task Scheduler → Create Task</strong>.</li>
+            <li><strong>General</strong> — choose <em>Run whether user is logged on or not</em>.</li>
+            <li><strong>Triggers</strong> — daily at a time the PC is on and online.</li>
+            <li><strong>Actions</strong> — start <code>powershell.exe</code> with the arguments above.</li>
+            <li><strong>Start in</strong> — the app folder, so relative paths resolve.</li>
+            <li>Activate the plan once with <code>--activate</code>, then confirm with <code>--subscription</code>.</li>
+          </ol>
+          <p>
+            Keep the machine awake and connected. A dropped network stops the run cleanly; the finished
+            MP4 stays on disk and the run can be retried. Roughly six uploads a day fit YouTube's quota.
+          </p>
+        </section>
+
+        <section id="youtube">
+          <h2>12. YouTube connection <a class="anchor" href="#youtube" aria-label="Link to this section">#</a></h2>
+          <p>Uploading needs your own Google Cloud OAuth client. It is a one-time setup and free.</p>
+          <ol>
+            <li>Open <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">console.cloud.google.com</a> and create or select a project.</li>
+            <li><strong>APIs &amp; Services → Library</strong> → search <strong>YouTube Data API v3</strong> → <strong>Enable</strong>.</li>
+            <li><strong>APIs &amp; Services → OAuth consent screen</strong>: choose <em>External</em>, add your Google account as a test user, and add the scopes <code>youtube.upload</code> and <code>youtube.readonly</code>.</li>
+            <li><strong>APIs &amp; Services → Credentials → Create credentials → OAuth client ID</strong> → application type <strong>Desktop app</strong>.</li>
+            <li>Copy the <strong>Client ID</strong> and <strong>Client secret</strong> into <strong>Settings → YouTube</strong> and press <strong>Connect YouTube</strong>.</li>
+            <li>A browser opens Google's consent page. TubePilot catches the redirect on a one-shot <code>http://127.0.0.1:&lt;port&gt;</code> listener and stores the refresh token.</li>
+          </ol>
+          <p>
+            The flow uses PKCE with <code>access_type=offline</code> and <code>prompt=consent</code>, so it
+            survives restarts. While the consent screen is in <strong>Testing</strong>, refresh tokens expire
+            after 7 days and only listed test users can authorise — publish the app or reconnect weekly.
+            Workspace accounts may need an administrator to allow the API.
+          </p>
+          <h3>Upload behaviour</h3>
+          <ul>
+            <li>Resumable upload with title, description, tags, category and privacy.</li>
+            <li><strong>Private by default.</strong> Unlisted, Public and scheduled publishing are available.</li>
+            <li>The thumbnail is set after the video is uploaded. Unverified channels may reject custom thumbnails; the video still uploads.</li>
+            <li>A failed upload never loses the MP4; retry from the Publish tab.</li>
+          </ul>
+        </section>
+
+        <section id="data">
+          <h2>13. Files, backups and reset <a class="anchor" href="#data" aria-label="Link to this section">#</a></h2>
+          <p>Everything is self-contained under <code>%APPDATA%\TubePilot</code>:</p>
+          <div class="code-block"><pre><code>%APPDATA%\TubePilot\
+├─ data\settings.properties     API keys, voice, automation, OAuth tokens, license cache
+├─ data\projects.json           project list and per-project state
+├─ media\&lt;id&gt;\                  voiceover, SRT, thumbnail, rendered MP4
+├─ cache\stock\&lt;source&gt;\       downloaded stock footage and photos per provider
+├─ cache\stock\ai\              AI-generated scene images (one per prompt)
+├─ cache\stock\ai_video\        AI-generated scene clips, when video is enabled
+├─ samples\                    optional user override for the bundled sample library
+├─ tools\                      fallback ffmpeg.exe / ffprobe.exe
+├─ music\                      optional background music
+└─ temp\                       per-scene TTS and render scratch files</code></pre></div>
+          <ul>
+            <li><strong>Back up:</strong> close the app, then copy the whole <code>%APPDATA%\TubePilot</code> folder.</li>
+            <li><strong>Move to another PC:</strong> install TubePilot there, close it, then copy the folder over.</li>
+            <li><strong>Start fresh:</strong> close the app and delete <code>%APPDATA%\TubePilot</code>. This removes keys, projects, caches and videos.</li>
+            <li><strong>Open the folder:</strong> use <strong>Open data folder</strong> in the sidebar.</li>
+            <li><strong>Free space:</strong> the <code>cache\stock</code> folders are the largest; deleting them only costs a re-download next time.</li>
+          </ul>
+          <p>Settings store keys in plain text inside your Windows profile. Protect the PC account and do not share the folder.</p>
+        </section>
+
+        <section id="quota">
+          <h2>14. Quota, uploads and channel limits <a class="anchor" href="#quota" aria-label="Link to this section">#</a></h2>
+          <ul>
+            <li><strong>Quota.</strong> The YouTube Data API grants 10,000 units per Google Cloud project per day. An upload costs roughly 1,600 units, so expect about <strong>6 uploads per day</strong>. Thumbnail and channel calls add a little more. Quota resets at midnight Pacific.</li>
+            <li><strong>Fresh channels.</strong> Custom thumbnails require channel verification, and videos longer than 15 minutes do too. TubePilot caps runs at 2–20 minutes, but a brand-new channel may still reject the thumbnail until verified.</li>
+            <li><strong>AI disclosure.</strong> Settings can append a short “created with AI assistance” line. It is on by default and covers narration; when AI visuals were used it mentions them too.</li>
+            <li><strong>Stock credits.</strong> A credit line naming the provider and photographer/channel is appended whenever stock media is used, as required by the Pexels, Pixabay, Unsplash, Openverse, Wikimedia Commons and NASA licences.</li>
+            <li><strong>No engagement automation.</strong> TubePilot does not automate views, likes, comments, subscriptions or watch time.</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>15. Troubleshooting <a class="anchor" href="#troubleshooting" aria-label="Link to this section">#</a></h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Symptom</th><th>Fix</th></tr></thead>
+              <tbody>
+                <tr><td>“Windows protected your PC”</td><td>The build is not code-signed. Click <em>More info → Run anyway</em>, and optionally verify the SHA-256 hash first.</td></tr>
+                <tr><td>Blank window, or Skiko/DirectX/OpenGL errors</td><td>Usually a remote desktop or VM without GPU. Set <code>TUBEPILOT_SOFTWARE_RENDER=1</code> before launching, or use a machine with a GPU.</td></tr>
+                <tr><td><code>Unrecognized option 'crf'</code> / “Option not found”</td><td>Another app's stripped FFmpeg was picked up. Press <strong>Detect</strong> in Settings → FFmpeg and confirm the self-test passes; let TubePilot use its bundled copy.</td></tr>
+                <tr><td>FFmpeg download fails or times out</td><td>The bundled copy is normally used, so this only matters if the app folder was moved or cleaned. Run <code>--setup</code> again; it retries and falls back to a second mirror.</td></tr>
+                <tr><td>Edge TTS rejected the client token (HTTP 403)</td><td>Microsoft changed the unofficial endpoint. TubePilot retries and otherwise falls back to offline Windows voices. Update the app when a new build is available.</td></tr>
+                <tr><td>No narration / silent video</td><td>In Settings → Narration, switch to <strong>Windows SAPI</strong>, pick an installed voice and test. <code>--setup</code> reports which engine works.</td></tr>
+                <tr><td>Pexels 401 / 403</td><td>Wrong or revoked key. Create a new one, or turn Pexels off and use the other sources.</td></tr>
+                <tr><td>Pexels / Pixabay 429</td><td>Free-tier rate limit. Wait a few minutes or leave that source off; the chain falls through.</td></tr>
+                <tr><td>Openverse 504 / timeout</td><td>The public API is overloaded. It is skipped and the next source is tried; no action needed.</td></tr>
+                <tr><td>No stock match in the Settings test</td><td>Check that provider's key, or enable a keyless source. The bundled samples always work offline.</td></tr>
+                <tr><td>AI 402 / “insufficient funds”</td><td>A paid Zen model with an empty balance. Add credits, switch to Go, or use Gemini (free).</td></tr>
+                <tr><td>AI 403 on a free Zen model</td><td>Free Zen models only work inside the OpenCode app. Use a paid Zen model, Go, or Gemini.</td></tr>
+                <tr><td>AI 429</td><td>Gemini free-tier or OpenAI rate limit. Wait a minute, or enable billing.</td></tr>
+                <tr><td>AI visuals fall back to stock every time</td><td>Gemini image/video generation is not in the free tier. Enable billing or add a paid OpenAI key; the render log names the exact reason.</td></tr>
+                <tr><td>AI video ignored after the first scene</td><td>The video model failed once (usually billing), so it stops for that render. Check <strong>Test AI visuals</strong>.</td></tr>
+                <tr><td>AI picture looks off-topic</td><td>Edit that scene's visual line in the Script tab. The picture follows the prompt, not a keyword.</td></tr>
+                <tr><td>AI “did not answer in time”</td><td>The model is overloaded. Pick <code>gemini-3.6-flash</code> or <code>gemini-3.5-flash-lite</code>, then retry.</td></tr>
+                <tr><td>OpenAI 401</td><td>The key is wrong or deleted. Create a new one at platform.openai.com/api-keys.</td></tr>
+                <tr><td>OpenAI 429 quota</td><td>The account has no credits or billing. Add credits or switch provider.</td></tr>
+                <tr><td>YouTube <code>quotaExceeded</code></td><td>Daily quota is exhausted. Wait for the Pacific-midnight reset or request more quota.</td></tr>
+                <tr><td>Upload works but the thumbnail fails</td><td>The channel is not verified for custom thumbnails. The video is still uploaded.</td></tr>
+                <tr><td>OAuth <code>redirect_uri_mismatch</code></td><td>The OAuth client must be type <strong>Desktop app</strong>, not Web application.</td></tr>
+                <tr><td>OAuth works, then fails after a week</td><td>The consent screen is still in Testing. Publish it or reconnect.</td></tr>
+                <tr><td>Render is slow</td><td>1080p encoding is CPU-bound. Close other heavy apps; the encoder already uses <code>veryfast</code>.</td></tr>
+                <tr><td>Antivirus blocks FFmpeg or the installer</td><td>Allow the TubePilot folder and <code>%APPDATA%\TubePilot\tools</code>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout tip">
+            <p><strong>Before asking for help:</strong> run <code>TubePilot-cli.cmd --setup</code>, copy its
+            output, and note what you were doing. The app log is at
+            <code>%APPDATA%\TubePilot\desktop.log</code>.</p>
+          </div>
+        </section>
+
+        <section id="faq">
+          <h2>16. FAQ <a class="anchor" href="#faq" aria-label="Link to this section">#</a></h2>
+          <h3>Do I need API keys to try it?</h3>
+          <p>
+            You need one AI key for your own videos; Gemini's free tier is enough. The built-in demo
+            renders with no keys. Stock footage, the bundled samples and the demo work without stock or
+            voice keys.
+          </p>
+          <h3>Does it upload without asking?</h3>
+          <p>
+            Only when uploading is enabled. Uploads default to <strong>Private</strong>. You can turn off
+            <em>Upload after rendering</em>, use <code>--no-upload</code>, or skip the YouTube connection
+            entirely and only render locally.
+          </p>
+          <h3>Which languages can the videos be in?</h3>
+          <p>
+            Sixteen narration languages: English (US and UK), Spanish, French, German, Italian,
+            Portuguese, Arabic, Hindi, Urdu, Turkish, Indonesian, Russian, Japanese, Korean and Chinese.
+            The app interface switches between English and Arabic.
+          </p>
+          <h3>Will it work without a GPU?</h3>
+          <p>
+            Yes. Rendering uses the CPU and bundled FFmpeg. A GPU only helps the window itself; on remote
+            desktops or VMs with no 3D support, set <code>TUBEPILOT_SOFTWARE_RENDER=1</code>.
+          </p>
+          <h3>Can it run fully offline?</h3>
+          <p>
+            The renderer, bundled sample library and FFmpeg are local, so a video can be rendered offline.
+            Scripts and SEO need your AI provider, stock downloads need internet, and Edge voices are
+            online. Windows SAPI voices cover offline narration.
+          </p>
+          <h3>How many videos can I upload per day?</h3>
+          <p>
+            About six per Google Cloud project per day (10,000 units, roughly 1,600 per upload). Local
+            renders are unlimited.
+          </p>
+          <h3>Can I use the same key on Windows and Android?</h3>
+          <p>Yes. The license is verified offline and is not tied to a single platform.</p>
+          <h3>What happens to my videos if the subscription expires?</h3>
+          <p>
+            Nothing is deleted. The app locks new runs until a new key is activated, but existing
+            projects and MP4s remain in <code>%APPDATA%\TubePilot</code>.
+          </p>
+          <h3>Does the app translate my script into Arabic?</h3>
+          <p>
+            No. The interface switches language; the narration stays in the language you choose on New
+            video. Choose <code>ar-SA</code> there for an Arabic voiceover.
+          </p>
+        </section>
+
+        <section id="legal">
+          <h2>17. Privacy and legal <a class="anchor" href="#legal" aria-label="Link to this section">#</a></h2>
+          <h3>Your data</h3>
+          <p>
+            API keys, OAuth tokens, projects, voiceovers, videos and caches live only on your PC under
+            <code>%APPDATA%\TubePilot</code>. TubePilot has no account system and no server of its own.
+            Requests go directly from your PC to the providers you configured: Google Gemini/YouTube,
+            OpenAI, OpenCode, Pexels, Pixabay, Unsplash, Openverse, Wikimedia Commons, NASA and
+            Microsoft's Edge speech endpoint.
+          </p>
+          <h3>Third-party terms</h3>
+          <p>
+            Your use of those services is governed by their terms and quotas, including YouTube's
+            Community Guidelines, the YouTube API Services Terms, and the licences of each stock
+            provider. AI-generated images and video are subject to the image provider's terms. Stock
+            credits are added automatically where required.
+          </p>
+          <h3>Content responsibility</h3>
+          <p>
+            You are responsible for the topic, script, narration and visuals you publish, and for
+            disclosing AI assistance where required by law or platform policy. TubePilot does not verify
+            facts in generated scripts. Review before publishing.
+          </p>
+          <h3>Licence</h3>
+          <p>
+            TubePilot is commercial software sold as a monthly or yearly plan with a one-time 48-hour
+            trial. The license key is personal and honour-based. Redistribution of the installer or
+            keys is not permitted.
+          </p>
+          <h3>Trademarks</h3>
+          <p>
+            TubePilot is not affiliated with Google, YouTube, Microsoft, OpenAI, OpenCode, Pexels,
+            Pixabay, Unsplash, Openverse, Wikimedia Commons or NASA. All trademarks belong to their
+            owners.
+          </p>
+        </section>
+
+        <section id="support">
+          <h2>18. Support <a class="anchor" href="#support" aria-label="Link to this section">#</a></h2>
+          <p>
+            Sales, license keys and technical help are handled on WhatsApp at
+            <a href="https://wa.me/9613091136" target="_blank" rel="noopener">+961 3 091 136</a>.
+          </p>
+          <ul>
+            <li>For a purchase, say which plan you want (Monthly $19 or Yearly $149).</li>
+            <li>For help, include the <code>--setup</code> output, the error text and what you were doing.</li>
+            <li>For a lost key, send the approximate purchase date and the label/email used on the key.</li>
+          </ul>
+          <div class="help-box">
+            <p><b>Still stuck?</b>Message us and include your setup report — most problems are a missing key, billing, or a blocked FFmpeg.</p>
+            <a class="btn btn-primary" href="https://wa.me/9613091136?text=Hi%2C%20I%20need%20help%20with%20TubePilot." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              WhatsApp support
+            </a>
+          </div>
+          <div class="next-prev">
+            <a href="index.html"><span aria-hidden="true">←</span> Back to the homepage</a>
+            <a href="index.html#downloads">Download TubePilot <span aria-hidden="true">→</span></a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/></svg>
+            </span>
+            TubePilot
+          </a>
+          <p class="blurb">A Windows studio for faceless YouTube channels. Script, voice, visuals, render, thumbnail and upload — on your own PC.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#downloads">Downloads</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Documentation</h4>
+          <ul>
+            <li><a href="#install">Installation</a></li>
+            <li><a href="#setup">First-time setup</a></li>
+            <li><a href="#visuals">AI and stock visuals</a></li>
+            <li><a href="#troubleshooting">Troubleshooting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Help</h4>
+          <ul>
+            <li><a href="https://wa.me/9613091136" target="_blank" rel="noopener">WhatsApp support</a></li>
+            <li><a href="docs-ar.html" lang="ar">الدليل بالعربية</a></li>
+            <li><a href="#data">Your data</a></li>
+            <li><a href="#legal">Legal notes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> TubePilot · Version 1.0.0 · Windows x64</p>
+        <p>Not affiliated with Google, Microsoft, Pexels, Pixabay, Unsplash, Openverse, Wikimedia Commons or NASA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/downloads.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

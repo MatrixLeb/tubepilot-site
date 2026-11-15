@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>دليل TubePilot — من التثبيت إلى النشر</title>
+  <meta name="description" content="دليل TubePilot الكامل: تثبيت تطبيق ويندوز، بدء التجربة، إضافة المفاتيح، شرح كل شاشة، تشغيل خط الإنتاج، الرفع إلى يوتيوب، المهام المجدولة وحل المشكلات.">
+  <meta name="theme-color" content="#0b0b0f">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5V15M7.5 10.5L12 15l4.5-4.5"/><path d="M4.5 19.5h15"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h15M13 6l6 6-6 6"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.5l4.5 4.5L19 7"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.4 3.6A10.9 10.9 0 0 0 3.9 17.2L2.5 21.5l4.4-1.4A10.9 10.9 0 1 0 20.4 3.6z"/>
+      <path d="M8.7 7.4c.3-.1.6 0 .8.4l.9 1.8c.1.3.1.6-.1.8l-.7.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.7c.2-.2.5-.2.8-.1l1.8.9c.4.2.5.5.4.8-.2.8-.9 1.4-1.7 1.5-3.3.5-8.1-4.3-7.6-7.6.1-.9.7-1.6 1.5-1.8z"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M8 7.5h8M8 11h6"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index-ar.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/></svg>
+        </span>
+        TubePilot
+      </a>
+      <nav class="nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <a href="index-ar.html#features">المزايا</a>
+        <a href="index-ar.html#how">طريقة العمل</a>
+        <a href="index-ar.html#downloads">التحميل</a>
+        <a href="index-ar.html#pricing">الأسعار</a>
+        <a href="docs-ar.html" aria-current="page">الدليل</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="اللغة">
+          <a href="docs.html" hreflang="en" lang="en">EN</a>
+          <a href="docs-ar.html" aria-current="true" hreflang="ar">العربية</a>
+        </div>
+        <a class="btn btn-primary btn-sm" href="index-ar.html#downloads">
+          <svg aria-hidden="true"><use href="#i-download"/></svg>
+          تحميل
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="القائمة">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="docs-hero">
+      <div class="wrap">
+        <span class="section-kicker">الدليل</span>
+        <h1>دليل TubePilot</h1>
+        <p>
+          كل شيء من أول تثبيت إلى فيديو منشور: التجربة، وكل مفتاح ومفتاح تبديل، وكل تبويب
+          في المشروع، وسطر الأوامر، والمهام المجدولة، وحدود يوتيوب، والنسخ الاحتياطي، وحل
+          المشكلات. مكتوب للإصدار 1.0.0.
+        </p>
+        <div class="doc-meta">
+          <span>الإصدار 1.0.0</span>
+          <span>ويندوز 10 / 11 · x64</span>
+          <span>العربية والإنجليزية</span>
+          <span>قراءة نحو 25 دقيقة</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap docs-layout">
+      <aside class="docs-sidebar" aria-label="محتويات الدليل">
+        <p class="toc-title">المحتويات</p>
+        <div class="docs-search">
+          <input id="toc-search" type="search" placeholder="ابحث في الأقسام…" aria-label="تصفية الأقسام" autocomplete="off">
+          <p class="hint" id="toc-search-hint"></p>
+        </div>
+        <ol>
+          <li><a href="#overview">1. نظرة عامة</a></li>
+          <li><a href="#requirements">2. المتطلبات</a></li>
+          <li><a href="#install">3. التثبيت</a></li>
+          <li><a href="#activate">4. التجربة والترخيص</a></li>
+          <li><a href="#setup">5. الإعداد لأول مرة</a></li>
+          <li><a href="#first-video">6. أول فيديو</a></li>
+          <li><a href="#screens">7. شرح الشاشات</a></li>
+          <li><a href="#language">8. اللغة والاتجاه</a></li>
+          <li><a href="#visuals">9. المشاهد والذكاء الاصطناعي</a></li>
+          <li><a href="#cli">10. سطر الأوامر</a></li>
+          <li><a href="#schedule">11. المهام المجدولة</a></li>
+          <li><a href="#youtube">12. ربط يوتيوب</a></li>
+          <li><a href="#data">13. الملفات والنسخ الاحتياطي</a></li>
+          <li><a href="#quota">14. الحصة والسياسات</a></li>
+          <li><a href="#troubleshooting">15. حل المشكلات</a></li>
+          <li><a href="#faq">16. الأسئلة الشائعة</a></li>
+          <li><a href="#legal">17. الخصوصية والقانون</a></li>
+          <li><a href="#support">18. الدعم</a></li>
+        </ol>
+      </aside>
+
+      <article class="doc-content">
+
+        <section id="overview">
+          <h2>1. نظرة عامة <a class="anchor" href="#overview" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            TubePilot استوديو سطح مكتب لويندوز لقنوات يوتيوب بدون ظهور. تعطيه مجالًا، واختياريًا
+            موضوعًا محددًا، فينفّذ خط الإنتاج كاملًا:
+          </p>
+          <p><strong>الموضوع ← النص ← SEO ← التعليق الصوتي العصبي ← مشاهد AI أو ستوك ← فيديو MP4 بدقة 1080p ← الصورة المصغّرة ← الرفع إلى يوتيوب.</strong></p>
+          <p>
+            كل شيء يعمل على جهازك. الإعدادات والمفاتيح والمشاريع والتعليقات الصوتية والفيديوهات
+            في مجلد واحد داخل <code dir="ltr">%APPDATA%\TubePilot</code>. يحمل التطبيق بيئة Java
+            وFFmpeg ومكتبة عينات دون اتصال، فلا يحتاج الجهاز المستهدف أدوات تطوير، ويستطيع
+            إنتاج فيديو حتى دون إنترنت.
+          </p>
+          <div class="callout note">
+            <p><strong>ما لا يفعله TubePilot.</strong> لا يؤتمت المشاهدات أو الإعجابات أو التعليقات أو
+            الاشتراكات أو وقت المشاهدة. الرفع يتم عبر واجهة YouTube Data API v3 الرسمية فقط.
+            التطبيق أداة إنتاج، لا بوت تفاعل.</p>
+          </div>
+          <h3>ماذا تنتج كل مرحلة</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>المرحلة</th><th>ما يحدث</th></tr></thead>
+              <tbody>
+                <tr><td>الفكرة</td><td>مزوّد الذكاء الاصطناعي يختار موضوعًا داخل المجال، أو يستخدم الموضوع الذي كتبته.</td></tr>
+                <tr><td>النص</td><td>سرد يبدأ بخطّاف ويُقسَّم إلى مشاهد موقّتة، لكل منها وصف بصري خاص.</td></tr>
+                <tr><td>SEO</td><td>العنوان والوصف والوسوم والنص القصير المستخدم على الصورة المصغّرة.</td></tr>
+                <tr><td>الصوت</td><td>تعليق صوتي عصبي مجاني من Microsoft Edge مع توقيتات لكل كلمة تُحوَّل إلى ملف SRT. وأصوات ويندوز المحلية بديلًا.</td></tr>
+                <tr><td>المشاهد</td><td>صور أو مقاطع AI لكل مشهد، ثم فيديو وصور ستوك، ثم المكتبة المرفقة.</td></tr>
+                <tr><td>الإنتاج</td><td>FFmpeg المرفق يكتب 1920×1080 بمعدل 30 إطارًا، H.264/AAC، مع موسيقى اختيارية وترجمة مدمجة.</td></tr>
+                <tr><td>الصورة المصغّرة</td><td>ملف JPEG بمقاس 1280×720 من صورة مشهد قوية مع تدرّج وكلماتك.</td></tr>
+                <tr><td>الرفع</td><td>رفع قابل للاستئناف مع البيانات والصورة المصغّرة، خاص افتراضيًا.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>فشل مرحلة اختيارية لا يُلغي العمل المنجز. يبقى MP4 على القرص ويظهر الخطأ على المشروع.</p>
+        </section>
+
+        <section id="requirements">
+          <h2>2. المتطلبات <a class="anchor" href="#requirements" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <h3>الجهاز</h3>
+          <ul class="checklist">
+            <li>ويندوز 10 أو 11، 64 بت.</li>
+            <li>نحو 700 ميغابايت مساحة حرة للتطبيق، مع مساحة للفيديوهات (نحو 40–120 ميغابايت لكل فيديو).</li>
+            <li>ذاكرة 4 غيغابايت تكفي للتشغيل والإنتاج؛ و8 غيغابايت أريح مع متصفح مفتوح.</li>
+            <li>لا حاجة إلى كرت شاشة. الإنتاج عبر المعالج؛ كرت الشاشة يساعد النافذة فقط.</li>
+            <li>إنترنت للذكاء الاصطناعي ومصادر الستوك والأصوات العصبية ويوتيوب.</li>
+          </ul>
+          <h3>الحسابات والمفاتيح</h3>
+          <ul class="checklist">
+            <li><strong>مفتاح AI واحد مطلوب لفيديوهاتك.</strong> الطبقة المجانية من Gemini تكفي للنصوص وSEO.</li>
+            <li>اختياري: مفتاح صور/فيديو AI مع تفعيل الفوترة للمشاهد المولّدة.</li>
+            <li>اختياري: مفاتيح Pexels وPixabay وUnsplash المجانية لأوسع اختيار ستوك. Openverse وWikimedia Commons وNASA بلا مفاتيح.</li>
+            <li>اختياري: عميل Google Cloud OAuth للرفع التلقائي إلى يوتيوب.</li>
+          </ul>
+          <div class="callout warn">
+            <p><strong>البناء من المصدر فقط.</strong> التشغيل من المصدر يحتاج JDK 21 وGradle. المثبّت
+            والنسخة المحمولة يحملان بيئة التشغيل؛ لا تثبّت Java على الجهاز المستهدف.</p>
+          </div>
+        </section>
+
+        <section id="install">
+          <h2>3. التثبيت <a class="anchor" href="#install" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>كلا الملفين يحتوي التطبيق نفسه. اختر:</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th></th><th>المثبّت</th><th>النسخة المحمولة ZIP</th></tr></thead>
+              <tbody>
+                <tr><td>الملف</td><td dir="ltr"><code>TubePilot-Setup-1.0.0.exe</code></td><td dir="ltr"><code>TubePilot-1.0.0-portable.zip</code></td></tr>
+                <tr><td>التثبيت</td><td>للمستخدم الحالي دون صلاحيات مدير</td><td>فكّ الضغط في أي مكان</td></tr>
+                <tr><td>الاختصار</td><td>قائمة ابدأ وأداة إزالة</td><td>شغّل <code dir="ltr">TubePilot\TubePilot.exe</code> مباشرة</td></tr>
+                <tr><td>التحديث</td><td>شغّل المثبّت الأحدث فوق القديم</td><td>استبدل المجلد بالنسخة الأحدث</td></tr>
+                <tr><td>الأنسب لـ</td><td>جهاز عمل دائم</td><td>التجربة، ذاكرة USB، الأجهزة المقيّدة</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>التثبيت بالمثبّت</h3>
+          <ol>
+            <li>نزّل <code dir="ltr">TubePilot-Setup-1.0.0.exe</code> من <a href="index-ar.html#downloads">قسم التحميل</a>.</li>
+            <li>انقر عليه نقرتين. قد يعرض ويندوز <em>Windows protected your PC</em> لأن النسخة غير موقّعة بعد. اضغط <strong>More info ← Run anyway</strong>.</li>
+            <li>اقبل المجلد الافتراضي أو اختر غيره. التثبيت يتم داخل ملف المستخدم، فلا حاجة لكلمة مرور المدير.</li>
+            <li>عند الانتهاء شغّل <strong>TubePilot</strong> من قائمة ابدأ.</li>
+          </ol>
+
+          <h3>تشغيل النسخة المحمولة</h3>
+          <ol>
+            <li>انقر على ZIP بالزر الأيمن ← <strong>Extract All</strong>. لا تشغّل التطبيق من داخل معاينة ZIP.</li>
+            <li>افتح مجلد <code dir="ltr">TubePilot</code> بعد فكّ الضغط.</li>
+            <li>انقر <code dir="ltr">TubePilot.exe</code> نقرتين.</li>
+            <li>لنقل التطبيق لاحقًا انقل <em>المجلد كاملًا</em>؛ فهو يحتاج الملفات المجاورة، ومنها <code dir="ltr">app\resources\tools\ffmpeg.exe</code>.</li>
+          </ol>
+
+          <h3>التحقق من الملف (اختياري)</h3>
+          <p>افتح PowerShell في مجلد التحميل وقارن البصمة بالقيمة في صفحة التحميل:</p>
+          <div class="code-block"><pre><code>Get-FileHash .\TubePilot-Setup-1.0.0.exe -Algorithm SHA256</code></pre></div>
+          <p>بصمة المثبّت الحالي <code dir="ltr">f0f6c679058620b4553702c05ffc341d0f6cf54ba135620f94e09266df25a7ff</code>، وبصمة ZIP المحمول <code dir="ltr">5f889c17a629b2bccdcf0948b2859adc16ea32b1a54217b61427d4249ff2c056</code>.</p>
+
+          <h3>ملاحظات التشغيل الأول</h3>
+          <ul>
+            <li>تُنشأ الإعدادات والفيديوهات في <code dir="ltr">%APPDATA%\TubePilot</code> عند أول تشغيل.</li>
+            <li>إذا كانت النافذة فارغة على سطح مكتب بعيد أو جهاز افتراضي، أغلقها واضبط <code dir="ltr">TUBEPILOT_SOFTWARE_RENDER=1</code> قبل التشغيل.</li>
+            <li>سيظل SmartScreen يحذّر حتى تُوقَّع النسخة رقميًا. التحذير يتعلق بسمعة التوقيع لا بوجود فيروس.</li>
+            <li>قد يفحص مكافح الفيروسات <code dir="ltr">ffmpeg.exe</code> عند أول إنتاج. اسمح بمجلد التطبيق و<code dir="ltr">%APPDATA%\TubePilot\tools</code>.</li>
+          </ul>
+
+          <h3>إزالة التثبيت</h3>
+          <ul>
+            <li><strong>المثبّت:</strong> الإعدادات ← التطبيقات ← التطبيقات المثبّتة ← TubePilot ← إزالة. للحذف الكامل احذف <code dir="ltr">%APPDATA%\TubePilot</code> بعده (يحذف المفاتيح والمشاريع والفيديوهات).</li>
+            <li><strong>المحمول:</strong> احذف المجلد المفكوك، ثم احذف <code dir="ltr">%APPDATA%\TubePilot</code> إن أردت إزالة بياناتك.</li>
+          </ul>
+        </section>
+
+        <section id="activate">
+          <h2>4. التجربة والترخيص <a class="anchor" href="#activate" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            عند أول تشغيل تفتح النافذة على <strong>الاشتراك</strong>. يبقى «فيديو جديد» والإعدادات
+            مقفلين حتى تبدأ التجربة أو تفعّل مفتاحًا مشترى.
+          </p>
+          <h3>بدء التجربة المجانية 48 ساعة</h3>
+          <ol>
+            <li>افتح <strong>الاشتراك</strong> من الشريط الجانبي (هناك يبدأ التطبيق).</li>
+            <li>اضغط <strong>بدء التجربة المجانية 48 ساعة</strong>.</li>
+            <li>يظهر عدّاد تنازلي في الشريط الجانبي وعلى الرئيسية وعلى شاشة الاشتراك. لا بطاقة ولا حساب.</li>
+          </ol>
+          <p>
+            التجربة <strong>مرة واحدة لكل حساب ويندوز</strong>. بعد استخدامها أو انتهائها يختفي زر
+            التجربة وكل عبارات «ابدأ التجربة المجانية»، وتبقى خطتا الشهري والسنوي فقط.
+          </p>
+          <h3>تفعيل مفتاح مشترى</h3>
+          <ol>
+            <li>افتح <strong>الاشتراك</strong>.</li>
+            <li>ألصق مفتاح <code dir="ltr">TP1…</code> في <strong>تفعيل ترخيص</strong>.</li>
+            <li>اضغط <strong>تفعيل</strong>. يُتحقَّق من توقيع Ed25519 دون اتصال؛ لا حاجة لإنترنت.</li>
+          </ol>
+          <p>يمكنك التفعيل أيضًا من طرفية في مجلد التطبيق:</p>
+          <div class="code-block"><pre><code>TubePilot-cli.cmd --activate TP1...</code></pre></div>
+          <div class="code-block"><pre><code>TubePilot-cli.cmd --subscription</code></pre></div>
+          <p>الأمر الثاني يطبع الخطة وتاريخ الانتهاء وما إذا كان الوصول مفتوحًا.</p>
+          <h3>عند انتهاء الصلاحية</h3>
+          <p>
+            عند وصول العدّاد إلى الصفر يتحول إلى الأحمر في الساعة الأخيرة ويُقفل الوصول فورًا.
+            إنشاء الفيديوهات وخط الإنتاج والرفع والتشغيل بلا واجهة وفتح المشاريع القائمة كلها
+            تحتاج خطة نشطة. تبقى النافذة على الاشتراك حتى إدخال مفتاح جديد. لا يُحذف شيء.
+          </p>
+          <h3>الخطط</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>الخطة</th><th>السعر</th><th>المدة</th></tr></thead>
+              <tbody>
+                <tr><td>تجربة مجانية</td><td>$0</td><td>48 ساعة، مرة لكل حساب ويندوز</td></tr>
+                <tr><td>شهري</td><td>$19</td><td>30 يومًا لكل مفتاح</td></tr>
+                <tr><td>سنوي</td><td>$149</td><td>365 يومًا، نحو $12.42 شهريًا</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            الدفع مباشرة عبر واتساب (<a href="https://wa.me/9613091136" target="_blank" rel="noopener" dir="ltr">+961 3 091 136</a>)
+            بواسطة OMT أو Whish Money أو USDT أو تحويل بنكي. المفتاح الوارد في المحادثة يفتح
+            تطبيقي ويندوز وأندرويد. التحقق دون اتصال، والمفاتيح قائمة على الثقة: لا يمكن تزويرها
+            أو إلغاؤها، لذا يمكن نظريًا استخدام مفتاح واحد على أكثر من جهاز.
+          </p>
+          <p><strong>تسجيل الخروج على هذا الجهاز</strong> يمسح الترخيص المحلي لإدخال المفتاح على جهاز آخر.</p>
+        </section>
+
+        <section id="setup">
+          <h2>5. الإعداد لأول مرة <a class="anchor" href="#setup" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            افتح <strong>الإعدادات</strong> واعمل على البطاقات بالترتيب. مزوّد الذكاء الاصطناعي وحده
+            مطلوب لفيديوهاتك؛ وما عدا ذلك اختياري أو مرفق مسبقًا.
+          </p>
+
+          <h3>5.1 مزوّد الذكاء الاصطناعي (مطلوب)</h3>
+          <ol>
+            <li>اختر المزوّد: <strong>Gemini (مجاني)</strong> هو الأبسط، و<strong>OpenAI (ChatGPT)</strong> يعمل بمفتاح OpenAI، و<strong>Zen</strong>/<strong>Go</strong> بوابتا OpenCode بفوترة خاصة.</li>
+            <li>ألصق المفتاح. تُحفظ المفاتيح محليًا في <code dir="ltr">settings.properties</code>.</li>
+            <li>اختر نموذجًا. <code dir="ltr">gemini-3.6-flash</code> خيار جيد؛ و<strong>Load models</strong> يسأل المزوّد عما يسمح به مفتاحك.</li>
+            <li>اضغط <strong>اختبار المفتاح والنموذج</strong>. تريد رسالة نجاح قصيرة، لا 401/429/402.</li>
+          </ol>
+          <p>
+            احصل على مفتاح Gemini مجاني من <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">aistudio.google.com/apikey</a>.
+            ومفتاح OpenAI من <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com/api-keys</a>؛
+            استخدام API يُفاتر منفصلًا عن اشتراك ChatGPT Plus.
+          </p>
+
+          <h3>5.2 مشاهد الذكاء الاصطناعي (اختياري)</h3>
+          <p>
+            بطاقة <strong>مشاهد الذكاء الاصطناعي</strong> تتيح رسم كل مشهد من وصفه في النص بدل البحث
+            في الستوك. اختيارية، ولا تعمل فعليًا حتى يتوفر مفتاح بحصة صور.
+          </p>
+          <ul>
+            <li><strong>رسم كل مشهد من نصه</strong> — المفتاح الرئيسي لصور AI. مفعّل افتراضيًا، ولا يعمل إلا بمفتاح صالح.</li>
+            <li><strong>نموذج صور Gemini</strong> — الافتراضي <code dir="ltr">gemini-2.5-flash-image</code>. إذا توقف الاسم، يُعثر على نموذج صور حالي تلقائيًا.</li>
+            <li><strong>نموذج صور OpenAI</strong> — الافتراضي <code dir="ltr">gpt-image-1</code>، يُستخدم مع مفتاح OpenAI.</li>
+            <li><strong>مقاطع فيديو AI (متقدم)</strong> — مغلق افتراضيًا؛ يطلب من Gemini Omni Flash مقطعًا قصيرًا لكل مشهد بدل صورة ثابتة.</li>
+            <li><strong>الدقة وطول المقطع</strong> — 360p أو 720p أو 1080p، و4/6/8/10 ثوانٍ، مع تقدير الكلفة على البطاقة.</li>
+            <li><strong>اختبار مشاهد AI</strong> — يفحص النموذج دون محاسبة صورة.</li>
+          </ul>
+          <div class="callout warn">
+            <p><strong>صور AI تحتاج فوترة.</strong> الطبقة المجانية من Gemini تسمح بـ<strong>صفر</strong>
+            طلبات صور وفيديو (HTTP 429). فعّل الفوترة في مشروع Google AI Studio أو أضف مفتاح
+            OpenAI مدفوعًا. النصوص وSEO تعمل بالطبقة المجانية. بدون فوترة يستخدم الفيديو الستوك.</p>
+          </div>
+
+          <h3>5.3 التعليق الصوتي</h3>
+          <ol>
+            <li>اترك <strong>Edge العصبي (مجاني)</strong> محددًا. لا يحتاج مفتاحًا ويغطي 16 لغة.</li>
+            <li>اختر صوتًا واضغط <strong>اختبار الصوت</strong>. أصوات Edge تحتاج إنترنت.</li>
+            <li>إذا فشل الاختبار، بدّل إلى <strong>أصوات ويندوز (دون اتصال)</strong> واختر صوت SAPI مثبّتًا. يوضح <code dir="ltr">--setup</code> المحرّك العامل.</li>
+            <li>عدّل <strong>السرعة</strong> إن أردت قراءة أسرع أو أبطأ.</li>
+          </ol>
+
+          <h3>5.4 مشاهد الستوك</h3>
+          <p>
+            تحت بطاقة AI، فعّل المصادر التي تريدها وألصق المفاتيح المجانية. Pexels وPixabay
+            وUnsplash تحتاج مفاتيح؛ Openverse وWikimedia Commons وNASA والعينات المرفقة لا تحتاج.
+            اضغط <strong>اختبار المصادر المفعّلة</strong>.
+          </p>
+          <ul>
+            <li><a href="https://www.pexels.com/api/" target="_blank" rel="noopener">Pexels API</a> — مفتاح مجاني، رابط إسناد مطلوب (يُضاف تلقائيًا).</li>
+            <li><a href="https://pixabay.com/api/docs/" target="_blank" rel="noopener">Pixabay API</a> — مفتاح مجاني، سطر إسناد يُضاف تلقائيًا.</li>
+            <li><a href="https://unsplash.com/developers" target="_blank" rel="noopener">Unsplash</a> — مفتاح وصول مجاني، يُنسب المصوّر تلقائيًا.</li>
+            <li>Openverse وWikimedia Commons وNASA — بلا مفتاح.</li>
+            <li><strong>العينات المرفقة</strong> — 44 مقطعًا مثبّتة مع التطبيق، تعمل دون اتصال.</li>
+          </ul>
+
+          <h3>5.5 FFmpeg</h3>
+          <p>
+            FFmpeg مرفق في <code dir="ltr">app\resources\tools\ffmpeg.exe</code>. اتركه واضغط
+            <strong>Detect</strong> مرة. نجاح اختبار H.264 يعني أن الإنتاج جاهز. إذا فُقد الملف،
+            يستطيع التطبيق تنزيل نسخة إلى <code dir="ltr">%APPDATA%\TubePilot\tools</code>.
+          </p>
+          <div class="callout note">
+            <p>بعض التطبيقات تثبّت نسخة FFmpeg منقوصة (CapCut مثال شائع). يكتشف TubePilot النسخ
+            الخالية من <code dir="ltr">libx264</code> ويتجاهلها، فدعه يستخدم نسخته دائمًا.</p>
+          </div>
+
+          <h3>5.6 الأتمتة والموسيقى</h3>
+          <ul>
+            <li><strong>الرفع بعد الإنتاج</strong> — اتركه مفتوحًا لتشغيل متصل، أو أغلقه لمراجعة MP4 أولًا.</li>
+            <li><strong>الظهور الافتراضي</strong> — خاص (موصى به)، غير مدرج، أو عام.</li>
+            <li><strong>الموسيقى الخلفية</strong> — وجّه مجلد الموسيقى إلى ملفات MP3 خالية من الحقوق، واضبط مستوى الصوت. يُختار مقطع واحد ويُمزج منخفضًا تحت التعليق.</li>
+            <li><strong>إفصاح الذكاء الاصطناعي</strong> — مفعّل افتراضيًا؛ يضيف سطر «أُنشئ بمساعدة الذكاء الاصطناعي» عند استخدامه.</li>
+          </ul>
+
+          <h3>5.7 يوتيوب (اختياري في البداية)</h3>
+          <p>
+            تخطَّ هذه الخطوة للإنتاج المحلي. لتفعيل الرفع، أنشئ عميل Google Cloud OAuth من نوع
+            <em>Desktop app</em>، وألصق Client ID وClient secret في <strong>الإعدادات ← يوتيوب</strong>،
+            واضغط <strong>ربط يوتيوب</strong>. الخطوات الكاملة في <a href="#youtube">القسم 12</a>.
+          </p>
+
+          <h3>5.8 الحفظ</h3>
+          <p>اضغط زر الحفظ في رأس الإعدادات. تُكتب التغييرات في <code dir="ltr">settings.properties</code>.</p>
+        </section>
+
+        <section id="first-video">
+          <h2>6. أول فيديو <a class="anchor" href="#first-video" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <ol>
+            <li>اضغط <strong>فيديو جديد</strong> في الشريط الجانبي.</li>
+            <li><strong>المجال / موضوع القناة</strong> — مثل <code>التمويل الشخصي للمبتدئين</code>. مطلوب ما لم تكتب موضوعًا.</li>
+            <li><strong>موضوع الفيديو</strong> — اختياري. اتركه فارغًا ليختار الذكاء الاصطناعي، أو اضغط <strong>اقترح 12 فكرة بالذكاء الاصطناعي</strong> واختر واحدة.</li>
+            <li><strong>الجمهور المستهدف</strong> — اختياري، الافتراضي «جمهور عام».</li>
+            <li><strong>النبرة</strong> — تعليمية، قصصية، وثائقية، قائمة، تحفيزية، تفسيرية، ملخص أخبار أو غموض.</li>
+            <li><strong>اللغة</strong> — لغة التعليق الصوتي لا لغة التطبيق. 16 خيارًا، منها العربية والهندية والأردية والتركية والصينية.</li>
+            <li><strong>المدة المستهدفة</strong> — من 2 إلى 20 دقيقة. ست دقائق خيار جيد.</li>
+            <li>اترك <strong>تشغيل خط الإنتاج كاملًا تلقائيًا</strong> مفتوحًا.</li>
+            <li>اضغط <strong>إنشاء وتشغيل كل شيء</strong>.</li>
+          </ol>
+          <p>
+            يفتح المشروع على تبويب <strong>تلقائي</strong>. تُبلغ كل مرحلة عن تقدمها، وزر الإيقاف
+            يوقف بأمان دون حذف الملفات المنجزة. عند النهاية تحصل على مسار MP4 ومسار الصورة
+            المصغّرة ورابط يوتيوب إن تم الرفع.
+          </p>
+          <div class="callout tip">
+            <p><strong>كم يستغرق؟</strong> فيديو ست دقائق يحتاج عادة بضع دقائق للنص وSEO والصوت،
+            ثم عدة دقائق لترميز المعالج. إنتاج 20 دقيقة بدقة 1080p أطول بكثير. أبقِ الجهاز
+            مستيقظًا ومتصلًا حتى ينتهي الرفع.</p>
+          </div>
+          <h3>راجع، عدّل، انشر</h3>
+          <ul>
+            <li><strong>النص</strong> — اقرأ الخطّاف والمشاهد، عدّل أي سرد أو وصف بصري، ثم احفظ.</li>
+            <li><strong>SEO</strong> — عدّل العنوان والوصف والوسوم؛ أضف فصولًا زمنية من قائمة المشاهد.</li>
+            <li><strong>الصوت</strong> — أعد توليد التعليق بعد تعديل النص، أو غيّر الصوت والسرعة.</li>
+            <li><strong>الفيديو</strong> — أعد بناء المشاهد والإنتاج؛ شاهد MP4 أو افتح مجلد المشروع.</li>
+            <li><strong>الصورة المصغّرة</strong> — أعد توليدها بنص مختلف.</li>
+            <li><strong>النشر</strong> — ارفع يدويًا، أو أعد الرفع ببيانات مختلفة إن فشلت المحاولة الأولى.</li>
+          </ul>
+        </section>
+
+        <section id="screens">
+          <h2>7. شرح الشاشات <a class="anchor" href="#screens" aria-label="رابط إلى هذا القسم">#</a></h2>
+
+          <h3>الرئيسية</h3>
+          <p>
+            تعرض خطتك والعدّاد وملخص المراحل الثماني واختصارات لفيديو جديد والمشاريع القائمة
+            والإعدادات. يحمل الشريط الجانبي مفتاح العربية/English، والرئيسية، وفيديو جديد،
+            والإعدادات، والاشتراك، وزر مجلد البيانات.
+          </p>
+
+          <h3>فيديو جديد</h3>
+          <p>
+            النموذج الموصوف في <a href="#first-video">القسم 6</a>، مع مولّد أفكار بالذكاء الاصطناعي
+            واختيار اللغة. تعرض بطاقات اليمين حالة مفتاح AI وسلسلة المشاهد وFFmpeg ويوتيوب
+            لترى ما ينقص قبل البدء.
+          </p>
+
+          <h3>تبويبات المشروع</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>التبويب</th><th>ما يمكنك فعله</th></tr></thead>
+              <tbody>
+                <tr><td>تلقائي</td><td>تشغيل خط الإنتاج أو استئنافه، متابعة تقدم المراحل، الإيقاف وقراءة السجل الحيّ.</td></tr>
+                <tr><td>النص</td><td>توليد السرد أو إعادة توليده، تحرير المشاهد، نسخ النص كاملًا، فتح مجلد المشروع.</td></tr>
+                <tr><td>SEO</td><td>توليد العنوان والوصف والوسوم ونص الصورة، إضافة فصول زمنية، نسخ الحزمة أو حفظها.</td></tr>
+                <tr><td>الصوت</td><td>اختيار محرّك Edge أو ويندوز، الصوت والسرعة، توليد MP3 وSRT، التشغيل وفتح WAV/المجلد.</td></tr>
+                <tr><td>الفيديو</td><td>بناء خطة المشاهد، جلب AI/ستوك، اختيار إعدادات الإنتاج وإخراج MP4.</td></tr>
+                <tr><td>الصورة</td><td>اختيار صورة المشهد أو إعادة توليدها، تحرير النص الإضافي وكتابة JPEG 1280×720.</td></tr>
+                <tr><td>النشر</td><td>مراجعة البيانات، ضبط الخصوصية، الرفع إلى يوتيوب وتعيين الصورة المصغّرة.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>الإعدادات</h3>
+          <p>الإعدادات صفحة واحدة طويلة من البطاقات تُحفظ معًا:</p>
+          <ul>
+            <li><strong>الاشتراك</strong> — الخطة والعدّاد ومفتاح الترخيص وأزرار واتساب وتسجيل الخروج.</li>
+            <li><strong>مزوّد الذكاء الاصطناعي</strong> — المزوّد والمفتاح والنموذج والتحميل والاختبار.</li>
+            <li><strong>مشاهد الذكاء الاصطناعي</strong> — الصور والفيديو والنماذج والدقة وطول المقطع والاختبار.</li>
+            <li><strong>التعليق الصوتي</strong> — المحرّك والصوت والسرعة واسم صوت ويندوز والاختبار.</li>
+            <li><strong>مشاهد الستوك</strong> — مفاتيح ومفتاحات كل مصدر، والاختبار.</li>
+            <li><strong>FFmpeg</strong> — الكشف والاختبار الذاتي والمسار.</li>
+            <li><strong>الأتمتة</strong> — الرفع بعد الإنتاج والظهور الافتراضي وإفصاح AI.</li>
+            <li><strong>الموسيقى الخلفية</strong> — المجلد ومستوى الصوت.</li>
+            <li><strong>يوتيوب</strong> — Client ID/secret والربط وفصل الاتصال.</li>
+          </ul>
+
+          <h3>الاشتراك</h3>
+          <p>
+            تعرض الخطة النشطة وتاريخ الانتهاء بالضبط، وبطاقتي الشهري والسنوي، وأزرار الشراء
+            والدعم عبر واتساب، ومربع مفتاح الترخيص، وتسجيل الخروج. يظهر زر التجربة فقط إذا لم
+            تُستخدم التجربة على حساب ويندوز هذا.
+          </p>
+        </section>
+
+        <section id="language">
+          <h2>8. اللغة والتخطيط من اليمين إلى اليسار <a class="anchor" href="#language" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            يحمل الشريط الجانبي مفتاح <strong>English / العربية</strong>. يغيّر النافذة كاملة —
+            الرئيسية وفيديو جديد وكل تبويبات المشروع والإعدادات والاشتراك — وتُعرض العربية من
+            اليمين إلى اليسار. يُحفظ الاختيار في <code dir="ltr">ui_language</code> ويُستعاد عند
+            التشغيل التالي.
+          </p>
+          <ul>
+            <li>الواجهة وحدها تُترجم. العناوين والنصوص والمواضيع المولّدة تبقى بلغة التعليق التي اخترتها.</li>
+            <li>مربعات حوار الملفات تُترجم أيضًا: عناوينها وفلاترها تتبع لغة التطبيق.</li>
+            <li>مفتاح اللغة مستقل عن لغة الفيديو في شاشة «فيديو جديد».</li>
+          </ul>
+          <p>
+            الفيديو التجريبي لم يعد زرًا في الرئيسية. يبقى متاحًا للعروض واختبارات التشغيل
+            من سطر الأوامر:
+          </p>
+          <div class="code-block"><pre><code>TubePilot.exe --demo
+TubePilot.exe --demo --language ar</code></pre></div>
+          <p>
+            وفي مجلد التطبيق يفعل <code dir="ltr">TubePilot-cli.cmd --demo</code> الأمر نفسه. ضبط
+            <code dir="ltr">TUBEPILOT_DEMO_AUTOSTART=en</code> أو <code dir="ltr">ar</code> يبدأ
+            العرض تلقائيًا بعد فتح النافذة. يحتاج العرض تجربة أو خطة نشطة.
+          </p>
+        </section>
+
+        <section id="visuals">
+          <h2>9. المشاهد والذكاء الاصطناعي <a class="anchor" href="#visuals" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            لكل مشهد صورة حتى لو غابت المفاتيح أو نفدت الحصة. يسير TubePilot في سلسلة ثابتة
+            ويأخذ أول نتيجة صالحة:
+          </p>
+          <div class="callout note">
+            <p><strong>فيديو AI ← صور AI ← Pexels ← Pixabay ← Unsplash ← العينات المرفقة ← Openverse ← Wikimedia Commons ← NASA.</strong></p>
+          </div>
+          <h3>صور AI</h3>
+          <p>
+            يُبنى وصف الصورة من الوصف البصري للمشهد مع سرده والموضوع والنبرة. تُطبَّع الصورة
+            إلى 1920×1080 وتُحرَّك بحركة كين برنز بطيئة. تُحفظ في <code dir="ltr">cache\stock\ai\</code>
+            حسب الوصف الكامل، فإعادة إنتاج مشروع لم يتغير لا تكلّف شيئًا.
+          </p>
+          <h3>فيديو AI</h3>
+          <p>
+            عند تفعيل <strong>مقاطع فيديو AI</strong> يُطلب من Gemini Omni Flash
+            (<code dir="ltr">gemini-omni-1.2-flash</code>) مقطع قصير لكل مشهد. ميزة متقدمة، مغلقة
+            افتراضيًا، وتتوقف محاولاتها لذلك الإنتاج بعد أول فشل. تُحفظ المقاطع في
+            <code dir="ltr">cache\stock\ai_video\</code>.
+          </p>
+          <h3>الستوك والمكتبة المرفقة</h3>
+          <p>
+            يُبحث عن الستوك بعبارة المشهد البصرية. يُقصّ الفيديو المناسب لطول المشهد، وتُحرَّك
+            الصورة بحركة كين برنز. تُضاف إسنادات Pexels وPixabay وUnsplash إلى الوصف تلقائيًا.
+            مكتبة العينات المرفقة (44 مقطعًا) مثبّتة مع التطبيق وهي شبكة الأمان دون اتصال.
+            لا تُرسم بطاقة عنوان مولّدة إلا إذا أخطأت كل المصادر.
+          </p>
+          <h3>الفشل</h3>
+          <p>
+            الحصة والنماذج المتوقفة وحدود المعدّل وتصفية المحتوى وأخطاء الشبكة تُسجَّل بسطر واحد
+            وينتقل إلى المصدر التالي. فشل مشهد لا يُفشل الإنتاج، وتبقى الصور المصغّرة على الستوك
+            كي لا ينفق الإنتاج مالًا خفيًا على صورة إضافية.
+          </p>
+          <div class="callout warn">
+            <p><strong>صور وفيديو AI تحتاج فوترة.</strong> الطبقة المجانية من Gemini تسمح بصفر طلبات
+            صور. إذا كان كل محاولة AI تعود إلى الستوك، اقرأ سببها في سجل الإنتاج وتأكد من تفعيل
+            الفوترة — أو استخدم مفتاح OpenAI مدفوعًا للصور.</p>
+          </div>
+        </section>
+
+        <section id="cli">
+          <h2>10. سطر الأوامر <a class="anchor" href="#cli" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            المحرّك نفسه يعمل بلا واجهة من مجلد التطبيق. استخدم
+            <code dir="ltr">TubePilot-cli.cmd</code> في النسخة المثبّتة أو المحمولة:
+          </p>
+          <div class="code-block"><pre><code>TubePilot-cli.cmd --niche "personal finance" --minutes 8
+TubePilot-cli.cmd --niche "ancient history" --topic "why Rome fell" --minutes 9 --no-upload
+TubePilot-cli.cmd --setup
+TubePilot-cli.cmd --subscription
+TubePilot-cli.cmd --activate TP1...</code></pre></div>
+          <p>ومن نسخة المصدر استخدم Gradle:</p>
+          <div class="code-block"><pre><code>$env:JAVA_HOME="C:\Program Files\Android\Android Studio\jbr"
+cd E:\Business\TubePilot
+.\gradlew.bat :desktop:runAuto --args='--niche "personal finance" --minutes 8'</code></pre></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>الخيار</th><th>المعنى</th></tr></thead>
+              <tbody>
+                <tr><td dir="ltr"><code>-n</code>, <code>--niche &lt;text&gt;</code></td><td>موضوع القناة. مطلوب ما لم يُضبط <code dir="ltr">--topic</code>.</td></tr>
+                <tr><td dir="ltr"><code>-t</code>, <code>--topic &lt;text&gt;</code></td><td>موضوع الفيديو بالضبط. عند إغفاله يختار الذكاء الاصطناعي.</td></tr>
+                <tr><td dir="ltr"><code>-a</code>, <code>--audience &lt;text&gt;</code></td><td>الجمهور المستهدف. الافتراضي <code>General audience</code>.</td></tr>
+                <tr><td dir="ltr"><code>--tone &lt;text&gt;</code></td><td>النبرة. الافتراضي <code>Educational</code>.</td></tr>
+                <tr><td dir="ltr"><code>--language &lt;tag&gt;</code></td><td>وسم لغة التعليق مثل <code>ar-SA</code> أو <code>en-US</code>. الافتراضي <code>en-US</code>.</td></tr>
+                <tr><td dir="ltr"><code>-m</code>, <code>--minutes &lt;2-20&gt;</code></td><td>المدة المستهدفة. الافتراضي 6.</td></tr>
+                <tr><td dir="ltr"><code>--no-upload</code></td><td>إنتاج محلي وتخطي يوتيوب.</td></tr>
+                <tr><td dir="ltr"><code>--privacy &lt;mode&gt;</code></td><td><code>private</code> أو <code>unlisted</code> أو <code>public</code> لهذا التشغيل فقط.</td></tr>
+                <tr><td dir="ltr"><code>--setup</code>, <code>--check</code></td><td>فحص الجاهزية: المفاتيح وFFmpeg وEdge TTS والمشاهد والاشتراك.</td></tr>
+                <tr><td dir="ltr"><code>--demo</code></td><td>إنتاج الفيديو التجريبي المدمج. أضف <code>--language ar</code> للعربية.</td></tr>
+                <tr><td dir="ltr"><code>--activate &lt;key&gt;</code></td><td>تفعيل مفتاح ترخيص على هذا الجهاز.</td></tr>
+                <tr><td dir="ltr"><code>--subscription</code></td><td>طباعة الخطة وما إذا كان الوصول مفتوحًا.</td></tr>
+                <tr><td dir="ltr"><code>-h</code>, <code>--help</code></td><td>عرض الاستخدام.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            <code dir="ltr">--no-upload</code> و<code dir="ltr">--privacy</code> يخصان هذا التشغيل
+            فقط؛ تُستعاد الإعدادات المحفوظة بعده. يُرجع <code dir="ltr">--setup</code> الرمز 0
+            عندما تكون العناصر المطلوبة جاهزة، و1 عند وجود عنصر MISSING أو FAILED. يمكن تشغيله
+            بأمان أكثر من مرة.
+          </p>
+          <div class="callout note">
+            <p>التشغيل بلا واجهة يستخدم <code dir="ltr">settings.properties</code> نفسه، لذا تفعيل
+            الخطة في النافذة يفتح المهام المجدولة أيضًا. تحتاج المهام المجدولة تجربة أو خطة نشطة.</p>
+          </div>
+        </section>
+
+        <section id="schedule">
+          <h2>11. المهام المجدولة <a class="anchor" href="#schedule" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            لفيديو يومي أو أسبوعي بلا إشراف، وجّه «مجدول مهام ويندوز» إلى
+            <code dir="ltr">TubePilot-cli.cmd</code> (النسخة المثبّتة) أو إلى
+            <code dir="ltr">run-auto.ps1</code> في المستودع (نسخة المصدر). مثال للنسخة المثبّتة:
+          </p>
+          <div class="code-block"><pre><code>powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "& 'C:\Users\YOU\AppData\Local\TubePilot\TubePilot-cli.cmd' --niche 'personal finance' --minutes 8"</code></pre></div>
+          <ol>
+            <li>افتح <strong>Task Scheduler ← Create Task</strong>.</li>
+            <li><strong>General</strong> — اختر <em>Run whether user is logged on or not</em>.</li>
+            <li><strong>Triggers</strong> — يوميًا في وقت يكون الجهاز فيه قيد التشغيل ومتصلًا.</li>
+            <li><strong>Actions</strong> — شغّل <code dir="ltr">powershell.exe</code> بالوسائط أعلاه.</li>
+            <li><strong>Start in</strong> — مجلد التطبيق، لتعمل المسارات النسبية.</li>
+            <li>فعّل الخطة مرة بـ<code dir="ltr">--activate</code> ثم تأكد بـ<code dir="ltr">--subscription</code>.</li>
+          </ol>
+          <p>
+            أبقِ الجهاز مستيقظًا ومتصلًا. انقطاع الشبكة يوقف التشغيل بأمان؛ يبقى MP4 على القرص
+            ويمكن إعادة المحاولة. نحو ستة رفع يوميًا تناسب حصة يوتيوب.
+          </p>
+        </section>
+
+        <section id="youtube">
+          <h2>12. ربط يوتيوب <a class="anchor" href="#youtube" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>الرفع يحتاج عميل Google Cloud OAuth خاصًا بك. إعداد لمرة واحدة ومجاني.</p>
+          <ol>
+            <li>افتح <a href="https://console.cloud.google.com/" target="_blank" rel="noopener">console.cloud.google.com</a> وأنشئ مشروعًا أو اختر واحدًا.</li>
+            <li><strong>APIs &amp; Services ← Library</strong> ← ابحث عن <strong>YouTube Data API v3</strong> ← <strong>Enable</strong>.</li>
+            <li><strong>APIs &amp; Services ← OAuth consent screen</strong>: اختر <em>External</em>، أضف حساب Google كـ test user، وأضف النطاقين <code dir="ltr">youtube.upload</code> و<code dir="ltr">youtube.readonly</code>.</li>
+            <li><strong>APIs &amp; Services ← Credentials ← Create credentials ← OAuth client ID</strong> ← نوع التطبيق <strong>Desktop app</strong>.</li>
+            <li>انسخ <strong>Client ID</strong> و<strong>Client secret</strong> إلى <strong>الإعدادات ← يوتيوب</strong> واضغط <strong>ربط يوتيوب</strong>.</li>
+            <li>يفتح المتصفح صفحة موافقة Google. يلتقط TubePilot إعادة التوجيه على مستمع <code dir="ltr">http://127.0.0.1:&lt;port&gt;</code> لمرة واحدة ويحفظ refresh token.</li>
+          </ol>
+          <p>
+            يستخدم التدفق PKCE مع <code dir="ltr">access_type=offline</code> و<code dir="ltr">prompt=consent</code>،
+            فيبقى بعد إعادة التشغيل. ما دامت شاشة الموافقة في <strong>Testing</strong> تنتهي رموز
+            التحديث بعد 7 أيام، ولا يصرّح إلا المستخدمون المدرجون. انشر التطبيق أو أعد الربط أسبوعيًا.
+            قد تحتاج حسابات Workspace إلى مدير يسمح بالواجهة.
+          </p>
+          <h3>سلوك الرفع</h3>
+          <ul>
+            <li>رفع قابل للاستئناف مع العنوان والوصف والوسوم والتصنيف والخصوصية.</li>
+            <li><strong>خاص افتراضيًا.</strong> يتوفر «غير مدرج» و«عام» والنشر المجدول.</li>
+            <li>تُعيّن الصورة المصغّرة بعد رفع الفيديو. قد ترفضها القنوات غير الموثّقة؛ ويُرفع الفيديو مع ذلك.</li>
+            <li>فشل الرفع لا يفقد MP4؛ أعد المحاولة من تبويب النشر.</li>
+          </ul>
+        </section>
+
+        <section id="data">
+          <h2>13. الملفات والنسخ الاحتياطي وإعادة الضبط <a class="anchor" href="#data" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>كل شيء داخل <code dir="ltr">%APPDATA%\TubePilot</code>:</p>
+          <div class="code-block"><pre><code>%APPDATA%\TubePilot\
+├─ data\settings.properties     API keys, voice, automation, OAuth tokens, license cache
+├─ data\projects.json           project list and per-project state
+├─ media\&lt;id&gt;\                  voiceover, SRT, thumbnail, rendered MP4
+├─ cache\stock\&lt;source&gt;\       downloaded stock footage and photos per provider
+├─ cache\stock\ai\              AI-generated scene images (one per prompt)
+├─ cache\stock\ai_video\        AI-generated scene clips, when video is enabled
+├─ samples\                    optional user override for the bundled sample library
+├─ tools\                      fallback ffmpeg.exe / ffprobe.exe
+├─ music\                      optional background music
+└─ temp\                       per-scene TTS and render scratch files</code></pre></div>
+          <ul>
+            <li><strong>نسخة احتياطية:</strong> أغلق التطبيق ثم انسخ مجلد <code dir="ltr">%APPDATA%\TubePilot</code> كاملًا.</li>
+            <li><strong>النقل إلى جهاز آخر:</strong> ثبّت TubePilot هناك، أغلقه، ثم انسخ المجلد فوقه.</li>
+            <li><strong>البدء من جديد:</strong> أغلق التطبيق واحذف <code dir="ltr">%APPDATA%\TubePilot</code>. يحذف المفاتيح والمشاريع والذاكرة المؤقتة والفيديوهات.</li>
+            <li><strong>فتح المجلد:</strong> استخدم <strong>فتح مجلد البيانات</strong> في الشريط الجانبي.</li>
+            <li><strong>توفير المساحة:</strong> مجلدات <code dir="ltr">cache\stock</code> هي الأكبر؛ حذفها يكلّف إعادة تنزيل لاحقًا فقط.</li>
+          </ul>
+          <p>تُحفظ المفاتيح كنص عادي داخل ملف ويندوز. احمِ حساب الجهاز ولا تشارك المجلد.</p>
+        </section>
+
+        <section id="quota">
+          <h2>14. الحصة والرفع وحدود القناة <a class="anchor" href="#quota" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <ul>
+            <li><strong>الحصة.</strong> تمنح YouTube Data API 10,000 وحدة لكل مشروع Google Cloud يوميًا. الرفع الواحد يكلّف نحو 1,600 وحدة، أي نحو <strong>6 رفع يوميًا</strong>. الصورة المصغّرة واستدعاءات القناة تضيف قليلًا. تُصفَّر الحصة منتصف الليل بتوقيت المحيط الهادئ.</li>
+            <li><strong>القنوات الجديدة.</strong> الصور المصغّرة المخصصة تحتاج توثيق القناة، وكذلك الفيديوهات الأطول من 15 دقيقة. يحدّ TubePilot المدة بين 2 و20 دقيقة، لكن قناة جديدة قد ترفض الصورة حتى التوثيق.</li>
+            <li><strong>إفصاح AI.</strong> يمكن للإعدادات إضافة سطر «أُنشئ بمساعدة الذكاء الاصطناعي». مفعّل افتراضيًا ويغطي السرد؛ وعند استخدام مشاهد AI يذكرها أيضًا.</li>
+            <li><strong>إسناد الستوك.</strong> يُضاف سطر يسمّي المزوّد والمصوّر/القناة عند استخدام الستوك، حسب تراخيص Pexels وPixabay وUnsplash وOpenverse وWikimedia Commons وNASA.</li>
+            <li><strong>لا أتمتة للتفاعل.</strong> لا يؤتمت TubePilot المشاهدات أو الإعجابات أو التعليقات أو الاشتراكات أو وقت المشاهدة.</li>
+          </ul>
+        </section>
+
+        <section id="troubleshooting">
+          <h2>15. حل المشكلات <a class="anchor" href="#troubleshooting" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>العرض</th><th>الحل</th></tr></thead>
+              <tbody>
+                <tr><td>«Windows protected your PC»</td><td>النسخة غير موقّعة. اضغط <em>More info ← Run anyway</em>، وتحقّق من بصمة SHA-256 أولًا إن أردت.</td></tr>
+                <tr><td>نافذة فارغة أو أخطاء Skiko/DirectX/OpenGL</td><td>غالبًا سطح مكتب بعيد أو جهاز افتراضي بلا كرت شاشة. اضبط <code dir="ltr">TUBEPILOT_SOFTWARE_RENDER=1</code> قبل التشغيل، أو استخدم جهازًا بكرت شاشة.</td></tr>
+                <tr><td><code dir="ltr">Unrecognized option 'crf'</code> أو «Option not found»</td><td>التُقط FFmpeg منقوص من تطبيق آخر. اضغط <strong>Detect</strong> في الإعدادات ← FFmpeg وتأكد من نجاح الاختبار؛ ودع TubePilot يستخدم نسخته.</td></tr>
+                <tr><td>فشل تنزيل FFmpeg أو انتهت المهلة</td><td>النسخة المرفقة تُستخدم عادة، وهذا يهم فقط إذا نُقل مجلد التطبيق أو نُظّف. شغّل <code dir="ltr">--setup</code> مجددًا؛ يعيد المحاولة وينتقل إلى مرآة ثانية.</td></tr>
+                <tr><td>Edge TTS يرفض رمز العميل (HTTP 403)</td><td>غيّرت Microsoft نقطة النهاية غير الرسمية. يعيد TubePilot المحاولة ثم يستخدم أصوات ويندوز المحلية. حدّث التطبيق عند توفر نسخة جديدة.</td></tr>
+                <tr><td>لا تعليق صوتي / فيديو صامت</td><td>في الإعدادات ← التعليق الصوتي، بدّل إلى <strong>Windows SAPI</strong>، اختر صوتًا مثبّتًا واختبره. يوضح <code dir="ltr">--setup</code> المحرّك العامل.</td></tr>
+                <tr><td>Pexels 401 / 403</td><td>مفتاح خاطئ أو ملغى. أنشئ مفتاحًا جديدًا، أو أغلق Pexels واستخدم المصادر الأخرى.</td></tr>
+                <tr><td>Pexels / Pixabay 429</td><td>حد معدّل الطبقة المجانية. انتظر دقائق أو اترك المصدر مغلقًا؛ تنتقل السلسلة للمصدر التالي.</td></tr>
+                <tr><td>Openverse 504 / انتهاء مهلة</td><td>الواجهة العامة مثقلة. تُتخطّى ويُجرَّب المصدر التالي؛ لا حاجة لإجراء.</td></tr>
+                <tr><td>لا نتيجة ستوك في اختبار الإعدادات</td><td>تحقق من مفتاح المزوّد أو فعّل مصدرًا بلا مفتاح. العينات المرفقة تعمل دائمًا دون اتصال.</td></tr>
+                <tr><td>AI 402 / «insufficient funds»</td><td>نموذج Zen مدفوع برصيد فارغ. أضف رصيدًا أو انتقل إلى Go أو استخدم Gemini المجاني.</td></tr>
+                <tr><td>AI 403 على نموذج Zen مجاني</td><td>نماذج Zen المجانية تعمل داخل تطبيق OpenCode فقط. استخدم نموذج Zen مدفوعًا أو Go أو Gemini.</td></tr>
+                <tr><td>AI 429</td><td>حد معدّل Gemini المجاني أو OpenAI. انتظر دقيقة أو فعّل الفوترة.</td></tr>
+                <tr><td>مشاهد AI تعود إلى الستوك دائمًا</td><td>توليد صور/فيديو Gemini ليس في الطبقة المجانية. فعّل الفوترة أو أضف مفتاح OpenAI مدفوعًا؛ يذكر سجل الإنتاج السبب.</td></tr>
+                <tr><td>فيديو AI يُتجاهل بعد المشهد الأول</td><td>فشل نموذج الفيديو مرة (غالبًا الفوترة) فتوقف لذلك الإنتاج. راجع <strong>اختبار مشاهد AI</strong>.</td></tr>
+                <tr><td>صورة AI غير مناسبة للموضوع</td><td>عدّل الوصف البصري لذلك المشهد في تبويب النص. الصورة تتبع الوصف لا كلمة مفتاحية.</td></tr>
+                <tr><td>AI «لم يجب في الوقت المحدد»</td><td>النموذج مثقل. اختر <code dir="ltr">gemini-3.6-flash</code> أو <code dir="ltr">gemini-3.5-flash-lite</code> ثم أعد المحاولة.</td></tr>
+                <tr><td>OpenAI 401</td><td>المفتاح خاطئ أو محذوف. أنشئ واحدًا جديدًا من platform.openai.com/api-keys.</td></tr>
+                <tr><td>OpenAI 429 quota</td><td>الحساب بلا رصيد أو فوترة. أضف رصيدًا أو بدّل المزوّد.</td></tr>
+                <tr><td>YouTube <code dir="ltr">quotaExceeded</code></td><td>نفدت الحصة اليومية. انتظر تصفير منتصف الليل بتوقيت المحيط الهادئ أو اطلب حصة أكبر.</td></tr>
+                <tr><td>الرفع ينجح والصورة المصغّرة تفشل</td><td>القناة غير موثّقة للصور المخصصة. يُرفع الفيديو مع ذلك.</td></tr>
+                <tr><td>OAuth <code dir="ltr">redirect_uri_mismatch</code></td><td>يجب أن يكون عميل OAuth من نوع <strong>Desktop app</strong> لا Web application.</td></tr>
+                <tr><td>OAuth يعمل ثم يفشل بعد أسبوع</td><td>شاشة الموافقة ما تزال في Testing. انشرها أو أعد الربط.</td></tr>
+                <tr><td>الإنتاج بطيء</td><td>ترميز 1080p يعتمد على المعالج. أغلق التطبيقات الثقيلة؛ المشفّر يستخدم <code dir="ltr">veryfast</code> أصلًا.</td></tr>
+                <tr><td>مكافح الفيروسات يحجب FFmpeg أو المثبّت</td><td>اسمح بمجلد TubePilot و<code dir="ltr">%APPDATA%\TubePilot\tools</code>.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout tip">
+            <p><strong>قبل طلب المساعدة:</strong> شغّل <code dir="ltr">TubePilot-cli.cmd --setup</code>،
+            وانسخ الناتج، واذكر ما كنت تفعله. سجل التطبيق في
+            <code dir="ltr">%APPDATA%\TubePilot\desktop.log</code>.</p>
+          </div>
+        </section>
+
+        <section id="faq">
+          <h2>16. الأسئلة الشائعة <a class="anchor" href="#faq" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <h3>هل أحتاج مفاتيح API للتجربة؟</h3>
+          <p>
+            تحتاج مفتاح AI واحدًا لفيديوهاتك؛ الطبقة المجانية من Gemini تكفي. الفيديو التجريبي
+            المدمج ينتج دون مفاتيح. الستوك والعينات المرفقة تعمل دون مفاتيح ستوك أو صوت.
+          </p>
+          <h3>هل يرفع دون سؤالي؟</h3>
+          <p>
+            فقط عند تفعيل الرفع. الوضع الافتراضي <strong>خاص</strong>. يمكنك إيقاف
+            <em>الرفع بعد الإنتاج</em>، أو استخدام <code dir="ltr">--no-upload</code>، أو عدم ربط
+            يوتيوب والإنتاج محليًا فقط.
+          </p>
+          <h3>ما لغات الفيديوهات؟</h3>
+          <p>
+            ست عشرة لغة: الإنجليزية (أمريكية وبريطانية)، الإسبانية، الفرنسية، الألمانية،
+            الإيطالية، البرتغالية، العربية، الهندية، الأردية، التركية، الإندونيسية، الروسية،
+            اليابانية، الكورية والصينية. واجهة التطبيق بين العربية والإنجليزية.
+          </p>
+          <h3>هل يعمل دون كرت شاشة؟</h3>
+          <p>
+            نعم. الإنتاج عبر المعالج وFFmpeg المرفق. كرت الشاشة يساعد النافذة فقط؛ على أسطح
+            المكتب البعيدة أو الأجهزة الافتراضية اضبط <code dir="ltr">TUBEPILOT_SOFTWARE_RENDER=1</code>.
+          </p>
+          <h3>هل يعمل دون إنترنت تمامًا؟</h3>
+          <p>
+            محرّك الإنتاج والمكتبة المرفقة وFFmpeg محلية، فيمكن الإنتاج دون اتصال. النصوص وSEO
+            تحتاج مزوّد AI، والستوك يحتاج إنترنت، وأصوات Edge تحتاج إنترنت. أصوات Windows SAPI
+            تغطي التعليق دون اتصال.
+          </p>
+          <h3>كم فيديو أرفع يوميًا؟</h3>
+          <p>نحو ستة لكل مشروع Google Cloud يوميًا (10,000 وحدة، نحو 1,600 لكل رفع). الإنتاج المحلي بلا حدود.</p>
+          <h3>هل يعمل المفتاح نفسه على ويندوز وأندرويد؟</h3>
+          <p>نعم. يُتحقق من الترخيص دون اتصال وهو غير مرتبط بمنصة واحدة.</p>
+          <h3>ماذا يحدث لفيديوهاتي عند انتهاء الاشتراك؟</h3>
+          <p>
+            لا يُحذف شيء. يقفل التطبيق التشغيلات الجديدة حتى تفعيل مفتاح جديد، لكن المشاريع
+            وملفات MP4 تبقى في <code dir="ltr">%APPDATA%\TubePilot</code>.
+          </p>
+          <h3>هل يترجم التطبيق نصي إلى العربية؟</h3>
+          <p>
+            لا. الواجهة تتبدّل؛ ويبقى التعليق باللغة التي تختارها في «فيديو جديد». اختر
+            <code dir="ltr">ar-SA</code> هناك للحصول على تعليق صوتي عربي.
+          </p>
+        </section>
+
+        <section id="legal">
+          <h2>17. الخصوصية والقانون <a class="anchor" href="#legal" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <h3>بياناتك</h3>
+          <p>
+            مفاتيح API ورموز OAuth والمشاريع والتعليقات الصوتية والفيديوهات والذاكرة المؤقتة
+            تبقى على جهازك فقط داخل <code dir="ltr">%APPDATA%\TubePilot</code>. لا يملك TubePilot
+            نظام حسابات أو خادمًا خاصًا به. تخرج الطلبات مباشرة من جهازك إلى المزوّدين الذين
+            أعددتهم: Google Gemini/YouTube وOpenAI وOpenCode وPexels وPixabay وUnsplash
+            وOpenverse وWikimedia Commons وNASA ونقطة نهاية Microsoft Edge للكلام.
+          </p>
+          <h3>شروط الأطراف الثالثة</h3>
+          <p>
+            يخضع استخدامك لتلك الخدمات لشروطها وحصصها، بما في ذلك إرشادات مجتمع يوتيوب وشروط
+            YouTube API Services وتراخيص كل مزوّد ستوك. الصور والفيديوهات المولّدة بالذكاء
+            الاصطناعي تخضع لشروط مزوّد الصور. تُضاف إسنادات الستوك تلقائيًا حيث تُطلب.
+          </p>
+          <h3>مسؤولية المحتوى</h3>
+          <p>
+            أنت مسؤول عن الموضوع والنص والتعليق والمشاهد التي تنشرها، وعن الإفصاح عن مساعدة
+            الذكاء الاصطناعي حيث يفرض القانون أو سياسة المنصة ذلك. لا يتحقق TubePilot من صحة
+            الوقائع في النصوص المولّدة. راجع قبل النشر.
+          </p>
+          <h3>الترخيص</h3>
+          <p>
+            TubePilot برنامج تجاري يُباع كخطة شهرية أو سنوية مع تجربة مجانية لمرة واحدة لمدة
+            48 ساعة. مفتاح الترخيص شخصي وقائم على الثقة. لا يُسمح بإعادة توزيع المثبّت أو المفاتيح.
+          </p>
+          <h3>العلامات التجارية</h3>
+          <p>
+            TubePilot غير مرتبط بـ Google أو YouTube أو Microsoft أو OpenAI أو OpenCode أو Pexels
+            أو Pixabay أو Unsplash أو Openverse أو Wikimedia Commons أو NASA. كل العلامات ملك لأصحابها.
+          </p>
+        </section>
+
+        <section id="support">
+          <h2>18. الدعم <a class="anchor" href="#support" aria-label="رابط إلى هذا القسم">#</a></h2>
+          <p>
+            البيع ومفاتيح الترخيص والمساعدة الفنية عبر واتساب على
+            <a href="https://wa.me/9613091136" target="_blank" rel="noopener" dir="ltr">+961 3 091 136</a>.
+          </p>
+          <ul>
+            <li>للشراء، اذكر الخطة التي تريدها (شهري $19 أو سنوي $149).</li>
+            <li>للمساعدة، أرسل ناتج <code dir="ltr">--setup</code> ونص الخطأ وما كنت تفعله.</li>
+            <li>لمفتاح مفقود، أرسل تاريخ الشراء التقريبي والاسم/البريد المستخدم على المفتاح.</li>
+          </ul>
+          <div class="help-box">
+            <p><b>ما زلت متعثرًا؟</b>راسلنا مع تقرير الإعداد — معظم المشكلات مفتاح ناقص أو فوترة أو حجب FFmpeg.</p>
+            <a class="btn btn-primary" href="https://wa.me/9613091136?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%AD%D8%AA%D8%A7%D8%AC%20%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9%20%D9%81%D9%8A%20TubePilot." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              دعم واتساب
+            </a>
+          </div>
+          <div class="next-prev">
+            <a href="index-ar.html"><span aria-hidden="true">→</span> العودة إلى الرئيسية</a>
+            <a href="index-ar.html#downloads">تحميل TubePilot <span aria-hidden="true">←</span></a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index-ar.html">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/></svg>
+            </span>
+            TubePilot
+          </a>
+          <p class="blurb">استوديو ويندوز لقنوات يوتيوب بدون ظهور. النص والصوت والمشاهد والإنتاج والصورة المصغّرة والرفع — على جهازك.</p>
+        </div>
+        <div>
+          <h4>المنتج</h4>
+          <ul>
+            <li><a href="index-ar.html#features">المزايا</a></li>
+            <li><a href="index-ar.html#downloads">التحميل</a></li>
+            <li><a href="index-ar.html#pricing">الأسعار</a></li>
+            <li><a href="docs-ar.html">الدليل</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>الدليل</h4>
+          <ul>
+            <li><a href="#install">التثبيت</a></li>
+            <li><a href="#setup">الإعداد لأول مرة</a></li>
+            <li><a href="#visuals">المشاهد والذكاء الاصطناعي</a></li>
+            <li><a href="#troubleshooting">حل المشكلات</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>المساعدة</h4>
+          <ul>
+            <li><a href="https://wa.me/9613091136" target="_blank" rel="noopener">دعم واتساب</a></li>
+            <li><a href="docs.html" lang="en">Documentation in English</a></li>
+            <li><a href="#data">بياناتك</a></li>
+            <li><a href="#legal">ملاحظات قانونية</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> TubePilot · الإصدار 1.0.0 · ويندوز x64</p>
+        <p>غير مرتبط بـ Google أو Microsoft أو Pexels أو Pixabay أو Unsplash أو Openverse أو Wikimedia Commons أو NASA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/downloads.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>

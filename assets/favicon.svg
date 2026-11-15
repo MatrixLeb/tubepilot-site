@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="TubePilot">
+  <defs>
+    <linearGradient id="g" x1="6" y1="4" x2="44" y2="46" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff6b6b"/>
+      <stop offset="1" stop-color="#c2121f"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="12" fill="#131318"/>
+  <rect x="4" y="4" width="40" height="40" rx="10" fill="url(#g)"/>
+  <path d="M20.5 16.5v15l12-7.5z" fill="#fff"/>
+  <path d="M14 9.5c-2.6 0-4.5 2-4.5 4.5v20c0 2.6 2 4.5 4.5 4.5h20c2.6 0 4.5-2 4.5-4.5V14c0-2.6-2-4.5-4.5-4.5z" fill="none" stroke="#fff" stroke-opacity=".28" stroke-width="1.6"/>
+</svg>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TubePilot — فيديوهات يوتيوب بدون ظهور، من الفكرة إلى النشر</title>
+  <meta name="description" content="TubePilot استوديو سطح مكتب لويندوز لقنوات يوتيوب بدون ظهور: يكتب النص، يسجّل التعليق الصوتي، يرسم المشاهد، ينتج فيديو 1080p، يصمم الصورة المصغّرة ويرفع إلى يوتيوب. تجربة مجانية 48 ساعة، بواجهة عربية وإنجليزية.">
+  <meta name="theme-color" content="#0b0b0f">
+  <meta property="og:title" content="TubePilot — فيديوهات بدون ظهور، من الفكرة إلى النشر">
+  <meta property="og:description" content="نقرة واحدة تشغّل النص، تحسين محركات البحث، الصوت العصبي، المشاهد بالذكاء الاصطناعي أو ستوك، إنتاج 1080p، الصورة المصغّرة والرفع إلى يوتيوب — على جهازك.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/screenshots/home-ar.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true" focusable="false">
+    <symbol id="i-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l1.8 4.9L18.7 9.7l-4.9 1.8L12 16.4l-1.8-4.9L5.3 9.7l4.9-1.8z"/>
+      <path d="M18.5 15.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/>
+    </symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15.5H6.5A2.5 2.5 0 0 0 4 21z"/><path d="M8 7.5h8M8 11h6"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>
+    </symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/>
+    </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="16" rx="2.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 17l5-5 4.5 4.5L17 13l3 3"/>
+    </symbol>
+    <symbol id="i-film" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M7 5v14M17 5v14M3 10h4M3 14h4M17 10h4M17 14h4"/>
+    </symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 16V4M7.5 8.5L12 4l4.5 4.5"/><path d="M4 15v3a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3v-3"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3l7 3v6c0 4.4-3 7.7-7 9-4-1.3-7-4.6-7-9V6z"/><path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/>
+    </symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 7.5A2.5 2.5 0 0 1 6 5h4l2 2.5h6A2.5 2.5 0 0 1 20.5 10v7A2.5 2.5 0 0 1 18 19.5H6A2.5 2.5 0 0 1 3.5 17z"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12.5l4.5 4.5L19 7"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5V15M7.5 10.5L12 15l4.5-4.5"/><path d="M4.5 19.5h15"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l10-6.5z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.4 3.6A10.9 10.9 0 0 0 3.9 17.2L2.5 21.5l4.4-1.4A10.9 10.9 0 1 0 20.4 3.6z"/>
+      <path d="M8.7 7.4c.3-.1.6 0 .8.4l.9 1.8c.1.3.1.6-.1.8l-.7.7c.6 1.2 1.5 2.1 2.7 2.7l.7-.7c.2-.2.5-.2.8-.1l1.8.9c.4.2.5.5.4.8-.2.8-.9 1.4-1.7 1.5-3.3.5-8.1-4.3-7.6-7.6.1-.9.7-1.6 1.5-1.8z"/>
+    </symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="12.5" rx="2.5"/><path d="M9 20h6M12 16.5V20"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5l8.5 4.5L12 12.5 3.5 8z"/><path d="M4 12l8 4.3 8-4.3M4 16l8 4.3 8-4.3"/>
+    </symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M7.5 9.5l3 2.5-3 2.5M12.5 15h4"/>
+    </symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4.5" y="10" width="15" height="10.5" rx="2.5"/><path d="M8.5 10V7.5a3.5 3.5 0 0 1 7 0V10"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index-ar.html">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/></svg>
+        </span>
+        TubePilot
+      </a>
+      <nav class="nav" id="site-nav" aria-label="القائمة الرئيسية">
+        <a href="#features">المزايا</a>
+        <a href="#how">طريقة العمل</a>
+        <a href="#downloads">التحميل</a>
+        <a href="#pricing">الأسعار</a>
+        <a href="docs-ar.html">الدليل</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="اللغة">
+          <a href="index.html" hreflang="en" lang="en">EN</a>
+          <a href="index-ar.html" aria-current="true" hreflang="ar">العربية</a>
+        </div>
+        <a class="btn btn-primary btn-sm" href="#downloads">
+          <svg aria-hidden="true"><use href="#i-download"/></svg>
+          تحميل
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="القائمة">
+          <svg aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">استوديو سطح مكتب لويندوز · الإصدار 1.0.0</span>
+          <h1>فيديوهات بدون ظهور،<br>من الفكرة إلى <span class="grad">النشر</span>.</h1>
+          <p class="hero-lead">
+            TubePilot يكتب النص، يسجّل التعليق الصوتي، يرسم كل مشهد، ينتج فيديو 1080p
+            بترجمة مدمجة، يصمّم الصورة المصغّرة ويرفعها إلى يوتيوب. نافذة واحدة، نقرة
+            واحدة، وعلى جهازك أنت.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#downloads">
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              تحميل لويندوز
+            </a>
+            <a class="btn btn-ghost" href="docs-ar.html">
+              <svg aria-hidden="true"><use href="#i-book"/></svg>
+              اقرأ الدليل الكامل
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> تجربة مجانية 48 ساعة</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> العربية والإنجليزية</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> مثبّت أو نسخة محمولة</span>
+          </div>
+        </div>
+
+        <div class="hero-shot">
+          <div class="window">
+            <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>TubePilot — الرئيسية</span></div>
+            <img src="assets/screenshots/home-ar.png" width="1382" height="744" alt="الشاشة الرئيسية لـ TubePilot بالعربية مع الشريط الجانبي ومفتاح اللغة ومراحل الإنتاج الثماني">
+          </div>
+          <div class="hero-badge">
+            <span class="dot"><svg aria-hidden="true"><use href="#i-film"/></svg></span>
+            <div>
+              <strong>1920 × 1080 · 30 إطار/ث</strong>
+              <small>H.264 + AAC مع ترجمة مدمجة</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap">
+        <div><svg aria-hidden="true"><use href="#i-monitor"/></svg> يعمل محليًا على جهازك</div>
+        <div><svg aria-hidden="true"><use href="#i-lock"/></svg> رفع خاص افتراضيًا</div>
+        <div><svg aria-hidden="true"><use href="#i-shield"/></svg> واجهة YouTube الرسمية</div>
+        <div><svg aria-hidden="true"><use href="#i-check"/></svg> لا أتمتة للتفاعل</div>
+      </div>
+    </div>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">كل شيء في مكان واحد</span>
+          <h2>خط إنتاج كامل، لا مجرد مجموعة أوامر نصية</h2>
+          <p>
+            معظم أدوات الذكاء الاصطناعي تتوقف عند النص. TubePilot يكمل العمل عبر الصوت
+            والمشاهد والمونتاج والصورة المصغّرة والنشر — ويُبقي كل خطوة قابلة للتعديل
+            عندما تريد أن تتولى الأمر بنفسك.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-play"/></svg></span>
+            <h3>خط إنتاج يعمل دون إشراف</h3>
+            <p>أدخل المجال أو الموضوع واضغط مرة. تُنفَّذ المراحل بالترتيب، وتظهر نسبة التقدّم في تبويب «تلقائي»، ويمكن الإيقاف أو إعادة المحاولة دون فقدان العمل المنجز.</p>
+          </article>
+          <article class="card">
+            <span class="ico blue"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
+            <h3>نص وتحسين محركات بحث مناسب للمجال</h3>
+            <p>سرد يبدأ بخطّاف ويُقسَّم إلى مشاهد موقّتة، ولكل مشهد وصف بصري، مع عنوان ووصف ووسوم وكلمات للصورة المصغّرة.</p>
+          </article>
+          <article class="card">
+            <span class="ico gold"><svg aria-hidden="true"><use href="#i-mic"/></svg></span>
+            <h3>تعليق صوتي عصبي مجاني</h3>
+            <p>أصوات Microsoft Edge العصبية بست عشرة لغة، مع توقيتات دقيقة لكل كلمة تُحوَّل إلى ملف ترجمة SRT. وإذا تعذّر الاتصال، تتولى أصوات ويندوز المثبّتة المهمة.</p>
+          </article>
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-image"/></svg></span>
+            <h3>مشاهد بالذكاء الاصطناعي لكل مشهد</h3>
+            <p>كل صورة تُرسم من وصف المشهد في النص نفسه، لا من بحث بكلمات مفتاحية. مقاطع فيديو بالذكاء الاصطناعي اختيارية، وحركة كين برنز بطيئة للصور الثابتة.</p>
+          </article>
+          <article class="card">
+            <span class="ico green"><svg aria-hidden="true"><use href="#i-layers"/></svg></span>
+            <h3>لا يتوقف عند غياب مصدر</h3>
+            <p>فيديو AI، صور AI، Pexels، Pixabay، Unsplash، المكتبة المرفقة، Openverse، Wikimedia وNASA — أول نتيجة صالحة تفوز، في كل مرة.</p>
+          </article>
+          <article class="card">
+            <span class="ico blue"><svg aria-hidden="true"><use href="#i-film"/></svg></span>
+            <h3>إنتاج 1080p حقيقي</h3>
+            <p>FFmpeg المرفق يقصّ المقاطع للطول المطلوب، يضبط المقاس على 1920×1080، يمزج موسيقى اختيارية، يدمج الترجمة ويكتب MP4 بترميز H.264/AAC.</p>
+          </article>
+          <article class="card">
+            <span class="ico gold"><svg aria-hidden="true"><use href="#i-image"/></svg></span>
+            <h3>صورة مصغّرة تطابق الفيديو</h3>
+            <p>ملف JPEG بمقاس 1280×720 من أقوى صورة مشهد، مع تدرّج لوني وكلماتك — أعد توليدها بنص مختلف في ثوانٍ.</p>
+          </article>
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-upload"/></svg></span>
+            <h3>رفع إلى يوتيوب يبدأ بالخصوصية</h3>
+            <p>رفع قابل للاستئناف عبر الواجهة الرسمية مع البيانات والصورة المصغّرة. الوضع الافتراضي «خاص»، ويدعم «غير مدرج» و«عام» والجدولة.</p>
+          </article>
+          <article class="card">
+            <span class="ico blue"><svg aria-hidden="true"><use href="#i-globe"/></svg></span>
+            <h3>العربية والإنجليزية</h3>
+            <p>بدّل الواجهة كاملة من الشريط الجانبي. العربية تُعرض من اليمين إلى اليسار، ويُحفظ اختيارك عند التشغيل التالي.</p>
+          </article>
+          <article class="card">
+            <span class="ico green"><svg aria-hidden="true"><use href="#i-terminal"/></svg></span>
+            <h3>سطر أوامر ومهام مجدولة</h3>
+            <p>المحرّك نفسه يعمل من سطر الأوامر مع «مجدول مهام ويندوز»: اختر مجالًا، أنتج وارفع يوميًا حسب جدول.</p>
+          </article>
+          <article class="card">
+            <span class="ico"><svg aria-hidden="true"><use href="#i-folder"/></svg></span>
+            <h3>ملفاتك تبقى ملكك</h3>
+            <p>الإعدادات والمشاريع والفيديوهات والذاكرة المؤقتة في مجلد واحد داخل <code dir="ltr">%APPDATA%</code>. انسخه احتياطيًا، انقله، أو احذفه للبدء من جديد.</p>
+          </article>
+          <article class="card">
+            <span class="ico gold"><svg aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3>صريح بشأن الحدود</h3>
+            <p>لا بوتات، لا أتمتة مشاهدات أو إعجابات، ولا تفاعل وهمي. الرفع يستخدم الواجهة الرسمية وحصتها الحقيقية — نحو ستة فيديوهات يوميًا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="pipeline">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">خط الإنتاج</span>
+          <h2>ثماني مراحل، تشغيل واحد</h2>
+          <p>يمكن أيضًا استخدام كل مرحلة على حدة من تبويبات المشروع، لإعادة توليد النص أو تغيير الصوت أو إعادة الإنتاج دون البدء من الصفر.</p>
+        </div>
+        <ol class="pipeline" style="list-style:none;margin:0;padding:0">
+          <li class="pipe-step"><span class="n">1</span><svg aria-hidden="true"><use href="#i-spark"/></svg><b>الموضوع</b><small>الذكاء الاصطناعي يختار أو تكتبه أنت</small></li>
+          <li class="pipe-step"><span class="n">2</span><svg aria-hidden="true"><use href="#i-book"/></svg><b>النص</b><small>خطّاف ومشاهد ووصف بصري</small></li>
+          <li class="pipe-step"><span class="n">3</span><svg aria-hidden="true"><use href="#i-search"/></svg><b>SEO</b><small>عنوان ووصف ووسوم</small></li>
+          <li class="pipe-step"><span class="n">4</span><svg aria-hidden="true"><use href="#i-mic"/></svg><b>الصوت</b><small>صوت عصبي وتوقيتات</small></li>
+          <li class="pipe-step"><span class="n">5</span><svg aria-hidden="true"><use href="#i-image"/></svg><b>المشاهد</b><small>AI أو ستوك أو مرفقة</small></li>
+          <li class="pipe-step"><span class="n">6</span><svg aria-hidden="true"><use href="#i-film"/></svg><b>الإنتاج</b><small>1080p مع الترجمة</small></li>
+          <li class="pipe-step"><span class="n">7</span><svg aria-hidden="true"><use href="#i-layers"/></svg><b>الصورة المصغّرة</b><small>1280×720 مع الكلمات</small></li>
+          <li class="pipe-step"><span class="n">8</span><svg aria-hidden="true"><use href="#i-upload"/></svg><b>الرفع</b><small>خاص افتراضيًا</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="screens">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">ألقِ نظرة</span>
+          <h2>الاستوديو نفسه بالعربية والإنجليزية</h2>
+          <p>مفتاح واحد يقلب النافذة كاملة، بما في ذلك الشريط الجانبي وتبويبات المشروع والإعدادات وشاشة الاشتراك. العربية تُقرأ من اليمين إلى اليسار.</p>
+        </div>
+        <div class="shots">
+          <figure class="shot" style="margin:0">
+            <div class="window">
+              <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span lang="ar">TubePilot — الرئيسية</span></div>
+              <img src="assets/screenshots/home-ar.png" width="1382" height="744" loading="lazy" alt="واجهة TubePilot بالعربية بتخطيط من اليمين إلى اليسار">
+            </div>
+            <figcaption><b>الواجهة العربية</b><span>تخطيط من اليمين إلى اليسار</span></figcaption>
+          </figure>
+          <figure class="shot" style="margin:0">
+            <div class="window">
+              <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>TubePilot — Home (English)</span></div>
+              <img src="assets/screenshots/home-en.png" width="1386" height="788" loading="lazy" alt="واجهة TubePilot بالإنجليزية مع مفتاح اللغة ومراحل الإنتاج">
+            </div>
+            <figcaption><b>English interface</b><span>مفتاح في الشريط الجانبي · يُحفظ على الجهاز</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="ai">
+      <div class="wrap">
+        <div class="ai-band">
+          <span class="section-kicker">المشاهد</span>
+          <h2>الذكاء الاصطناعي عندما تريده. والستوك عندما لا تريده.</h2>
+          <p>
+            فعّل مشاهد الذكاء الاصطناعي ليُرسم كل مشهد من وصفه في النص. وإذا تركته
+            مغلقًا أو نفدت الحصة أو انقطع الاتصال، يبقى الفيديو قابلاً للإنتاج —
+            ينزل TubePilot في السلسلة حتى ينجح مصدر.
+          </p>
+          <ul class="chain" aria-label="ترتيب مصادر المشاهد">
+            <li>فيديو AI</li><li class="sep" aria-hidden="true">←</li>
+            <li>صور AI</li><li class="sep" aria-hidden="true">←</li>
+            <li>Pexels</li><li class="sep" aria-hidden="true">←</li>
+            <li>Pixabay</li><li class="sep" aria-hidden="true">←</li>
+            <li>Unsplash</li><li class="sep" aria-hidden="true">←</li>
+            <li class="sample">المكتبة المرفقة</li><li class="sep" aria-hidden="true">←</li>
+            <li>Openverse</li><li class="sep" aria-hidden="true">←</li>
+            <li>Wikimedia</li><li class="sep" aria-hidden="true">←</li>
+            <li>NASA</li>
+          </ul>
+          <div class="ai-notes">
+            <div>
+              <b>لا يوجد طريق مسدود</b>
+              أخطاء الحصة والنماذج المتوقفة وحدود المعدّل وانقطاع الشبكة تُسجَّل، ويُجرَّب المصدر التالي. فشل مشهد لا يُفشل الإنتاج.
+            </div>
+            <div>
+              <b>تدفع مقابل ما تستخدمه فقط</b>
+              الطبقة المجانية من Gemini تغطي النصوص وSEO. صور وفيديو AI يحتاجان إلى تفعيل الفوترة (أو مفتاح OpenAI مدفوع)، وبطاقة الإعدادات تعرض تقديرًا قبل الاختبار.
+            </div>
+            <div>
+              <b>تخزين حسب الوصف</b>
+              الصور والمقاطع المولّدة تُحفظ لكل وصف، لذا إعادة إنتاج مشروع لم يتغيّر لا تكلّف شيئًا. عدّل مشهدًا فيُعاد توليد ذلك المشهد فقط.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">بداية سريعة</span>
+          <h2>من التحميل إلى أول فيديو</h2>
+          <p>لا Python، لا تثبيت FFmpeg، لا أدوات بناء. التطبيق يحمل بيئة Java الخاصة به والمشفّر معه.</p>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span class="num">01</span>
+            <h3>ثبّت وفعّل</h3>
+            <p>شغّل المثبّت، أو فكّ ضغط النسخة المحمولة وابدأ <code>TubePilot.exe</code>. ابدأ التجربة المجانية لـ48 ساعة من شاشة الاشتراك — دون بطاقة، مرة واحدة لكل حساب ويندوز.</p>
+            <a href="docs-ar.html#install">دليل التثبيت <span aria-hidden="true">←</span></a>
+          </article>
+          <article class="step">
+            <span class="num">02</span>
+            <h3>أضف مفاتيحك</h3>
+            <p>افتح الإعدادات وألصق مفتاح Gemini المجاني للنصوص وSEO. أضف اختياريًا مفاتيح صور AI وستوك وصوتًا واتصال يوتيوب.</p>
+            <a href="docs-ar.html#setup">الإعداد لأول مرة <span aria-hidden="true">←</span></a>
+          </article>
+          <article class="step">
+            <span class="num">03</span>
+            <h3>أنشئ وانشر</h3>
+            <p>اختر «فيديو جديد»، صف مجالك، اختر مدة من 2 إلى 20 دقيقة وشغّل كل شيء. تابع المراحل، ثم راجع MP4 والصورة المصغّرة.</p>
+            <a href="docs-ar.html#first-video">أول فيديو لك <span aria-hidden="true">←</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="downloads">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">التحميل</span>
+          <h2>احصل على TubePilot 1.0.0</h2>
+          <p>ويندوز 10 أو 11، 64 بت. كلا الملفين يحتويان التطبيق نفسه؛ اختر ما يناسب جهازك.</p>
+        </div>
+
+        <div class="downloads-grid">
+          <article class="download-card primary">
+            <span class="tag">موصى به</span>
+            <h3>مثبّت ويندوز</h3>
+            <div class="file" dir="ltr">TubePilot-Setup-1.0.0.exe</div>
+            <p>
+              يثبّت للمستخدم الحالي دون طلب صلاحيات المدير، ويضيف اختصارًا في قائمة
+              ابدأ وأداة إزالة. الإصدارات الجديدة تُحدَّث فوق القديمة مباشرة.
+            </p>
+            <a class="btn btn-primary btn-block" data-download="TubePilot-Setup-1.0.0.exe" href="downloads/TubePilot-Setup-1.0.0.exe" download>
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              تحميل المثبّت
+            </a>
+            <div class="download-meta">
+              <span>263 ميغابايت</span>
+              <span>دون صلاحيات مدير</span>
+              <span>اختصار في قائمة ابدأ</span>
+            </div>
+          </article>
+
+          <article class="download-card">
+            <h3>نسخة محمولة ZIP</h3>
+            <div class="file" dir="ltr">TubePilot-1.0.0-portable.zip</div>
+            <p>
+              فكّ الضغط في أي مكان وشغّل <code dir="ltr">TubePilot\TubePilot.exe</code>. لا شيء
+              يُثبَّت؛ لكن الإعدادات والفيديوهات تبقى في <code dir="ltr">%APPDATA%\TubePilot</code>.
+            </p>
+            <a class="btn btn-ghost btn-block" data-download="TubePilot-1.0.0-portable.zip" href="downloads/TubePilot-1.0.0-portable.zip" download>
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              تحميل النسخة المحمولة
+            </a>
+            <div class="download-meta">
+              <span>260 ميغابايت</span>
+              <span>دون تثبيت</span>
+              <span>تعمل من ذاكرة USB</span>
+            </div>
+          </article>
+        </div>
+
+        <details class="hash-box">
+          <summary>بصمات SHA-256 وتفاصيل الملفات</summary>
+          <div class="hash-row">
+            <span dir="ltr">TubePilot-Setup-1.0.0.exe · 275,382,272 bytes</span>
+            <code dir="ltr">f0f6c679058620b4553702c05ffc341d0f6cf54ba135620f94e09266df25a7ff</code>
+          </div>
+          <div class="hash-row">
+            <span dir="ltr">TubePilot-1.0.0-portable.zip · 272,964,658 bytes</span>
+            <code dir="ltr">5f889c17a629b2bccdcf0948b2859adc16ea32b1a54217b61427d4249ff2c056</code>
+          </div>
+          <div class="hash-row">
+            <span>التحقق في PowerShell</span>
+            <code dir="ltr">Get-FileHash .\TubePilot-Setup-1.0.0.exe -Algorithm SHA256</code>
+          </div>
+          <div class="hash-row">
+            <span>ملفات إضافية</span>
+            <code><a href="downloads/SHA256SUMS.txt" dir="ltr">SHA256SUMS.txt</a> · الفيديوهات التجريبية وملفات الشرح في مجلد الإصدار</code>
+          </div>
+        </details>
+
+        <h3 style="margin-top:38px">متطلبات التشغيل</h3>
+        <ul class="req-list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> ويندوز 10 أو 11، 64 بت</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> نحو 700 ميغابايت مساحة حرة</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> مفتاح AI لفيديوهاتك — الطبقة المجانية من Gemini تكفي</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> إنترنت للذكاء الاصطناعي ومصادر الستوك والأصوات العصبية</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> لا حاجة إلى كرت شاشة؛ الإنتاج عبر المعالج</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> الإنتاج دون اتصال يعمل بالمكتبة المرفقة</li>
+        </ul>
+
+        <div class="callout note" style="margin-top:26px">
+          <p><strong>تنبيه SmartScreen.</strong> النسخة غير موقّعة رقميًا بعد، لذا قد يعرض ويندوز
+          «Windows protected your PC». اضغط <em>More info</em> ثم <em>Run anyway</em>. يمكنك التحقق
+          من بصمة SHA-256 أعلاه قبل التشغيل.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">الخطط</span>
+          <h2>جرّبه مجانًا، ثم اختر خطتك</h2>
+          <p>ترخيص واحد يفتح الاستوديو على جهاز واحد. الدفع يتم مباشرة عبر واتساب — OMT أو Whish Money أو USDT أو تحويل بنكي.</p>
+        </div>
+        <div class="pricing">
+          <article class="price-card">
+            <h3>تجربة مجانية</h3>
+            <div class="price">$0</div>
+            <div class="price-note">48 ساعة · مرة واحدة لكل حساب ويندوز</div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> كل المزايا مفتوحة</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> دون بطاقة أو حساب</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> ابدأ من داخل التطبيق</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="docs-ar.html#activate">كيف تعمل التجربة</a>
+          </article>
+
+          <article class="price-card featured">
+            <h3>شهري</h3>
+            <div class="price">$19 <small>/ شهر</small></div>
+            <div class="price-note">30 يومًا لكل مفتاح</div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> إنتاج محلي بلا حدود</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> سطر الأوامر ومجدول المهام</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> يعمل دون اتصال بعد التفعيل</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/9613091136?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B4%D8%B1%D8%A7%D8%A1%20TubePilot%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B4%D9%87%D8%B1%D9%8A%D8%A9%20(19%24)." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              الشراء عبر واتساب
+            </a>
+          </article>
+
+          <article class="price-card">
+            <h3>سنوي</h3>
+            <div class="price">$149 <small>/ سنة</small></div>
+            <div class="price-note">365 يومًا · نحو $12.42 شهريًا</div>
+            <ul>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> وفّر نحو 35% مقارنة بالشهري</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> المزايا نفسها لمدة أطول</li>
+              <li><svg aria-hidden="true"><use href="#i-check"/></svg> المفتاح يعمل على ويندوز وأندرويد</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/9613091136?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B4%D8%B1%D8%A7%D8%A1%20TubePilot%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B3%D9%86%D9%88%D9%8A%D8%A9%20(149%24)." target="_blank" rel="noopener">
+              <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+              الشراء عبر واتساب
+            </a>
+          </article>
+        </div>
+
+        <div class="callout tip" style="margin-top:26px">
+          <p><strong>لديك مفتاح بالفعل؟</strong> افتح <em>الاشتراك ← تفعيل ترخيص</em>، وألصق مفتاح
+          <code dir="ltr">TP1…</code> ليُتحقّق منه دون اتصال. المفتاح نفسه يعمل في تطبيقي ويندوز
+          وأندرويد. للأسئلة راسل <a href="https://wa.me/9613091136" target="_blank" rel="noopener" dir="ltr">+961 3 091 136</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">الأسئلة الشائعة</span>
+          <h2>قبل أن تثبّت</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>هل أحتاج مفاتيح API للتجربة؟</summary>
+            <p>
+              تحتاج مفتاح AI واحدًا لفيديوهاتك، والطبقة المجانية من Gemini تكفي للنصوص وSEO.
+              الأمر <code dir="ltr">--demo</code> ينتج فيديو تجريبيًا كاملًا دون أي مفاتيح. الستوك
+              والمكتبة المرفقة والأصوات العصبية المجانية تعمل دون مفاتيح ستوك أو صوت.
+            </p>
+          </details>
+          <details>
+            <summary>هل يرفع الفيديو دون سؤالي؟</summary>
+            <p>
+              فقط عند تشغيل خط الإنتاج مع تفعيل الرفع، والوضع الافتراضي <strong>خاص</strong>.
+              يمكنك الإنتاج محليًا بإيقاف «الرفع بعد الإنتاج»، أو استخدام
+              <code dir="ltr">--no-upload</code>، أو عدم ربط يوتيوب إطلاقًا.
+            </p>
+          </details>
+          <details>
+            <summary>ما لغات الفيديوهات المتاحة؟</summary>
+            <p>
+              ست عشرة لغة للتعليق الصوتي: الإنجليزية (أمريكية وبريطانية)، الإسبانية، الفرنسية،
+              الألمانية، الإيطالية، البرتغالية، العربية، الهندية، الأردية، التركية، الإندونيسية،
+              الروسية، اليابانية، الكورية والصينية. أما واجهة التطبيق فتبدّل بين العربية والإنجليزية.
+            </p>
+          </details>
+          <details>
+            <summary>هل يعمل دون كرت شاشة؟</summary>
+            <p>
+              نعم. الإنتاج يستخدم المعالج وFFmpeg المرفق. كرت الشاشة يساعد النافذة فقط؛ وعلى
+              أسطح المكتب البعيدة أو الأجهزة الافتراضية دون دعم 3D، اضبط
+              <code dir="ltr">TUBEPILOT_SOFTWARE_RENDER=1</code> قبل التشغيل.
+            </p>
+          </details>
+          <details>
+            <summary>هل يمكن تشغيله دون إنترنت؟</summary>
+            <p>
+              محرّك الإنتاج والمكتبة المرفقة وFFmpeg محلية، لذا يمكن إنتاج فيديو دون اتصال.
+              النصوص وSEO تحتاج مزوّد الذكاء الاصطناعي، والستوك يحتاج إنترنت، وأصوات Edge
+              تحتاج إنترنت. أصوات Windows SAPI تغطي التعليق الصوتي دون اتصال.
+            </p>
+          </details>
+          <details>
+            <summary>كم فيديو يمكنني رفعه يوميًا؟</summary>
+            <p>
+              تمنح YouTube 10,000 وحدة API يوميًا، والرفع الواحد يكلّف نحو 1,600، أي ما يقارب
+              ستة رفع يوميًا لكل مشروع Google Cloud. الإنتاج المحلي بلا حدود. التفاصيل في
+              <a href="docs-ar.html#youtube">دليل يوتيوب</a>.
+            </p>
+          </details>
+        </div>
+        <p style="margin-top:24px"><a href="docs-ar.html#faq">مزيد من الأسئلة في الدليل ←</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="cta">
+          <h2>أنشئ أول فيديو بدون ظهور هذه الليلة</h2>
+          <p>ثبّت، ابدأ تجربة الـ48 ساعة، ألصق مفتاح Gemini المجاني واضغط «إنشاء وتشغيل كل شيء». الدليل الكامل يشرح كل شاشة وكل إعداد.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#downloads">
+              <svg aria-hidden="true"><use href="#i-download"/></svg>
+              تحميل TubePilot
+            </a>
+            <a class="btn btn-ghost" href="docs-ar.html">
+              <svg aria-hidden="true"><use href="#i-book"/></svg>
+              افتح الدليل
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index-ar.html">
+            <span class="brand-mark">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6.5l8 5.5-8 5.5z" fill="#fff"/></svg>
+            </span>
+            TubePilot
+          </a>
+          <p class="blurb">استوديو ويندوز لقنوات يوتيوب بدون ظهور. النص والصوت والمشاهد والإنتاج والصورة المصغّرة والرفع — على جهازك.</p>
+        </div>
+        <div>
+          <h4>المنتج</h4>
+          <ul>
+            <li><a href="#features">المزايا</a></li>
+            <li><a href="#downloads">التحميل</a></li>
+            <li><a href="#pricing">الأسعار</a></li>
+            <li><a href="docs-ar.html">الدليل</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>الدليل</h4>
+          <ul>
+            <li><a href="docs-ar.html#install">التثبيت</a></li>
+            <li><a href="docs-ar.html#setup">الإعداد لأول مرة</a></li>
+            <li><a href="docs-ar.html#visuals">المشاهد والذكاء الاصطناعي</a></li>
+            <li><a href="docs-ar.html#troubleshooting">حل المشكلات</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>المساعدة</h4>
+          <ul>
+            <li><a href="https://wa.me/9613091136" target="_blank" rel="noopener">دعم واتساب</a></li>
+            <li><a href="docs.html" lang="en">Documentation in English</a></li>
+            <li><a href="docs-ar.html#data">بياناتك</a></li>
+            <li><a href="docs-ar.html#legal">ملاحظات قانونية</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> TubePilot · الإصدار 1.0.0 · ويندوز x64</p>
+        <p>غير مرتبط بـ Google أو Microsoft أو Pexels أو Pixabay أو Unsplash أو Openverse أو Wikimedia Commons أو NASA.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/downloads.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
