@@ -70,13 +70,30 @@
       if (label) video.setAttribute("aria-label", label);
     };
 
+    var rtl = (document.documentElement.dir || "").toLowerCase() === "rtl";
+
     videoTabs.forEach(function (tab, index) {
       tab.addEventListener("click", function () {
         selectVideo(tab);
       });
 
       tab.addEventListener("keydown", function (event) {
-        var step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+        var step = 0;
+        if (event.key === "Home") {
+          event.preventDefault();
+          selectVideo(videoTabs[0]);
+          videoTabs[0].focus();
+          return;
+        }
+        if (event.key === "End") {
+          event.preventDefault();
+          var last = videoTabs[videoTabs.length - 1];
+          selectVideo(last);
+          last.focus();
+          return;
+        }
+        if (event.key === "ArrowRight") step = rtl ? -1 : 1;
+        if (event.key === "ArrowLeft") step = rtl ? 1 : -1;
         if (!step) return;
         event.preventDefault();
         var next = videoTabs[(index + step + videoTabs.length) % videoTabs.length];
