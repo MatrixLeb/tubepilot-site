@@ -38,6 +38,54 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  /* ------------------------------------------------------ demo video tabs */
+
+  var video = document.getElementById("walkthrough");
+  var videoTabs = Array.prototype.slice.call(
+    document.querySelectorAll("[data-video] [role='tab']")
+  );
+
+  if (video && videoTabs.length) {
+    var videoCaption = document.querySelector("[data-video-caption]");
+
+    var selectVideo = function (tab) {
+      var src = tab.getAttribute("data-src");
+      if (!src) return;
+      if (video.getAttribute("src") !== src) {
+        video.pause();
+        video.setAttribute("src", src);
+        var poster = tab.getAttribute("data-poster");
+        if (poster) video.setAttribute("poster", poster);
+        video.load();
+      }
+      videoTabs.forEach(function (other) {
+        var on = other === tab;
+        other.setAttribute("aria-selected", on ? "true" : "false");
+        other.tabIndex = on ? 0 : -1;
+      });
+      if (videoCaption) {
+        videoCaption.textContent = tab.getAttribute("data-caption") || "";
+      }
+      var label = tab.getAttribute("data-label");
+      if (label) video.setAttribute("aria-label", label);
+    };
+
+    videoTabs.forEach(function (tab, index) {
+      tab.addEventListener("click", function () {
+        selectVideo(tab);
+      });
+
+      tab.addEventListener("keydown", function (event) {
+        var step = event.key === "ArrowRight" ? 1 : event.key === "ArrowLeft" ? -1 : 0;
+        if (!step) return;
+        event.preventDefault();
+        var next = videoTabs[(index + step + videoTabs.length) % videoTabs.length];
+        next.focus();
+        selectVideo(next);
+      });
+    });
+  }
+
   /* ----------------------------------------------------------- downloads */
 
   var base = window.TUBEPILOT_DOWNLOAD_BASE || "downloads/";

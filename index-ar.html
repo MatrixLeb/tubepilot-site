@@ -87,6 +87,7 @@
       <nav class="nav" id="site-nav" aria-label="القائمة الرئيسية">
         <a href="#features">المزايا</a>
         <a href="#how">طريقة العمل</a>
+        <a href="#demo">شاهد العرض</a>
         <a href="#downloads">التحميل</a>
         <a href="#pricing">الأسعار</a>
         <a href="docs-ar.html">الدليل</a>
@@ -350,6 +351,71 @@
             <a href="docs-ar.html#first-video">أول فيديو لك <span aria-hidden="true">←</span></a>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section demo" id="demo">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="section-kicker">شاهد العرض</span>
+          <h2>من أول تشغيل إلى النشر النهائي</h2>
+          <p>
+            جولة معلّقة على مسار العمل كاملًا: التثبيت، المفاتيح، المجال، النص، الصوت،
+            المشاهد، الترجمة، التصدير، الصورة المصغّرة والنشر. نفس الخطوات ونفس التطبيق،
+            بالعربية والإنجليزية.
+          </p>
+        </div>
+
+        <div class="video-card" data-video>
+          <div class="video-bar">
+            <div class="video-tabs" role="tablist" aria-label="لغة الشرح">
+              <button type="button" role="tab" aria-selected="true" tabindex="0"
+                data-src="assets/video/walkthrough-ar.mp4"
+                data-poster="assets/video/poster-ar.jpg"
+                data-label="شرح TubePilot بالعربية"
+                data-caption="تعليق عربي · 2:24 · 1920 × 1080 · H.264 + AAC">
+                <svg aria-hidden="true"><use href="#i-play"/></svg>
+                العربية <span>2:24</span>
+              </button>
+              <button type="button" role="tab" aria-selected="false" tabindex="-1" lang="en"
+                data-src="assets/video/walkthrough-en.mp4"
+                data-poster="assets/video/poster-en.jpg"
+                data-label="TubePilot walkthrough in English"
+                data-caption="English narration · 1:47 · 1920 × 1080 · H.264 + AAC">
+                <svg aria-hidden="true"><use href="#i-play"/></svg>
+                English <span>1:47</span>
+              </button>
+            </div>
+            <span class="video-pill"><svg aria-hidden="true"><use href="#i-film"/></svg> 1080p · H.264</span>
+          </div>
+
+          <div class="video-frame">
+            <video id="walkthrough" controls playsinline preload="metadata"
+              poster="assets/video/poster-ar.jpg"
+              src="assets/video/walkthrough-ar.mp4"
+              aria-label="شرح TubePilot بالعربية">
+              متصفحك لا يستطيع تشغيل هذا الفيديو.
+              <a href="assets/video/walkthrough-ar.mp4">حمّل الشرح</a>.
+            </video>
+          </div>
+
+          <div class="video-meta">
+            <p data-video-caption>تعليق عربي · 2:24 · 1920 × 1080 · H.264 + AAC</p>
+            <a href="docs-ar.html#first-video">اقرأ نفس الخطوات في الدليل <span aria-hidden="true">←</span></a>
+          </div>
+        </div>
+
+        <ol class="video-agenda">
+          <li><span>01</span> ثبّت التطبيق وابدأ التجربة</li>
+          <li><span>02</span> أضف مفتاح Gemini والصوت</li>
+          <li><span>03</span> أنشئ فيديو من مجال</li>
+          <li><span>04</span> راجع النص المُولَّد</li>
+          <li><span>05</span> اختر المشاهد: AI أو ستوك أو المرفقة</li>
+          <li><span>06</span> صدّر الفيديو مع ترجمة محروقة</li>
+          <li><span>07</span> عدّل الصورة المصغّرة وبيانات الفيديو</li>
+          <li><span>08</span> راجع ملف MP4 النهائي</li>
+          <li><span>09</span> ارفع إلى يوتيوب أو جدوله</li>
+        </ol>
       </div>
     </section>
 

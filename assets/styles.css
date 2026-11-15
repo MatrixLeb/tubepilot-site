@@ -892,6 +892,179 @@ h3 {
   font-weight: 650;
 }
 
+/* ------------------------------------------------------------------- demo */
+
+.demo {
+  background:
+    radial-gradient(900px 380px at 16% -12%, rgba(143, 211, 255, 0.07), transparent 70%),
+    radial-gradient(760px 340px at 100% 112%, rgba(255, 61, 61, 0.08), transparent 70%);
+}
+
+.video-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.video-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--line);
+}
+
+.video-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.video-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 650;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.video-tabs button svg {
+  width: 13px;
+  height: 13px;
+  flex: none;
+}
+
+.video-tabs button span {
+  color: var(--dim);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+.video-tabs button:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+.video-tabs button[aria-selected="true"] {
+  background: var(--surface-3);
+  border-color: var(--line-2);
+  color: var(--text);
+}
+
+.video-tabs button[aria-selected="true"] svg {
+  color: var(--primary);
+}
+
+.video-tabs button[aria-selected="true"] span {
+  color: var(--text-2);
+}
+
+.video-tabs button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.video-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--dim);
+  font-size: 0.7rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.video-pill svg {
+  width: 12px;
+  height: 12px;
+  color: var(--accent);
+}
+
+.video-frame {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.video-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  padding: 13px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.video-meta p {
+  margin: 0;
+  color: var(--dim);
+  font-size: 0.82rem;
+}
+
+.video-meta a {
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.video-agenda {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.video-agenda li {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--text-2);
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.video-agenda li span {
+  flex: none;
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
 /* -------------------------------------------------------------- downloads */
 
 .downloads-grid {
@@ -1776,7 +1949,7 @@ tbody tr:hover td {
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 1000px) {
   .nav {
     position: fixed;
     inset: var(--header-h) 0 auto 0;
@@ -1818,7 +1991,9 @@ tbody tr:hover td {
   .site-header .nav {
     order: 4;
   }
+}
 
+@media (max-width: 760px) {
   .hero-badge {
     inset-inline-end: 8px;
     bottom: -16px;
@@ -1827,6 +2002,10 @@ tbody tr:hover td {
 
   .pipeline {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .video-agenda {
+    grid-template-columns: 1fr 1fr;
   }
 
   .footer-grid {
@@ -1858,6 +2037,14 @@ tbody tr:hover td {
 
   .hero-cta .btn {
     width: 100%;
+  }
+
+  .video-agenda {
+    grid-template-columns: 1fr;
+  }
+
+  .video-meta {
+    padding: 12px 14px;
   }
 
   .footer-grid {

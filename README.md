@@ -1,19 +1,21 @@
 # TubePilot website
 
 A static, dependency-free marketing site and full user manual for TubePilot 1.0.0.
-English and Arabic, light/dark studio styling, responsive down to phones.
+English and Arabic, light/dark studio styling, responsive down to phones, with the
+narrated A–Z walkthrough embedded on both landing pages.
 
 ## Pages
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | English landing page: features, pipeline, screenshots, downloads, pricing, FAQ |
+| `index.html` | English landing page: features, pipeline, screenshots, demo video, downloads, pricing, FAQ |
 | `index-ar.html` | Arabic landing page (`dir="rtl"`) |
 | `docs.html` | Complete English manual, installation to publishing |
 | `docs-ar.html` | Complete Arabic manual |
 | `assets/styles.css` | All styling, including RTL and print rules |
-| `assets/site.js` | Mobile nav, copy buttons, docs search, scroll-spy |
+| `assets/site.js` | Mobile nav, demo video language tabs, copy buttons, docs search, scroll-spy |
 | `assets/downloads.js` | One place to change where the installers are hosted |
+| `assets/video/` | English and Arabic walkthrough MP4s plus poster frames |
 | `downloads/` | Local copy of the installer, portable ZIP and `SHA256SUMS.txt` |
 
 ## Preview locally
@@ -44,8 +46,10 @@ The site is plain HTML/CSS/JS, so any free static host works.
 
 1. Put the contents of this folder at the repository root (or in `/docs` and
    select that folder in Settings → Pages).
-2. Settings → Pages → Deploy from a branch → `main` → `/docs`.
+2. Settings → Pages → Deploy from a branch → `main` → `/(root)`.
 3. Add `.nojekyll` if you later introduce files or folders beginning with `_`.
+
+The live site for this repository is <https://matrixleb.github.io/tubepilot-site/>.
 
 ### Option C — Netlify
 
@@ -78,6 +82,25 @@ You can keep the local `downloads/` copies for offline testing; the deployed
 site will use the base URL you configure. The download page also links to
 `downloads/SHA256SUMS.txt`, so keep a copy of that file at the hosted location
 or update the link.
+
+## Demo video
+
+`index.html#demo` and `index-ar.html#demo` play the narrated walkthroughs from
+`assets/video/`. The language tabs swap `src`, poster and caption in place — no
+framework and no external player. Both files are about 14–15 MB, under GitHub's
+100 MB per-file limit, so they are committed with the site and need no extra
+hosting.
+
+Regenerate the poster frames after re-recording:
+
+```powershell
+$ff = "E:\Business\TubePilot\dist\TubePilot-1.0.0-portable\TubePilot\app\resources\tools\ffmpeg.exe"
+& $ff -y -ss 3 -i assets\video\walkthrough-en.mp4 -frames:v 1 -vf "scale=1280:-2" -q:v 3 assets\video\poster-en.jpg
+& $ff -y -ss 3 -i assets\video\walkthrough-ar.mp4 -frames:v 1 -vf "scale=1280:-2" -q:v 3 assets\video\poster-ar.jpg
+```
+
+Durations are written into the tab labels (`1:47` English, `2:24` Arabic);
+update them if the recordings change.
 
 ## When you ship a new build
 
