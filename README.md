@@ -16,6 +16,7 @@ narrated A–Z walkthrough embedded on both landing pages.
 | `assets/site.js` | Mobile nav, demo video language tabs, copy buttons, docs search, scroll-spy |
 | `assets/downloads.js` | One place to change where the installers are hosted |
 | `assets/video/` | English and Arabic walkthrough MP4s plus poster frames |
+| `assets/social/` | 1200×630 promo image used for Open Graph and Twitter cards |
 | `downloads/` | Local copy of the installer, portable ZIP and `SHA256SUMS.txt` |
 
 ## Preview locally
@@ -101,6 +102,17 @@ $ff = "E:\Business\TubePilot\dist\TubePilot-1.0.0-portable\TubePilot\app\resourc
 
 Durations are written into the tab labels (`1:47` English, `2:24` Arabic);
 update them if the recordings change.
+
+## Social preview image
+
+`assets/social/tubepilot-promo-1200x630.png` is the link-preview image used by
+all four pages (`og:image` and `twitter:image`). It is a 1200×630 composition
+built from the real Home screen, the brand palette and the walkthrough badge.
+Keep the absolute URL in the meta tags in sync with the deployed domain if the
+site moves.
+
+If you change the app screenshot, rebuild the card at the same 1200×630 size so
+social platforms do not crop the text.
 
 ## When you ship a new build
 
