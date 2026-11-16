@@ -139,9 +139,9 @@ Get-FileHash .\downloads\TubePilot-1.0.0-portable.zip -Algorithm SHA256
   `#troubleshooting` are linked from the landing pages, so do not rename them.
 - Arabic pages use `dir="rtl"`; code snippets and file paths use `dir="ltr"`.
 - Screenshots live in `assets/screenshots/`. `hero-en.png` and `hero-ar.png` are
-  real 1366×705 captures of the Windows app's Home screen, taken from the client
-  area so no OS title bar or taskbar appears. `home-*.png` holds the same pair
-  for the language cards. Replace them at the same dimensions or update the
+  real 1224×749 client-area crops of the finished demo project, so no OS title
+  bar or taskbar appears. `home-*.png` holds 1366×705 Home-screen captures used
+  by the language cards. Replace them at the same dimensions or update the
   `width`/`height` attributes to avoid layout shift.
 - The site has no cookies, analytics or external fonts. The only outbound links
   are WhatsApp, the documentation, and the API-key sites named in the manual.
