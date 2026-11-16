@@ -50,11 +50,24 @@ The site is plain HTML/CSS/JS, so any free static host works.
 2. Settings → Pages → Deploy from a branch → `main` → `/(root)`.
 3. Add `.nojekyll` if you later introduce files or folders beginning with `_`.
 
-The live site for this repository is <https://tubepilot-690.netlify.app/>.
+### Option C — Netlify (current production host)
 
-### Option C — Netlify
+The official site is <https://tubepilot-690.netlify.app/>. The Netlify project
+is not connected to this repository, so a Git push does not redeploy it.
 
-Drag the folder onto <https://app.netlify.com/drop>. No build step.
+To publish an update, zip this folder without `.git` and without the large
+installers in `downloads/` (keep `downloads/SHA256SUMS.txt`), then either drag
+the zip onto the Netlify dashboard or POST it to the deploy API:
+
+```powershell
+curl.exe -H "Authorization: Bearer $env:NETLIFY_AUTH_TOKEN" `
+  -H "Content-Type: application/zip" `
+  --data-binary "@tubepilot-site.zip" `
+  "https://api.netlify.com/api/v1/sites/4fbd4aee-7d16-4a47-85da-e8664619aee2/deploys"
+```
+
+Use forward slashes when building the zip; Netlify does not extract archives
+whose entry names use Windows backslashes.
 
 ## Host the big downloads separately
 
