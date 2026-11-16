@@ -1,6 +1,6 @@
 # TubePilot website
 
-A static, dependency-free marketing site and full user manual for TubePilot 1.0.1.
+A static, dependency-free marketing site and full user manual for TubePilot 1.0.2.
 English and Arabic, light/dark studio styling, responsive down to phones, with the
 narrated A–Z walkthrough embedded on both landing pages.
 
@@ -77,13 +77,13 @@ files are allowed, then point the site at that folder.
 
 **GitHub Releases** (free, 2 GB per file):
 
-1. Create a release tagged `v1.0.1` (keep older tags so past downloads stay counted).
-2. Upload `TubePilot-Setup-1.0.1.exe` and `TubePilot-1.0.1-portable.zip`.
+1. Create a release tagged `v1.0.2` (keep older tags so past downloads stay counted).
+2. Upload `TubePilot-Setup-1.0.2.exe` and `TubePilot-1.0.2-portable.zip`.
 3. Edit `assets/downloads.js`:
 
 ```js
 window.TUBEPILOT_DOWNLOAD_BASE =
-  "https://github.com/YOUR-NAME/YOUR-REPO/releases/download/v1.0.1/";
+  "https://github.com/YOUR-NAME/YOUR-REPO/releases/download/v1.0.2/";
 ```
 
 `assets/downloads.js` also sets `TUBEPILOT_RELEASE_API`. The page fetches that
@@ -140,8 +140,8 @@ social platforms do not crop the text.
 3. Recompute the hashes:
 
 ```powershell
-Get-FileHash .\downloads\TubePilot-Setup-1.0.1.exe -Algorithm SHA256
-Get-FileHash .\downloads\TubePilot-1.0.1-portable.zip -Algorithm SHA256
+Get-FileHash .\downloads\TubePilot-Setup-1.0.2.exe -Algorithm SHA256
+Get-FileHash .\downloads\TubePilot-1.0.2-portable.zip -Algorithm SHA256
 ```
 
 4. Update the two hash values and byte counts in `index.html`, `index-ar.html`
@@ -157,7 +157,7 @@ Get-FileHash .\downloads\TubePilot-1.0.1-portable.zip -Algorithm SHA256
 The number shown on the site comes from GitHub. To read it directly:
 
 ```powershell
-gh release view v1.0.1 --repo MatrixLeb/tubepilot-site --json assets
+gh release view v1.0.2 --repo MatrixLeb/tubepilot-site --json assets
 ```
 
 or open <https://github.com/MatrixLeb/tubepilot-site/releases> — each asset

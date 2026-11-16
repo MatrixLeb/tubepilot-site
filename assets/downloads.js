@@ -1,7 +1,7 @@
 /*
  * Download location configuration.
  *
- * TubePilot 1.0.1 installers are hosted as GitHub Release assets because they
+ * TubePilot 1.0.2 installers are hosted as GitHub Release assets because they
  * are far larger than GitHub Pages allows in a repository. The site itself is
  * published from the same repository with GitHub Pages.
  *
@@ -10,7 +10,7 @@
  * website/downloads/.
  */
 window.TUBEPILOT_DOWNLOAD_BASE =
-  "https://github.com/MatrixLeb/tubepilot-site/releases/download/v1.0.1/";
+  "https://github.com/MatrixLeb/tubepilot-site/releases/download/v1.0.2/";
 
 /*
  * Public GitHub API endpoint the site reads to show live download counts.

@@ -1,2 +1,2 @@
-7726389fd070f2af85ebcbfb9d5703a56bfd0004b124be18b925a9f6328ce86f *TubePilot-Setup-1.0.1.exe
-3c795f26a4ea9cb54aa77de3905d16f35b4a5d66b12665bff325c67ef490b613 *TubePilot-1.0.1-portable.zip
+ec520708021e37e83fc5fd27042e5a2e67481a549e3b469056dc057103dbc8e8 *TubePilot-Setup-1.0.2.exe
+f029eaeaebccc4f60ea1bb2d0c5d8314087084750a0fe453af44170cac6088c5 *TubePilot-1.0.2-portable.zip
