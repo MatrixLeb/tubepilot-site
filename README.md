@@ -138,7 +138,7 @@ Get-FileHash .\downloads\TubePilot-1.0.0-portable.zip -Algorithm SHA256
   `#install`, `#setup`, `#visuals`, `#youtube`, `#data`, `#legal` and
   `#troubleshooting` are linked from the landing pages, so do not rename them.
 - Arabic pages use `dir="rtl"`; code snippets and file paths use `dir="ltr"`.
-- Screenshots live in `assets/screenshots/`. `hero-en.png` and `hero-ar.png` are
+- Screenshots live in `assets/screenshots/`. `hero-en-app.png` and `hero-ar-app.png` are
   real 1224×749 client-area crops of the finished demo project, so no OS title
   bar or taskbar appears. `home-*.png` holds 1366×705 Home-screen captures used
   by the language cards. Replace them at the same dimensions or update the
