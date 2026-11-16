@@ -492,6 +492,24 @@ h3 {
   transform: rotate(-0.4deg);
 }
 
+.hero-photo {
+  margin: 0;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #0b0b0f;
+  line-height: 0;
+  box-shadow:
+    0 46px 100px -32px rgba(0, 0, 0, 0.95),
+    0 0 80px -34px rgba(255, 61, 61, 0.4);
+}
+
+.hero-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .hero-badge {
   position: absolute;
   inset-inline-end: -10px;
