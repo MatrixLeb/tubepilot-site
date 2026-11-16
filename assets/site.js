@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  var isArabic = (document.documentElement.lang || "").toLowerCase().indexOf("ar") === 0;
+
   /* ---------------------------------------------------------------- nav */
 
   var toggle = document.querySelector(".nav-toggle");
@@ -112,9 +114,67 @@
     if (file) link.setAttribute("href", base + file);
   });
 
+  /* ----------------------------------------------------- download counts */
+
+  // GitHub's public API reports how many times each release asset was
+  // downloaded. Sum them for a total and show per-file numbers next to the
+  // buttons. Everything stays hidden if the API is unreachable or rate-limited.
+  var countTargets = Array.prototype.slice.call(
+    document.querySelectorAll("[data-download-count]")
+  );
+  var totalTargets = Array.prototype.slice.call(
+    document.querySelectorAll("[data-download-total]")
+  );
+
+  if (
+    (countTargets.length || totalTargets.length) &&
+    window.TUBEPILOT_RELEASE_API &&
+    window.fetch
+  ) {
+    window
+      .fetch(window.TUBEPILOT_RELEASE_API, {
+        headers: { Accept: "application/vnd.github+json" }
+      })
+      .then(function (response) {
+        return response.ok ? response.json() : null;
+      })
+      .then(function (data) {
+        var releases = Array.isArray(data) ? data : data ? [data] : [];
+        if (!releases.length) return;
+
+        var counts = {};
+        var total = 0;
+        releases.forEach(function (release) {
+          (release.assets || []).forEach(function (asset) {
+            var n = Number(asset.download_count) || 0;
+            counts[asset.name] = n;
+            total += n;
+          });
+        });
+
+        countTargets.forEach(function (el) {
+          var n = counts[el.getAttribute("data-download-count")];
+          if (typeof n !== "number") return;
+          el.textContent = isArabic
+            ? n.toLocaleString("en-US") + " تنزيل"
+            : n.toLocaleString("en-US") + (n === 1 ? " download" : " downloads");
+          el.hidden = false;
+        });
+
+        totalTargets.forEach(function (el) {
+          el.textContent = isArabic
+            ? total.toLocaleString("en-US") + " تنزيلًا حتى الآن"
+            : total.toLocaleString("en-US") + " downloads so far";
+          el.hidden = false;
+        });
+      })
+      .catch(function () {
+        /* no counter is better than a broken page */
+      });
+  }
+
   /* -------------------------------------------------------- copy buttons */
 
-  var isArabic = (document.documentElement.lang || "").toLowerCase().indexOf("ar") === 0;
   var copyLabel = isArabic ? "نسخ" : "Copy";
   var copiedLabel = isArabic ? "تم النسخ" : "Copied";
   var manualLabel = isArabic ? "اضغط Ctrl+C" : "Press Ctrl+C";

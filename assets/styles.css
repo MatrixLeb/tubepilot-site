@@ -1093,6 +1093,18 @@ h3 {
   border: 1px solid var(--line);
 }
 
+.download-meta .download-count {
+  font-weight: 650;
+  color: var(--text-2);
+  border-color: rgba(255, 61, 61, 0.4);
+}
+
+.downloads-total {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: var(--dim);
+}
+
 .hash-box {
   margin-top: 26px;
   background: var(--surface);
