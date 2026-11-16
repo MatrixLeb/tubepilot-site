@@ -154,7 +154,8 @@
 
         countTargets.forEach(function (el) {
           var n = counts[el.getAttribute("data-download-count")];
-          if (typeof n !== "number") return;
+          // A brand-new asset reports 0; hide it rather than advertise a zero.
+          if (typeof n !== "number" || n < 1) return;
           el.textContent = isArabic
             ? n.toLocaleString("en-US") + " تنزيل"
             : n.toLocaleString("en-US") + (n === 1 ? " download" : " downloads");
