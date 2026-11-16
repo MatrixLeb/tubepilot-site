@@ -50,7 +50,7 @@ The site is plain HTML/CSS/JS, so any free static host works.
 2. Settings → Pages → Deploy from a branch → `main` → `/(root)`.
 3. Add `.nojekyll` if you later introduce files or folders beginning with `_`.
 
-The live site for this repository is <https://matrixleb.github.io/tubepilot-site/>.
+The live site for this repository is <https://tubepilot-690.netlify.app/>.
 
 ### Option C — Netlify
 
