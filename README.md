@@ -52,7 +52,7 @@ The site is plain HTML/CSS/JS, so any free static host works.
 
 ### Option C — Netlify (current production host)
 
-The official site is <https://tubepilot-690.netlify.app/>. The Netlify project
+The official site is <https://tubepilot.loc.cc/> (Netlify also serves <https://tubepilot-690.netlify.app/>). The Netlify project
 is not connected to this repository, so a Git push does not redeploy it.
 
 To publish an update, zip this folder without `.git` and without the large
