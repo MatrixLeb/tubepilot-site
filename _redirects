@@ -1,3 +1,0 @@
-# The default Netlify address is retired: only tubepilot.loc.cc serves the site.
-https://tubepilot-690.netlify.app/  https://tubepilot.loc.cc/  301!
-https://tubepilot-690.netlify.app/*  https://tubepilot.loc.cc/:splat  301!
