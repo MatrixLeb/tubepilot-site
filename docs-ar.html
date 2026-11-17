@@ -187,46 +187,30 @@
           </ul>
           <div class="callout warn">
             <p><strong>البناء من المصدر فقط.</strong> التشغيل من المصدر يحتاج JDK 21 وGradle. المثبّت
-            والنسخة المحمولة يحملان بيئة التشغيل؛ لا تثبّت Java على الجهاز المستهدف.</p>
+            يحمل بيئة التشغيل؛ لا تثبّت Java على الجهاز المستهدف.</p>
           </div>
         </section>
 
         <section id="install">
           <h2>3. التثبيت <a class="anchor" href="#install" aria-label="رابط إلى هذا القسم">#</a></h2>
-          <p>كلا الملفين يحتوي التطبيق نفسه. اختر:</p>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th></th><th>المثبّت</th><th>النسخة المحمولة ZIP</th></tr></thead>
-              <tbody>
-                <tr><td>الملف</td><td dir="ltr"><code>TubePilot-Setup-1.0.2.exe</code></td><td dir="ltr"><code>TubePilot-1.0.2-portable.zip</code></td></tr>
-                <tr><td>التثبيت</td><td>للمستخدم الحالي دون صلاحيات مدير</td><td>فكّ الضغط في أي مكان</td></tr>
-                <tr><td>الاختصار</td><td>قائمة ابدأ وأداة إزالة</td><td>شغّل <code dir="ltr">TubePilot\TubePilot.exe</code> مباشرة</td></tr>
-                <tr><td>التحديث</td><td>شغّل المثبّت الأحدث فوق القديم</td><td>استبدل المجلد بالنسخة الأحدث</td></tr>
-                <tr><td>الأنسب لـ</td><td>جهاز عمل دائم</td><td>التجربة، ذاكرة USB، الأجهزة المقيّدة</td></tr>
-              </tbody>
-            </table>
+          <p>هناك ملف واحد للتحميل: مثبّت إصدار 1.0.2 اللبناني.</p>
+          <div class="callout warn">
+            <p><strong>عندك 1.0.2 مثبّت؟</strong> إزّل النسخة القديمة قبل تثبيت هذه النسخة — كلاهما يستخدمان رمز
+            المنتج نفسه، فسيرفض ويندوز التثبيت فوقها. إعداداتك ومشاريعك في <code dir="ltr">%APPDATA%\TubePilot</code> تبقى.</p>
           </div>
 
-          <h3>التثبيت بالمثبّت</h3>
+          <h3>التثبيت بالمثبّت اللبناني</h3>
           <ol>
-            <li>نزّل <code dir="ltr">TubePilot-Setup-1.0.2.exe</code> من <a href="index-ar.html#downloads">قسم التحميل</a>.</li>
+            <li>نزّل <code dir="ltr">TubePilot-1.0.2-Lebanese.exe</code> من <a href="index-ar.html#downloads">قسم التحميل</a>.</li>
             <li>انقر عليه نقرتين. قد يعرض ويندوز <em>Windows protected your PC</em> لأن النسخة غير موقّعة بعد. اضغط <strong>More info ← Run anyway</strong>.</li>
             <li>اقبل المجلد الافتراضي أو اختر غيره. التثبيت يتم داخل ملف المستخدم، فلا حاجة لكلمة مرور المدير.</li>
             <li>عند الانتهاء شغّل <strong>TubePilot</strong> من قائمة ابدأ.</li>
           </ol>
 
-          <h3>تشغيل النسخة المحمولة</h3>
-          <ol>
-            <li>انقر على ZIP بالزر الأيمن ← <strong>Extract All</strong>. لا تشغّل التطبيق من داخل معاينة ZIP.</li>
-            <li>افتح مجلد <code dir="ltr">TubePilot</code> بعد فكّ الضغط.</li>
-            <li>انقر <code dir="ltr">TubePilot.exe</code> نقرتين.</li>
-            <li>لنقل التطبيق لاحقًا انقل <em>المجلد كاملًا</em>؛ فهو يحتاج الملفات المجاورة، ومنها <code dir="ltr">app\resources\tools\ffmpeg.exe</code>.</li>
-          </ol>
-
           <h3>التحقق من الملف (اختياري)</h3>
           <p>افتح PowerShell في مجلد التحميل وقارن البصمة بالقيمة في صفحة التحميل:</p>
-          <div class="code-block"><pre><code>Get-FileHash .\TubePilot-Setup-1.0.2.exe -Algorithm SHA256</code></pre></div>
-          <p>بصمة المثبّت الحالي <code dir="ltr">ec520708021e37e83fc5fd27042e5a2e67481a549e3b469056dc057103dbc8e8</code>، وبصمة ZIP المحمول <code dir="ltr">f029eaeaebccc4f60ea1bb2d0c5d8314087084750a0fe453af44170cac6088c5</code>.</p>
+          <div class="code-block"><pre><code>Get-FileHash .\TubePilot-1.0.2-Lebanese.exe -Algorithm SHA256</code></pre></div>
+          <p>بصمة المثبّت الحالي <code dir="ltr">3dc5dddf3278aba7096968195582e41eb7103baca763307f2456e0b0ea0f40c4</code>.</p>
 
           <h3>ملاحظات التشغيل الأول</h3>
           <ul>
@@ -547,7 +531,7 @@ TubePilot.exe --demo --language ar</code></pre></div>
           <h2>10. سطر الأوامر <a class="anchor" href="#cli" aria-label="رابط إلى هذا القسم">#</a></h2>
           <p>
             المحرّك نفسه يعمل بلا واجهة من مجلد التطبيق. استخدم
-            <code dir="ltr">TubePilot-cli.cmd</code> في النسخة المثبّتة أو المحمولة:
+            <code dir="ltr">TubePilot-cli.cmd</code> في النسخة المثبّتة:
           </p>
           <div class="code-block"><pre><code>TubePilot-cli.cmd --niche "personal finance" --minutes 8
 TubePilot-cli.cmd --niche "ancient history" --topic "why Rome fell" --minutes 9 --no-upload

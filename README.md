@@ -17,7 +17,7 @@ narrated A–Z walkthrough embedded on both landing pages.
 | `assets/downloads.js` | One place to change where the installers are hosted |
 | `assets/video/` | English and Arabic walkthrough MP4s plus poster frames |
 | `assets/social/` | 1200×630 promo image used for Open Graph and Twitter cards |
-| `downloads/` | Local copy of the standard installer, Lebanese-edition installer, portable ZIP and `SHA256SUMS.txt` |
+| `downloads/` | Local copy of the Lebanese-edition installer and `SHA256SUMS.txt` |
 
 ## Preview locally
 
@@ -72,13 +72,13 @@ whose entry names use Windows backslashes.
 ## Host the big downloads separately
 
 GitHub Pages rejects files over 100 MB, and many free hosts cap repository size.
-The installer is ~263 MB and the portable ZIP ~260 MB. Host them where large
-files are allowed, then point the site at that folder.
+The Lebanese installer is ~263 MB. Host it where large files are allowed, then
+point the site at that folder.
 
 **GitHub Releases** (free, 2 GB per file):
 
 1. Create a release tagged `v1.0.2` (keep older tags so past downloads stay counted).
-2. Upload `TubePilot-Setup-1.0.2.exe`, `TubePilot-1.0.2-Lebanese.exe` and `TubePilot-1.0.2-portable.zip`.
+2. Upload `TubePilot-1.0.2-Lebanese.exe`.
 3. Edit `assets/downloads.js`:
 
 ```js
@@ -94,7 +94,7 @@ version does not reset it. Set the value to `null` to hide the counters.
 
 **Cloudflare R2** (free tier, 10 GB):
 
-1. Create a bucket and upload both files.
+1. Create a bucket and upload the installer.
 2. Enable public access or attach a custom domain.
 3. Set `TUBEPILOT_DOWNLOAD_BASE` to the public bucket URL.
 
@@ -135,14 +135,12 @@ social platforms do not crop the text.
 
 ## When you ship a new build
 
-1. Rebuild the installer and ZIP (`.\build-exe.ps1 -Installer -Zip`).
-2. Copy the new files over `downloads/`.
-3. Recompute the hashes:
+1. Rebuild the installer (`.\build-exe.ps1 -Installer`).
+2. Copy the new file over `downloads/`.
+3. Recompute the hash:
 
 ```powershell
-Get-FileHash .\downloads\TubePilot-Setup-1.0.2.exe -Algorithm SHA256
 Get-FileHash .\downloads\TubePilot-1.0.2-Lebanese.exe -Algorithm SHA256
-Get-FileHash .\downloads\TubePilot-1.0.2-portable.zip -Algorithm SHA256
 ```
 
 4. Update the hash values and byte counts in `index.html`, `index-ar.html`

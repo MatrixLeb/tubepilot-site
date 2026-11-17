@@ -184,7 +184,7 @@
           <div class="hero-meta">
             <span><svg aria-hidden="true"><use href="#i-check"/></svg> 48-hour free trial</span>
             <span><svg aria-hidden="true"><use href="#i-check"/></svg> English &amp; العربية</span>
-            <span><svg aria-hidden="true"><use href="#i-check"/></svg> Portable or installer</span>
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg> Lebanese edition included</span>
           </div>
         </div>
       </div>
@@ -378,7 +378,7 @@
           <article class="step">
             <span class="num">01</span>
             <h3>Install and activate</h3>
-            <p>Run the installer, or unzip the portable build and start <code>TubePilot.exe</code>. Start the 48-hour free trial on the Subscription screen — no card, once per Windows profile.</p>
+            <p>Run the Lebanese installer and start <code>TubePilot.exe</code>. Start the 48-hour free trial on the Subscription screen — no card, once per Windows profile.</p>
             <a href="docs.html#install">Installation guide <span aria-hidden="true">→</span></a>
           </article>
           <article class="step">
@@ -467,60 +467,21 @@
         <div class="section-head">
           <span class="section-kicker">Downloads</span>
           <h2>Get TubePilot 1.0.2</h2>
-          <p>Windows 10 or 11, 64-bit. Choose the standard build or the Lebanese edition, which adds Lebanese and Egyptian narration voices and a Lebanese Arabic interface.</p>
+          <p>Windows 10 or 11, 64-bit. This is the 1.0.2 Lebanese edition, adding Lebanese and Egyptian narration voices and a Lebanese Arabic interface.</p>
           <p class="downloads-total" data-download-total hidden></p>
         </div>
 
         <div class="downloads-grid">
           <article class="download-card primary">
-            <span class="tag">Recommended</span>
-            <h3>Windows installer</h3>
-            <div class="file">TubePilot-Setup-1.0.2.exe</div>
-            <p>
-              Installs for the current user with no administrator prompt, adds a Start-menu
-              shortcut and an uninstaller. New builds upgrade straight over the old one.
-            </p>
-            <a class="btn btn-primary btn-block" data-download="TubePilot-Setup-1.0.2.exe" href="downloads/TubePilot-Setup-1.0.2.exe" download>
-              <svg aria-hidden="true"><use href="#i-download"/></svg>
-              Download installer
-            </a>
-            <div class="download-meta">
-              <span class="download-count" data-download-count="TubePilot-Setup-1.0.2.exe" hidden></span>
-              <span>263 MB</span>
-              <span>No admin prompt</span>
-              <span>Start-menu shortcut</span>
-            </div>
-          </article>
-
-          <article class="download-card">
-            <h3>Portable ZIP</h3>
-            <div class="file">TubePilot-1.0.2-portable.zip</div>
-            <p>
-              Unzip anywhere and double-click <code>TubePilot\TubePilot.exe</code>. Nothing is
-              installed; settings and videos still live in <code>%APPDATA%\TubePilot</code>.
-            </p>
-            <a class="btn btn-ghost btn-block" data-download="TubePilot-1.0.2-portable.zip" href="downloads/TubePilot-1.0.2-portable.zip" download>
-              <svg aria-hidden="true"><use href="#i-download"/></svg>
-              Download portable ZIP
-            </a>
-            <div class="download-meta">
-              <span class="download-count" data-download-count="TubePilot-1.0.2-portable.zip" hidden></span>
-              <span>260 MB</span>
-              <span>No installation</span>
-              <span>Runs from a USB stick</span>
-            </div>
-          </article>
-
-          <article class="download-card">
             <span class="tag">Lebanese edition</span>
             <h3>Windows installer — Lebanese Edition</h3>
             <div class="file">TubePilot-1.0.2-Lebanese.exe</div>
             <p>
-              The same 1.0.2 app plus Lebanese (<code>ar-LB</code>) and Egyptian (<code>ar-EG</code>)
+              TubePilot 1.0.2 with Lebanese (<code>ar-LB</code>) and Egyptian (<code>ar-EG</code>)
               neural narration voices, Arabic (Lebanon) and Arabic (Egypt) project languages, and a
               Lebanese Arabic interface option. Installs for the current user with no admin prompt.
             </p>
-            <a class="btn btn-ghost btn-block" data-download="TubePilot-1.0.2-Lebanese.exe" href="downloads/TubePilot-1.0.2-Lebanese.exe" download>
+            <a class="btn btn-primary btn-block" data-download="TubePilot-1.0.2-Lebanese.exe" href="downloads/TubePilot-1.0.2-Lebanese.exe" download>
               <svg aria-hidden="true"><use href="#i-download"/></svg>
               Download Lebanese installer
             </a>
@@ -533,23 +494,21 @@
           </article>
         </div>
 
+        <div class="callout warn" style="margin-top:22px">
+          <p><strong>Already have 1.0.2 installed?</strong> Uninstall the old version first — both
+          builds share the same product code, so Windows will reject an upgrade. Your settings and
+          projects are kept in <code>%APPDATA%\TubePilot</code>.</p>
+        </div>
+
         <details class="hash-box">
           <summary>SHA-256 checksums and file details</summary>
-          <div class="hash-row">
-            <span>TubePilot-Setup-1.0.2.exe · 275,415,040 bytes</span>
-            <code>ec520708021e37e83fc5fd27042e5a2e67481a549e3b469056dc057103dbc8e8</code>
-          </div>
-          <div class="hash-row">
-            <span>TubePilot-1.0.2-portable.zip · 272,983,270 bytes</span>
-            <code>f029eaeaebccc4f60ea1bb2d0c5d8314087084750a0fe453af44170cac6088c5</code>
-          </div>
           <div class="hash-row">
             <span>TubePilot-1.0.2-Lebanese.exe · 275,419,136 bytes</span>
             <code>3dc5dddf3278aba7096968195582e41eb7103baca763307f2456e0b0ea0f40c4</code>
           </div>
           <div class="hash-row">
             <span>Verify in PowerShell</span>
-            <code>Get-FileHash .\TubePilot-Setup-1.0.2.exe -Algorithm SHA256</code>
+            <code>Get-FileHash .\TubePilot-1.0.2-Lebanese.exe -Algorithm SHA256</code>
           </div>
           <div class="hash-row">
             <span>More files</span>

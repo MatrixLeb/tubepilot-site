@@ -190,47 +190,32 @@
           </ul>
           <div class="callout warn">
             <p><strong>Builds from source only.</strong> Running from source needs JDK 21 and Gradle. The
-            downloadable installer and portable ZIP include their own runtime; you do not install
-            Java on the target PC.</p>
+            downloadable installer includes its own runtime; you do not install Java on the target
+            PC.</p>
           </div>
         </section>
 
         <section id="install">
           <h2>3. Installation <a class="anchor" href="#install" aria-label="Link to this section">#</a></h2>
-          <p>Both downloads contain the same application. Choose one:</p>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th></th><th>Installer</th><th>Portable ZIP</th></tr></thead>
-              <tbody>
-                <tr><td>File</td><td><code>TubePilot-Setup-1.0.2.exe</code></td><td><code>TubePilot-1.0.2-portable.zip</code></td></tr>
-                <tr><td>Install</td><td>Per-user, no administrator prompt</td><td>Unzip anywhere</td></tr>
-                <tr><td>Shortcut</td><td>Start-menu entry and uninstaller</td><td>Start <code>TubePilot\TubePilot.exe</code> directly</td></tr>
-                <tr><td>Upgrades</td><td>Run the newer installer over the old one</td><td>Replace the folder with the newer unzip</td></tr>
-                <tr><td>Best for</td><td>A permanent workstation</td><td>Testing, USB sticks, locked-down PCs</td></tr>
-              </tbody>
-            </table>
+          <p>There is one download: the 1.0.2 Lebanese edition installer.</p>
+          <div class="callout warn">
+            <p><strong>Already installed 1.0.2?</strong> Uninstall the old version before installing this
+            build — both share the same product code, so Windows will reject an upgrade. Your settings
+            and projects in <code>%APPDATA%\TubePilot</code> are kept.</p>
           </div>
 
-          <h3>Install with the setup EXE</h3>
+          <h3>Install with the Lebanese setup EXE</h3>
           <ol>
-            <li>Download <code>TubePilot-Setup-1.0.2.exe</code> from the <a href="index.html#downloads">downloads section</a>.</li>
+            <li>Download <code>TubePilot-1.0.2-Lebanese.exe</code> from the <a href="index.html#downloads">downloads section</a>.</li>
             <li>Double-click it. Windows may show <em>Windows protected your PC</em> because the build is not code-signed yet. Click <strong>More info → Run anyway</strong>.</li>
             <li>Accept the default folder, or choose another one. The installer writes to your user profile, so no admin password is needed.</li>
             <li>When it finishes, launch <strong>TubePilot</strong> from the Start menu.</li>
           </ol>
 
-          <h3>Run the portable build</h3>
-          <ol>
-            <li>Right-click the ZIP → <strong>Extract All</strong>. Do not run the app from inside the ZIP preview.</li>
-            <li>Open the extracted <code>TubePilot</code> folder.</li>
-            <li>Double-click <code>TubePilot.exe</code>.</li>
-            <li>To move it later, move the <em>whole folder</em>; the app needs the files next to the EXE, including <code>app\resources\tools\ffmpeg.exe</code>.</li>
-          </ol>
-
           <h3>Verify the download (optional)</h3>
           <p>Open PowerShell in the download folder and compare the hash with the value on the download page:</p>
-          <div class="code-block"><pre><code>Get-FileHash .\TubePilot-Setup-1.0.2.exe -Algorithm SHA256</code></pre></div>
-          <p>The current installer hash is <code>ec520708021e37e83fc5fd27042e5a2e67481a549e3b469056dc057103dbc8e8</code>. The portable ZIP is <code>f029eaeaebccc4f60ea1bb2d0c5d8314087084750a0fe453af44170cac6088c5</code>.</p>
+          <div class="code-block"><pre><code>Get-FileHash .\TubePilot-1.0.2-Lebanese.exe -Algorithm SHA256</code></pre></div>
+          <p>The current installer hash is <code>3dc5dddf3278aba7096968195582e41eb7103baca763307f2456e0b0ea0f40c4</code>.</p>
 
           <h3>First launch notes</h3>
           <ul>
@@ -556,7 +541,7 @@ TubePilot.exe --demo --language ar</code></pre></div>
           <h2>10. Command line <a class="anchor" href="#cli" aria-label="Link to this section">#</a></h2>
           <p>
             The same engine runs headless from the app folder. Use <code>TubePilot-cli.cmd</code> in the
-            installed or portable build:
+            installed build:
           </p>
           <div class="code-block"><pre><code>TubePilot-cli.cmd --niche "personal finance" --minutes 8
 TubePilot-cli.cmd --niche "ancient history" --topic "why Rome fell" --minutes 9 --no-upload
