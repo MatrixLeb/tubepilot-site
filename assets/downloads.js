@@ -1,16 +1,20 @@
 /*
  * Download location configuration.
  *
- * TubePilot 1.0.2 installers are hosted as GitHub Release assets because they
- * are far larger than GitHub Pages allows in a repository. The site itself is
- * published from the same repository with GitHub Pages.
+ * Local previews (file:// or localhost) serve the 1.0.2 files staged in
+ * website/downloads/ directly. Deployed copies use the identical GitHub
+ * Release assets, because a 275 MB installer cannot be committed to GitHub
+ * Pages / Netlify / Cloudflare Pages alongside the site.
  *
- * Point this at another folder (Cloudflare R2, your own server) if you move the
- * files. Leave it as "downloads/" when testing with the local copies in
- * website/downloads/.
+ * Change the URL below if you move the hosted files (e.g. to Cloudflare R2).
  */
-window.TUBEPILOT_DOWNLOAD_BASE =
-  "https://github.com/MatrixLeb/tubepilot-site/releases/download/v1.0.2/";
+var tubepilotLocalPreview =
+  window.location.protocol === "file:" ||
+  /^(localhost|127\.0\.0\.1|\[::1\])$/.test(window.location.hostname);
+
+window.TUBEPILOT_DOWNLOAD_BASE = tubepilotLocalPreview
+  ? "downloads/"
+  : "https://github.com/MatrixLeb/tubepilot-site/releases/download/v1.0.2/";
 
 /*
  * Public GitHub API endpoint the site reads to show live download counts.
